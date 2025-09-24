@@ -45,22 +45,20 @@
             function TypingAnimator(el, options) {
                 this.el = el;
                 this.texts = options.texts || ['Creative Digital'];
-                this.typeSpeed = options.typeSpeed || 40; // ms per char
+                this.typeSpeed = options.typeSpeed || 80; // ms per char
                 this.deleteSpeed = options.deleteSpeed || 50; // ms per char when deleting
                 this.pauseAfterType = options.pauseAfterType || 700; // pause after typing full word
-                this.pauseAfterDelete = options.pauseAfterDelete || 1000; // pause before typing next
+                this.pauseAfterDelete = options.pauseAfterDelete || 200; // pause before typing next
                 this.current = 0;
                 this.isDeleting = false;
                 this.timer = null;
 
                 // wrap element contents with a span for typing
                 var wrapper = document.createElement('span');
-                // wrapper.className = 'typing-wrapper';
                 var textSpan = document.createElement('span');
                 textSpan.className = 'typing-text';
                 wrapper.appendChild(textSpan);
                 var caret = document.createElement('span');
-                // caret.className = 'typing-caret';
                 wrapper.appendChild(caret);
 
                 // move child nodes into textSpan if any
@@ -142,8 +140,8 @@
                         'Creative Digital',
                         'Innovative Design',
                         'Strategic Growth',
-                        'Digital Marketing',
-                        'Web Development'
+                        'Performance Marketing',
+                        'Scalable Development'
                     ];
                 }
 
@@ -181,7 +179,7 @@
                     <nav class="nav-area drop-down-rts">
                         <ul class="navbar-nav-1">
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="javascript:void(0);"><span class="rolling-text">
+                                <a href="index.html"><span class="rolling-text">
                                         <div class="block"><span class="letter">H</span><span
                                                 class="letter">O</span><span class="letter">M</span><span
                                                 class="letter">E</span></div>
@@ -198,8 +196,8 @@
                                     </span></a>
                                 <ul class="sub-menu" style="display: block;">
                                     <li class="menu-item menu-item-home has-children-sub"><a class="menu-link"
-                                            href="javascript:void(0);">Portfolio Grid</a>
-                                        <ul class="sub-menu third-lvl base">
+                                            href="portfolio-grid.html">Portfolio Grid</a>
+                                        <!-- <ul class="sub-menu third-lvl base">
                                             <li class="menu-item menu-item-home"><a class="nav-link"
                                                     href="portfolio-grid.html"> Grid 2
                                                     Column</a></li>
@@ -210,7 +208,7 @@
                                                     href="portfolio-full-width.html">Grid
                                                     Full Width</a></li>
 
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="menu-item menu-item-home has-children-sub"><a class="menu-link"
                                             href="javascript:void(0);">Portfolio List</a>
