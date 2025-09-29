@@ -451,8 +451,8 @@
       });
       $(document).ready(function () {
         var swiper = new Swiper(".mySwiper_service-h2", {
-          spaceBetween: 24,
-          slidesPerView: 4.5,
+          spaceBetween: 30,
+          slidesPerView: 3,
           centeredSlides: true,
           roundLengths: true,
           loop: true,
@@ -463,7 +463,7 @@
           },
           breakpoints: {
             1700: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 30,
             },
             1500: {
