@@ -1,16 +1,22 @@
-<html lang="en" class="rts-dark" style="transform: none;">
+<html lang="en" data-theme="light" class="rts-light-mood">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-style-mode" content="1">
-    <link rel="shortcut icon" type="image/x-icon" href="/Krafthaus Logo white version.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
     <title>Blogs - KraftHaus</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/vendor/bootstrap.min.css" as="style">
+
+    <!-- CSS files in optimized order -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/fontawesome-6.css">
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <link rel="stylesheet" href="css/vendor/metismenu.css">
     <link rel="stylesheet" href="css/plugins/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style id="theia-sticky-sidebar-stylesheet-TSS">
         .theiaStickySidebar:after {
@@ -21,49 +27,38 @@
     </style>
 </head>
 
-<body class="inner-page blog-details" style="transform: none;" data-new-gr-c-s-check-loaded="14.1255.0"
-    data-gr-ext-installed="">
+<body class="inner-page" style="" data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed="">
 
-    <!-- Scripts style two -->
-    <!-- header area two start -->
-    <div class="gsap-marker-end"
-        style="border-color: red; font-size: 16px; color: red; font-weight: normal; pointer-events: none; white-space: nowrap; font-family: sans-serif, Arial; z-index: 1000; padding: 4px 8px; border-width: 1px 0px 0px; border-style: solid; position: absolute; translate: none; rotate: none; scale: none; top: 4344px; transform: translate(0px, 0px); display: block; left: 0px;">
-        end</div>
-    <div class="gsap-marker-start"
-        style="border-color: green; font-size: 16px; color: green; font-weight: normal; pointer-events: none; white-space: nowrap; font-family: sans-serif, Arial; z-index: 1000; padding: 4px 8px; border-width: 0px 0px 1px; border-style: solid; position: absolute; translate: none; rotate: none; scale: none; top: 4344px; transform: translate(0%, -100%) translate(0px, 1px); display: block; left: 0px;">
-        start</div>
-    <div class="gsap-marker-scroller-end"
-        style="border-color: red; font-size: 16px; color: red; font-weight: normal; pointer-events: none; white-space: nowrap; font-family: sans-serif, Arial; z-index: 1000; padding: 4px 8px; border-width: 1px 0px 0px; border-style: solid; position: fixed; right: 0px; box-sizing: border-box; text-align: left; width: 0px; translate: none; rotate: none; scale: none; top: 0px; transform: translate(0px, 0px); display: block;">
-        scroller-end</div>
-    <div class="gsap-marker-scroller-start"
-        style="border-color: green; font-size: 16px; color: green; font-weight: normal; pointer-events: none; white-space: nowrap; font-family: sans-serif, Arial; z-index: 1000; padding: 4px 8px; border-width: 0px 0px 1px; border-style: solid; position: fixed; right: 0px; translate: none; rotate: none; scale: none; top: 881px; transform: translate(0%, -100%) translate(0px, 1px); display: block;">
-        scroller-start</div>
+    <!-- Header area start -->
     <header class="header-area header-one header--sticky">
         <div class="header-container-one">
             <div class="header-wrapper">
-                <a href="index.html" class="logo">
-                    <img src="/Krafthaus Logo white version.png" alt="logo" width="130px" , height="27px">
+                <a href="index.html" class="logo" aria-label="KraftHaus Home">
+                    <img src="Krafthaus Logo white version.png" alt="KraftHaus Logo" width="130" height="27"
+                        loading="eager">
                 </a>
                 <div class="header-right">
 
-                    <nav class="nav-area drop-down-rts">
+                    <nav class="nav-area drop-down-rts" role="navigation" aria-label="Main navigation">
                         <ul class="navbar-nav-1">
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="index.html"><span class="rolling-text">
+                                <a href="index.html" aria-label="Go to Home page"><span class="rolling-text">
                                         <div class="block"><span class="letter">H</span><span
                                                 class="letter">O</span><span class="letter">M</span><span
                                                 class="letter">E</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on">
-                                <a class="menu-link" href="about-style.html"><span class="rolling-text">
+                                <a class="menu-link" href="about-style.html" aria-label="Go to About page"><span
+                                        class="rolling-text">
                                         <div class="block"><span class="letter">A</span><span
                                                 class="letter">B</span><span class="letter">O</span><span
                                                 class="letter">U</span><span class="letter">T</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="portfolio-filter.html"><span class="rolling-text">
+                                <a href="portfolio-filter.html" aria-label="Go to Portfolio page"><span
+                                        class="rolling-text">
                                         <div class="block"><span class="letter">P</span><span
                                                 class="letter">O</span><span class="letter">R</span><span
                                                 class="letter">T</span><span class="letter">F</span><span
@@ -72,24 +67,25 @@
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="service-3.html"><span class="rolling-text">
+                                <a href="service-3.html" aria-label="Go to Services page"><span class="rolling-text">
                                         <div class="block"><span class="letter">S</span><span
                                                 class="letter">E</span><span class="letter">R</span><span
                                                 class="letter">V</span><span class="letter">I</span><span
-                                                class="letter">C</span><span class="letter">E<span class="letter">S
-                                                </span>
+                                                class="letter">C</span><span class="letter">E</span><span
+                                                class="letter">S</span>
                                         </div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="blog-detailsright-sidebar.html"><span class="rolling-text">
+                                <a href="blog-detailsright-sidebar.html" aria-label="Go to Blog page"
+                                    aria-current="page"><span class="rolling-text">
                                         <div class="block"><span class="letter">B</span><span
                                                 class="letter">L</span><span class="letter">O</span><span
                                                 class="letter">G</span><span class="letter">S</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="contact.html"><span class="rolling-text">
+                                <a href="contact.html" aria-label="Go to Contact page"><span class="rolling-text">
                                         <div class="block"><span class="letter">C</span><span
                                                 class="letter">O</span><span class="letter">N</span><span
                                                 class="letter">T</span><span class="letter">A</span><span
@@ -132,523 +128,428 @@
     <!-- Scripts style two End -->
 
 
-    <!-- blog- details bread cro=umnb area -->
-    <div class="blog-details-breadcrumb rts-section-gap"
-        style="background-image: url('https://cdn.wallpapersafari.com/43/89/NEe6LB.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh ; width: 100%;">
-        <div class="container-430">
+    <!-- Scripts style two -->
+    <!-- rts bread crumba rea start -->
+    <div class="rts-breadcrumb-area bg_image"
+        style="background-image: url('https://cdn.wallpapersafari.com/43/89/NEe6LB.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100%;">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="blog-details-bd-wrapper pt--120">
-                        <p>Photography <span>/ Module Design</span></p>
-                        <h1 class="title rts_hero__title"
-                            style="font-size: clamp(6rem, 13vw, 13.5rem); line-height: 1.05; font-weight: 900; margin: 0; padding: 0; word-wrap: break-word; hyphens: auto; letter-spacing: -0.03em;">
-                            Creative Pattern Limited: Designer UI/UX Complete Checklist.
-                        </h1>
-                        <div class="author-area">
-                            <a href="#">
-                                <img src="images/banner/20.png" alt="banner">
+                    <div class="baread-crumb-main-wrapper pt--100">
+                        <div class="inner">
+                            <h1 class="title rts_hero__title">
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    B</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    l</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    o</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    g</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    P</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    o</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    s</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    t</div>
+                                <div
+                                    style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                    s</div>
+                            </h1>
+                            <span class="bg-text">Blog Posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts bread crumba rea end -->
+    <!-- Scripts style two End -->
+
+
+
+
+    <!-- blog post area inner  start-->
+    <div class="blog-list-area pb--120 pt--80">
+        <div class="container-150  rts-section-gap">
+            <div class="row">
+                <div class="col-lg-12">
+                    <article class="single-blog-list-one rts-skew-up-gsap">
+                        <a href="blog-details.html" class="thumbnail" aria-label="Read full article">
+                            <img src="images/blog/11.jpg" alt="Photography and module design blog post" loading="lazy"
+                                width="400" height="300">
+                        </a>
+                        <div class="blog-content-area">
+                            <span>Photography / Module Design</span>
+                            <a href="blog-details.html">
+                                <h3 class="title quote animated fadeIn" style="">
+                                    <div class="split-parent">
+                                        <div class="split-line"
+                                            style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">A</div>
+                                                <div style="position:relative;display:inline-block;">w</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                                <div style="position:relative;display:inline-block;">s</div>
+                                                <div style="position:relative;display:inline-block;">o</div>
+                                                <div style="position:relative;display:inline-block;">m</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                            </div>
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">P</div>
+                                                <div style="position:relative;display:inline-block;">h</div>
+                                                <div style="position:relative;display:inline-block;">o</div>
+                                                <div style="position:relative;display:inline-block;">t</div>
+                                                <div style="position:relative;display:inline-block;">o</div>
+                                                <div style="position:relative;display:inline-block;">g</div>
+                                                <div style="position:relative;display:inline-block;">r</div>
+                                                <div style="position:relative;display:inline-block;">a</div>
+                                                <div style="position:relative;display:inline-block;">p</div>
+                                                <div style="position:relative;display:inline-block;">h</div>
+                                                <div style="position:relative;display:inline-block;">y</div>
+                                            </div>
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">M</div>
+                                                <div style="position:relative;display:inline-block;">o</div>
+                                                <div style="position:relative;display:inline-block;">d</div>
+                                                <div style="position:relative;display:inline-block;">u</div>
+                                                <div style="position:relative;display:inline-block;">l</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                            </div>
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">D</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                                <div style="position:relative;display:inline-block;">s</div>
+                                                <div style="position:relative;display:inline-block;">i</div>
+                                                <div style="position:relative;display:inline-block;">g</div>
+                                                <div style="position:relative;display:inline-block;">n</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="split-parent">
+                                        <div class="split-line"
+                                            style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">I</div>
+                                                <div style="position:relative;display:inline-block;">n</div>
+                                                <div style="position:relative;display:inline-block;">t</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                                <div style="position:relative;display:inline-block;">r</div>
+                                                <div style="position:relative;display:inline-block;">a</div>
+                                                <div style="position:relative;display:inline-block;">c</div>
+                                                <div style="position:relative;display:inline-block;">t</div>
+                                                <div style="position:relative;display:inline-block;">i</div>
+                                                <div style="position:relative;display:inline-block;">v</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                            </div>
+                                            <div style="position:relative;display:inline-block;">
+                                                <div style="position:relative;display:inline-block;">J</div>
+                                                <div style="position:relative;display:inline-block;">o</div>
+                                                <div style="position:relative;display:inline-block;">u</div>
+                                                <div style="position:relative;display:inline-block;">r</div>
+                                                <div style="position:relative;display:inline-block;">n</div>
+                                                <div style="position:relative;display:inline-block;">e</div>
+                                                <div style="position:relative;display:inline-block;">y</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h3>
                             </a>
-                            <div class="info">
-                                <span>Author</span>
-                                <p>Mark Daniel</p>
-                            </div>
+                            <p class="disc">
+                                If you want to have an effective content with the latest trends. When you think of
+                                creating <br> content most people’s minds go straight to blogging.
+                            </p>
+                            <a href="blog-details.html" class="read-more-bb">Read More</a>
                         </div>
-                    </div>
                 </div>
+                <article class="single-blog-list-one rts-skew-up-gsap">
+                    <a href="blog-details.html" class="thumbnail" aria-label="Read full article">
+                        <img src="images/blog/12.jpg" alt="Photography and module design blog post" loading="lazy"
+                            width="400" height="300">
+                    </a>
+                    <div class="blog-content-area">
+                        <span>Photography / Module Design</span>
+                        <a href="blog-details.html">
+                            <h3 class="title quote animated fadeIn" style="">
+                                <div class="split-parent">
+                                    <div class="split-line"
+                                        style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">A</div>
+                                            <div style="position:relative;display:inline-block;">w</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                            <div style="position:relative;display:inline-block;">s</div>
+                                            <div style="position:relative;display:inline-block;">o</div>
+                                            <div style="position:relative;display:inline-block;">m</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                        </div>
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">P</div>
+                                            <div style="position:relative;display:inline-block;">h</div>
+                                            <div style="position:relative;display:inline-block;">o</div>
+                                            <div style="position:relative;display:inline-block;">t</div>
+                                            <div style="position:relative;display:inline-block;">o</div>
+                                            <div style="position:relative;display:inline-block;">g</div>
+                                            <div style="position:relative;display:inline-block;">r</div>
+                                            <div style="position:relative;display:inline-block;">a</div>
+                                            <div style="position:relative;display:inline-block;">p</div>
+                                            <div style="position:relative;display:inline-block;">h</div>
+                                            <div style="position:relative;display:inline-block;">y</div>
+                                        </div>
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">M</div>
+                                            <div style="position:relative;display:inline-block;">o</div>
+                                            <div style="position:relative;display:inline-block;">d</div>
+                                            <div style="position:relative;display:inline-block;">u</div>
+                                            <div style="position:relative;display:inline-block;">l</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                        </div>
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">D</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                            <div style="position:relative;display:inline-block;">s</div>
+                                            <div style="position:relative;display:inline-block;">i</div>
+                                            <div style="position:relative;display:inline-block;">g</div>
+                                            <div style="position:relative;display:inline-block;">n</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="split-parent">
+                                    <div class="split-line"
+                                        style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">I</div>
+                                            <div style="position:relative;display:inline-block;">n</div>
+                                            <div style="position:relative;display:inline-block;">t</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                            <div style="position:relative;display:inline-block;">r</div>
+                                            <div style="position:relative;display:inline-block;">a</div>
+                                            <div style="position:relative;display:inline-block;">c</div>
+                                            <div style="position:relative;display:inline-block;">t</div>
+                                            <div style="position:relative;display:inline-block;">i</div>
+                                            <div style="position:relative;display:inline-block;">v</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                        </div>
+                                        <div style="position:relative;display:inline-block;">
+                                            <div style="position:relative;display:inline-block;">J</div>
+                                            <div style="position:relative;display:inline-block;">o</div>
+                                            <div style="position:relative;display:inline-block;">u</div>
+                                            <div style="position:relative;display:inline-block;">r</div>
+                                            <div style="position:relative;display:inline-block;">n</div>
+                                            <div style="position:relative;display:inline-block;">e</div>
+                                            <div style="position:relative;display:inline-block;">y</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                        </a>
+                        <p class="disc">
+                            If you want to have an effective content with the latest trends. When you think of
+                            creating <br> content most people’s minds go straight to blogging.
+                        </p>
+                        <a href="blog-details.html" class="read-more-bb">Read More</a>
+                    </div>
             </div>
+            <article class="single-blog-list-one rts-skew-up-gsap">
+                <a href="blog-details.html" class="thumbnail" aria-label="Read full article">
+                    <img src="images/blog/13.jpg" alt="Photography and module design blog post" loading="lazy"
+                        width="400" height="300">
+                </a>
+                <div class="blog-content-area">
+                    <span>Photography / Module Design</span>
+                    <a href="blog-details.html">
+                        <h3 class="title quote animated fadeIn" style="">
+                            <div class="split-parent">
+                                <div class="split-line"
+                                    style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">A</div>
+                                        <div style="position:relative;display:inline-block;">w</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                        <div style="position:relative;display:inline-block;">s</div>
+                                        <div style="position:relative;display:inline-block;">o</div>
+                                        <div style="position:relative;display:inline-block;">m</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">P</div>
+                                        <div style="position:relative;display:inline-block;">h</div>
+                                        <div style="position:relative;display:inline-block;">o</div>
+                                        <div style="position:relative;display:inline-block;">t</div>
+                                        <div style="position:relative;display:inline-block;">o</div>
+                                        <div style="position:relative;display:inline-block;">g</div>
+                                        <div style="position:relative;display:inline-block;">r</div>
+                                        <div style="position:relative;display:inline-block;">a</div>
+                                        <div style="position:relative;display:inline-block;">p</div>
+                                        <div style="position:relative;display:inline-block;">h</div>
+                                        <div style="position:relative;display:inline-block;">y</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">M</div>
+                                        <div style="position:relative;display:inline-block;">o</div>
+                                        <div style="position:relative;display:inline-block;">d</div>
+                                        <div style="position:relative;display:inline-block;">u</div>
+                                        <div style="position:relative;display:inline-block;">l</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">D</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                        <div style="position:relative;display:inline-block;">s</div>
+                                        <div style="position:relative;display:inline-block;">i</div>
+                                        <div style="position:relative;display:inline-block;">g</div>
+                                        <div style="position:relative;display:inline-block;">n</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="split-parent">
+                                <div class="split-line"
+                                    style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">I</div>
+                                        <div style="position:relative;display:inline-block;">n</div>
+                                        <div style="position:relative;display:inline-block;">t</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                        <div style="position:relative;display:inline-block;">r</div>
+                                        <div style="position:relative;display:inline-block;">a</div>
+                                        <div style="position:relative;display:inline-block;">c</div>
+                                        <div style="position:relative;display:inline-block;">t</div>
+                                        <div style="position:relative;display:inline-block;">i</div>
+                                        <div style="position:relative;display:inline-block;">v</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div style="position:relative;display:inline-block;">J</div>
+                                        <div style="position:relative;display:inline-block;">o</div>
+                                        <div style="position:relative;display:inline-block;">u</div>
+                                        <div style="position:relative;display:inline-block;">r</div>
+                                        <div style="position:relative;display:inline-block;">n</div>
+                                        <div style="position:relative;display:inline-block;">e</div>
+                                        <div style="position:relative;display:inline-block;">y</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </a>
+                    <p class="disc">
+                        If you want to have an effective content with the latest trends. When you think of
+                        creating <br> content most people’s minds go straight to blogging.
+                    </p>
+                    <a href="blog-details.html" class="read-more-bb">Read More</a>
+                </div>
         </div>
-    </div>
-    <!-- blog- details bread cro=umnb area end -->
-
-    <!-- blog details area start -->
-    <div class="blog-details-main-wrapper rts-section-gap" style="transform: none;">
-        <div class="container" style="transform: none;">
-            <div class="row" style="transform: none;">
-                <div class="col-lg-8">
-                    <div class="containe-false">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="main-wrapper">
-                                    <div class="thumbnail-banner-large-iamge grow">
-
-                                    </div>
+        <article class="single-blog-list-one rts-skew-up-gsap">
+            <a href="blog-details.html" class="thumbnail" aria-label="Read full article">
+                <img src="images/blog/14.jpg" alt="Photography and module design blog post" loading="lazy" width="400"
+                    height="300">
+            </a>
+            <div class="blog-content-area">
+                <span>Photography / Module Design</span>
+                <a href="blog-details.html">
+                    <h3 class="title quote animated fadeIn" style="">
+                        <div class="split-parent">
+                            <div class="split-line"
+                                style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">A</div>
+                                    <div style="position:relative;display:inline-block;">w</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                    <div style="position:relative;display:inline-block;">s</div>
+                                    <div style="position:relative;display:inline-block;">o</div>
+                                    <div style="position:relative;display:inline-block;">m</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                </div>
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">P</div>
+                                    <div style="position:relative;display:inline-block;">h</div>
+                                    <div style="position:relative;display:inline-block;">o</div>
+                                    <div style="position:relative;display:inline-block;">t</div>
+                                    <div style="position:relative;display:inline-block;">o</div>
+                                    <div style="position:relative;display:inline-block;">g</div>
+                                    <div style="position:relative;display:inline-block;">r</div>
+                                    <div style="position:relative;display:inline-block;">a</div>
+                                    <div style="position:relative;display:inline-block;">p</div>
+                                    <div style="position:relative;display:inline-block;">h</div>
+                                    <div style="position:relative;display:inline-block;">y</div>
+                                </div>
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">M</div>
+                                    <div style="position:relative;display:inline-block;">o</div>
+                                    <div style="position:relative;display:inline-block;">d</div>
+                                    <div style="position:relative;display:inline-block;">u</div>
+                                    <div style="position:relative;display:inline-block;">l</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                </div>
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">D</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                    <div style="position:relative;display:inline-block;">s</div>
+                                    <div style="position:relative;display:inline-block;">i</div>
+                                    <div style="position:relative;display:inline-block;">g</div>
+                                    <div style="position:relative;display:inline-block;">n</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt--60">
-                            <div class="col-lg-12">
-                                <p class="disc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod consequat neque
-                                    in interdum. Mauris a nulla tortor. Nunc orci dui, blandit eu suscipit at, blandit
-                                    in dolor. Cras gravida arcu et lorem eleifend, dictum dapibus augue maximus. Integer
-                                    fermentum viverra sem, eget efficitur nisi gravida ac. Vivamus sodales, sapien quis
-                                    facilisis hendrerit, elit leo bibendum lectus, et feugiat lectus ante quis quam.
-                                    Morbi libero nunc, vulputate vitae dui id, congue ultricies risus. Proin porttitor
-                                    eu libero eget pulvinar. Aliquam tincidunt, urna quis congue blandit, eros velit
-                                    facilisis odio, eu sagittis libero enim sodales ligula.
-                                </p>
-                                <!-- quote area start -->
-                                <div class="quote-area">
-                                    <img src="images/blog/16.png" alt="blog-quote">
-                                    <h6 class="quote-title">
-                                        “VENIAM SOLEAT MOLESTIAE QUI NO, NO HAS EXPLICARI HENDRERIT, LUPTATUM EXPETENDIS
-                                        IN IUS UT SPLENDID.”
-                                    </h6>
+                        <div class="split-parent">
+                            <div class="split-line"
+                                style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">I</div>
+                                    <div style="position:relative;display:inline-block;">n</div>
+                                    <div style="position:relative;display:inline-block;">t</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                    <div style="position:relative;display:inline-block;">r</div>
+                                    <div style="position:relative;display:inline-block;">a</div>
+                                    <div style="position:relative;display:inline-block;">c</div>
+                                    <div style="position:relative;display:inline-block;">t</div>
+                                    <div style="position:relative;display:inline-block;">i</div>
+                                    <div style="position:relative;display:inline-block;">v</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
                                 </div>
-                                <!-- quote area end -->
-                                <p class="disc mt--50">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod consequat neque
-                                    in interdum. Mauris a nulla tortor. Nunc orci dui, blandit eu suscipit at, blandit
-                                    in dolor. Cras gravida arcu et lorem eleifend, dictum dapibus augue maximus. Integer
-                                    fermentum viverra sem, eget efficitur nisi gravida ac. Vivamus sodales, sapien quis
-                                    facilisis hendrerit, elit leo bibendum lectus, et feugiat lectus ante quis quam.
-                                    Morbi libero nunc, vulputate vitae dui id, congue ultricies risus. Proin porttitor
-                                    eu libero eget pulvinar. Aliquam tincidunt, urna
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row mt--60 g-5">
-                            <div class="col-lg-6">
-                                <img src="images/blog/17.jpg" alt="blog">
-                            </div>
-                            <div class="col-lg-6">
-                                <img src="images/blog/18.jpg" alt="blog">
-                            </div>
-                        </div>
-                        <div class="row mt--60 mb--100">
-                            <div class="col-lg-12">
-                                <h3 class="title animated fadeIn">On the Specificity of Selectors</h3>
-                                <p class="disc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod consequat neque
-                                    in interdum. Mauris a nulla tortor. Nunc orci dui, blandit eu suscipit at, blandit
-                                    in dolor. Cras gravida arcu et lorem eleifend, dictum dapibus augue maximus. Integer
-                                    fermentum viverra sem, eget efficitur nisi gravida ac. Vivamus sodales, sapien quis
-                                    facilisis hendrerit, elit leo bibendum lectus, et feugiat lectus ante quis quam.
-                                    Morbi libero nunc, vulputate vitae dui id, congue ultricies risus. Proin porttitor
-                                    eu libero eget pulvinar. Aliquam tincidunt, urna
-                                </p>
-                                <p class="disc mb--0">
-                                    Natoque faucibus auctor condimentum habitasse dis nullam vivamus porta a, conubia
-                                    est lacinia netus cubilia magnis rutrum laoreet cum posuere, metus ad cras quis orci
-                                    vestibulum sed diam. Vehicula ante felis mi fusce massa nam nostra scelerisque et ut
-                                    interdum magnis leo sodales ultrices placerat, magna dictum ad per quisque venenatis
-                                    facilisis nullam volutpat enim mattis iaculis lacus sociosqu viverra. Augue lectus
-                                    varius dictum egestas ultrices libero euismod facilisis integer, sodales luctus
-                                    inceptos iaculis tincidunt imperdiet duis. Cras nibh purus sem viverra duis nunc ad,
-                                    mus dis felis eget inceptos velit accumsan, rhoncus tristique luctus suscipit
-                                    sagittis ultrices. magnis curabitur duis ultrices class cras elementum volutpat.
-                                    Viverra fringilla etiam habitant hendrerit turpis arcu laoreet pharetra molestie,
-                                    ante sapien porta tellus luctus conubia et phasellus proin, quisque facilisis erat
-                                    curae ultricies magna suspendisse placerat. Euismod senectus dis pellentesque mollis
-                                    venenatis nunc morbi proin felis erat aptent varius inceptos posuere vitae
-                                    vestibulum tempor, magnis curabitur cursus nulla justo parturient.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="post-author-blog">
-                                    <a href="#" class="thumbnail">
-                                        <img src="images/blog/19.png" alt="blog-details">
-                                    </a>
-                                    <div class="infor-wrapper">
-                                        <h5 class="title">Jhon Dahid Smith</h5>
-                                        <p class="dsic">
-                                            Nisi bibendum eros commodo phasellus viverra mi litora nullam torquent neque
-                                            iaculis, rhoncus condimentum a molestie ultricies ultrices tortor egestas
-                                            taciti eleifend, hac quam placerat cursus aliquet aenean nisl cum dis quis.
-                                        </p>
-                                        <div class="rts-social-area-one">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div style="position:relative;display:inline-block;">
+                                    <div style="position:relative;display:inline-block;">J</div>
+                                    <div style="position:relative;display:inline-block;">o</div>
+                                    <div style="position:relative;display:inline-block;">u</div>
+                                    <div style="position:relative;display:inline-block;">r</div>
+                                    <div style="position:relative;display:inline-block;">n</div>
+                                    <div style="position:relative;display:inline-block;">e</div>
+                                    <div style="position:relative;display:inline-block;">y</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="containe-false mt--90">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!-- comments area start -->
-                                <div class="rts-comment-area">
-                                    <h3 class="title-m animated fadeIn">Comments 02</h3>
-                                    <!-- single comments -->
-                                    <div class="sigle-comments-bd mt--50">
-                                        <img src="images/blog/22.png" alt="blog_image">
-                                        <div class="inner-info">
-                                            <div class="titlea-rea">
-                                                <h6 class="title">Andrew Mation</h6>
-                                                <button class="replay-btn">Reply</button>
-                                            </div>
-                                            <div class="details-area">
-                                                <p class="disc">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-                                                    consequat neque in interdum. Mauris a nulla tortor. <br> Nunc orci
-                                                    dui dictum dapibus augue maximus Integer fermentum viverra sem.
-                                                </p>
-                                                <span class="date">25 June, 2023</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single comments end -->
-                                    <!-- single comments -->
-                                    <div class="sigle-comments-bd mt--50 pl--150 pl_md--50 pl_sm--15">
-                                        <img src="images/blog/23.png" alt="blog_image">
-                                        <div class="inner-info">
-                                            <div class="titlea-rea">
-                                                <h6 class="title">Andrew Mation</h6>
-                                                <button class="replay-btn">Reply</button>
-                                            </div>
-                                            <div class="details-area">
-                                                <p class="disc">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-                                                    consequat neque in interdum. Mauris a nulla tortor. Nunc orci dui
-                                                    dictum dapibus augue maximus Integer fermentum viverra sem.
-                                                </p>
-                                                <span class="date">25 June, 2023</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single comments end -->
-                                </div>
-                                <!-- comments area end -->
-                            </div>
-                        </div>
-                        <div class="row pt--50">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="title-area-pd">
-                                        <h2 class="title quote" style="">
-                                            <div class="split-parent">
-                                                <div class="split-line"
-                                                    style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform: translate(0%, 100%);">
-                                                    <div style="position:relative;display:inline-block;">
-                                                        <div style="position:relative;display:inline-block;">L</div>
-                                                        <div style="position:relative;display:inline-block;">e</div>
-                                                        <div style="position:relative;display:inline-block;">a</div>
-                                                        <div style="position:relative;display:inline-block;">v</div>
-                                                        <div style="position:relative;display:inline-block;">e</div>
-                                                    </div>
-                                                    <div style="position:relative;display:inline-block;">
-                                                        <div style="position:relative;display:inline-block;">a</div>
-                                                    </div>
-                                                    <div style="position:relative;display:inline-block;">
-                                                        <div style="position:relative;display:inline-block;">R</div>
-                                                        <div style="position:relative;display:inline-block;">e</div>
-                                                        <div style="position:relative;display:inline-block;">p</div>
-                                                        <div style="position:relative;display:inline-block;">l</div>
-                                                        <div style="position:relative;display:inline-block;">y</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </h2>
-                                        <p class="rts-text-anim" style="perspective: 400px;">
-                                        <div
-                                            style="display: block; text-align: start; position: relative; translate: none; rotate: none; scale: none; transform-origin: 50% 0%; transform: translate3d(0px, 0px, 0px); opacity: 0;">
-                                            Your email address will not be published. Required fields are marked *</div>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt--60">
-                                <div class="col-lg-12">
-                                    <form action="#" class="product-details-form">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <!-- ingle -input-area -->
-                                                <div class="single-input rts-slide-up-gsap"
-                                                    style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                                    <label for="name">Name*</label>
-                                                    <input id="name" type="text" placeholder="Andrew Daniel Smith"
-                                                        required="">
-                                                </div>
-                                                <!-- ingle -input-area end -->
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <!-- ingle -input-area -->
-                                                <div class="single-input rts-slide-up-gsap"
-                                                    style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                                    <label for="email">Email*</label>
-                                                    <input id="email" type="email">
-                                                </div>
-                                                <!-- ingle -input-area end -->
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <!-- ingle -input-area -->
-                                                <div class="single-input rts-slide-up-gsap"
-                                                    style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                                    <label for="website">Website*</label>
-                                                    <input id="website" type="text">
-                                                </div>
-                                                <!-- ingle -input-area end -->
-                                            </div>
-                                            <div class="col-gl-12 mt--30">
-                                                <!-- ingle -input-area -->
-                                                <div class="single-input rts-slide-up-gsap"
-                                                    style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                                    <label for="message">Comment*</label>
-                                                    <textarea id="message"></textarea>
-                                                </div>
-                                                <!-- ingle -input-area end -->
-                                            </div>
-                                        </div>
-                                        <button class="submit-pd">Post Comment</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="containe-false rts-section-gapTop">
-                        <div class="row g-5">
-                            <div class="col-lg-6 rts-slide-up-gsap"
-                                style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                <div class="blog-single-main-wrapper style-one">
-                                    <a href="#" class="thumbnail">
-                                        <div class="imgae-box">
-                                            <img src="images/blog/20.jpg" alt="blog">
-                                        </div>
-                                    </a>
-                                    <div class="inner">
-                                        <div class="head">
-                                            <span class="date">March 25, 2023</span>
-                                            <span class="time">8 min read</span>
-                                        </div>
-                                        <div class="body">
-                                            <a href="#">
-                                                <h4 class="title">Marketing Musings: Insights from a <br> Social Media
-                                                    Marketer</h4>
-                                            </a>
-                                            <a href="#" class="rts-btn btn-primary mt--30">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 rts-slide-up-gsap"
-                                style="translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform-origin: 0% 0%; transform: translate(0px, 100px);">
-                                <div class="blog-single-main-wrapper style-one">
-                                    <a href="#" class="thumbnail">
-                                        <div class="imgae-box">
-                                            <img src="images/blog/21.jpg" alt="blog">
-                                        </div>
-                                    </a>
-                                    <div class="inner">
-                                        <div class="head">
-                                            <span class="date">March 25, 2023</span>
-                                            <span class="time">8 min read</span>
-                                        </div>
-                                        <div class="body">
-                                            <a href="#">
-                                                <h4 class="title">Marketing Musings: Insights from a <br> Social Media
-                                                    Marketer</h4>
-                                            </a>
-                                            <a href="#" class="rts-btn btn-primary mt--30">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-12 col-sm-12 col-12 pl--30 pl_md--10 pl_sm--10 mt_sm--50 h-100 rts-sticky-column-item"
-                    style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-                    <!-- single wizered start -->
-
-                    <!-- single wizered End -->
-                    <!-- single wizered start -->
-
-                    <!-- single wizered End -->
-                    <!-- single wizered start -->
-
-                    <!-- single wizered End -->
-                    <!-- single wizered start -->
-
-                    <!-- single wizered End -->
-                    <!-- single wizered start -->
-
-                    <!-- single wizered End -->
-                    <div class="theiaStickySidebar"
-                        style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
-                        <div class="rts-single-wized search">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Search Hear
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <div class="rts-search-wrapper">
-                                    <input class="Search" type="text" placeholder="Enter Keyword">
-                                    <button><i class="fal fa-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rts-single-wized Categories">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Categories
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <!-- single categoris -->
-                                <ul class="single-categories">
-                                    <li><a href="#">Business Solution <i class="far fa-long-arrow-right"></i></a></li>
-                                </ul>
-                                <!-- single categoris End -->
-                                <!-- single categoris -->
-                                <ul class="single-categories">
-                                    <li><a href="#">Strategy Growth<i class="far fa-long-arrow-right"></i></a></li>
-                                </ul>
-                                <!-- single categoris End -->
-                                <!-- single categoris -->
-                                <ul class="single-categories">
-                                    <li><a href="#">Finance Solution<i class="far fa-long-arrow-right"></i></a></li>
-                                </ul>
-                                <!-- single categoris End -->
-                                <!-- single categoris -->
-                                <ul class="single-categories">
-                                    <li><a href="#">Investment Policy<i class="far fa-long-arrow-right"></i></a></li>
-                                </ul>
-                                <!-- single categoris End -->
-                                <!-- single categoris -->
-                                <ul class="single-categories">
-                                    <li><a href="#">Tax Managment<i class="far fa-long-arrow-right"></i></a></li>
-                                </ul>
-                                <!-- single categoris End -->
-                            </div>
-                        </div>
-                        <div class="rts-single-wized Recent-post">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Recent Posts
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <!-- recent-post -->
-                                <div class="recent-post-single">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html"><img src="images/blog/sm/01.jpg"
-                                                alt="Blog_post"></a>
-                                    </div>
-                                    <div class="content-area">
-                                        <div class="user">
-                                            <i class="fal fa-clock"></i>
-                                            <span>15 Jan, 2023</span>
-                                        </div>
-                                        <a class="post-title" href="blog-details.html">
-                                            <h6 class="title">We would love to share a similar experience</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- recent-post End -->
-                                <!-- recent-post -->
-                                <div class="recent-post-single">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html"><img src="images/blog/sm/02.jpg"
-                                                alt="Blog_post"></a>
-                                    </div>
-                                    <div class="content-area">
-                                        <div class="user">
-                                            <i class="fal fa-clock"></i>
-                                            <span>15 Jan, 2023</span>
-                                        </div>
-                                        <a class="post-title" href="blog-details.html">
-                                            <h6 class="title">We would love to share a similar experience</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- recent-post End -->
-                                <!-- recent-post -->
-                                <div class="recent-post-single">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html"><img src="images/blog/sm/03.jpg"
-                                                alt="Blog_post"></a>
-                                    </div>
-                                    <div class="content-area">
-                                        <div class="user">
-                                            <i class="fal fa-clock"></i>
-                                            <span>15 Jan, 2023</span>
-                                        </div>
-                                        <a class="post-title" href="blog-details.html">
-                                            <h6 class="title">We would love to share a similar experience</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- recent-post End -->
-                            </div>
-                        </div>
-                        <div class="rts-single-wized Recent-post">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Gallery Posts
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <div class="gallery-inner">
-                                    <div class="row-1 single-row">
-                                        <a href="#"><img src="images/blog/sm/04.jpg" alt="Gallery"></a>
-                                        <a href="#"><img src="images/blog/sm/05.jpg" alt="Gallery"></a>
-                                        <a href="#"><img src="images/blog/sm/06.jpg" alt="Gallery"></a>
-                                    </div>
-                                    <div class="row-2 single-row">
-                                        <a href="#"><img src="images/blog/sm/07.jpg" alt="Gallery"></a>
-                                        <a href="#"><img src="images/blog/sm/08.jpg" alt="Gallery"></a>
-                                        <a href="#"><img src="images/blog/sm/09.jpg" alt="Gallery"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rts-single-wized">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Popular Tags
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <div class="tags-wrapper">
-                                    <a href="#">Services</a>
-                                    <a href="#">Business</a>
-                                    <a href="#">Growth</a>
-                                    <a href="#">Finance</a>
-                                    <a href="#">UI/UX Design</a>
-                                    <a href="#">Solution</a>
-                                    <a href="#">Speed</a>
-                                    <a href="#">Strategy</a>
-                                    <a href="#">Technology</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resize-sensor"
-                            style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
-                            <div class="resize-sensor-expand"
-                                style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
-                                <div
-                                    style="position: absolute; left: 0px; top: 0px; transition: all; width: 424px; height: 2031px;">
-                                </div>
-                            </div>
-                            <div class="resize-sensor-shrink"
-                                style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
-                                <div
-                                    style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </h3>
+                </a>
+                <p class="disc">
+                    If you want to have an effective content with the latest trends. When you think of
+                    creating <br> content most people’s minds go straight to blogging.
+                </p>
+                <a href="blog-details.html" class="read-more-bb">Read More</a>
             </div>
-        </div>
     </div>
-    <!-- blog details area end -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- blog post area inner end -->
 
 
 
 
 
 
+
+
+    <!-- Footer style two -->
     <!-- rts footer two area start -->
     <div class="rts-footer-two-area bg-footer-2 bg_image-1">
         <div class="container-140">
@@ -658,20 +559,17 @@
                         <!-- footer left start -->
                         <div class="footer-left-two">
                             <a href="index.html" class="logo">
-                                <img src="/Krafthaus Logo white version.png" alt="logo" width="250px">
+                                <img src="images/logo/03.svg" alt="logo">
                             </a>
                             <p class="disc">
-                                Ready to scale your story through content,<br> performance, and
-                                purpose-driven design?
+                                Teor facilis porta maurs ligula vivamus <br> nullam laoreet pharetra posuere.
                             </p>
                             <div class="rts-social-area-one">
                                 <ul>
-                                    <li><a href="#" aria-label="Follow us on Facebook"><i
-                                                class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" aria-label="Follow us on Instagram"><i
-                                                class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" aria-label="Connect with us on LinkedIn"><i
-                                                class="fa-brands fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -682,9 +580,9 @@
                             <!-- contact info -->
                             <div class="contact-information">
                                 <h5 class="title">Contact Info</h5>
-                                <a href="#" class="map">Bangalore <br> India</a>
-                                <a href="#" class="mailto:hello@krafthaus.in">hello@krafthaus.in</a>
-                                <a href="tel:+91 - 7795 356 168<" class="number">+91 - 7795 356 168<< /a>
+                                <a href="#" class="map">Maxuel Street, Frankfurt <br> 2589 Germany.</a>
+                                <a href="#" class="mail">information.mighty.com</a>
+                                <a href="tel:28586235932159" class="number">+2858 62359 32159</a>
                             </div>
                             <!-- contact info end -->
                             <!-- contact info -->
@@ -692,10 +590,12 @@
                                 <h5 class="title">Subscribe Newsletter</h5>
                                 <p class="map">Subscribe our newsletter for future updates. don’t <br> worry we don’t
                                     spam your email address</p>
-                                <form action="#" class="form-footer-2">
-                                    <label for="email-1"><i class="fa-regular fa-envelope"></i></label>
-                                    <input id="email-1" type="email" placeholder="Enter your email..." required="">
-                                    <button type="submit">Subscribe</button>
+                                <form action="#" class="form-footer-2" aria-label="Newsletter subscription">
+                                    <label for="email-1" aria-label="Email address"><i class="fa-regular fa-envelope"
+                                            aria-hidden="true"></i></label>
+                                    <input id="email-1" type="email" placeholder="Enter your email..." required=""
+                                        aria-label="Enter your email address">
+                                    <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
                                 </form>
                             </div>
                             <!-- contact info end -->
@@ -706,7 +606,7 @@
                 <div class="col-lg-12">
                     <!-- copyright-area-start -->
                     <div class="copy-right-area-start-two">
-                        <p class="left">2023 © KraftHaus. All rights reserved.</p>
+                        <p class="left">2024 © KraftHaus. All rights reserved.</p>
                     </div>
                     <!-- copyright-area-end -->
                 </div>
@@ -714,6 +614,8 @@
         </div>
     </div>
     <!-- rts footer two area end -->
+
+    <!-- Footer style two End -->
 
 
     <!-- Scripts style two -->
@@ -737,11 +639,11 @@
 
     <!-- pre loader start -->
     <div class="rts-cursor cursor-outer" data-default="yes" data-link="yes" data-slider="no"
-        style="visibility: visible; transform: translate(14px, 804px);">
+        style="visibility: visible; transform: translate(29px, 792px);">
         <span class="fn-cursor"></span>
     </div>
     <div class="rts-cursor cursor-inner" data-default="yes" data-link="yes" data-slider="no"
-        style="visibility: visible; transform: translate(14px, 804px);">
+        style="visibility: visible; transform: translate(29px, 792px);">
         <span class="fn-cursor">
             <span class="fn-left"></span>
             <span class="fn-right"></span>
@@ -762,11 +664,14 @@
 
 
 
-    <script defer="" src="js/vendor/jquery.min.js"></script>
-    <script defer="" src="js/plugins/bootstrap.min.js"></script>
-    <script defer="" src="js/plugins/contact.form.js"></script>
-    <script defer="" src="js/vendor/waypoint.js"></script>
-    <script defer="" src="js/plugins/swiper.js"></script>
+    <!-- Core JavaScript libraries -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/waypoint.js"></script>
+
+    <!-- Essential plugins -->
+    <script defer src="js/plugins/contact.form.js"></script>
+    <script defer src="js/plugins/swiper.js"></script>
 
 
     <!-- for side bar sticky -->
@@ -778,7 +683,7 @@
     <script defer="" src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <script defer="" src="js/plugins/smoothscroll-varticle.js"></script>
-    <script defer="" src="js/vendor/gsap.js"></script>
+    <script src="js/vendor/gsap.js"></script>
     <script defer="" src="js/plugins/scrolltiger.js"></script>
     <script defer="" src="js/plugins/scrolltoplugin.js"></script>
     <script defer="" src="js/plugins/splittext.js"></script>
@@ -794,7 +699,7 @@
     <script defer="" src="js/plugins/tilt.js"></script>
     <script defer="" src="js/plugins/counterup.js"></script>
 
-    <script defer="" src="js/vendor/waw.js"></script>
+    <script src="js/vendor/waw.js"></script>
     <!-- custom javascripts -->
     <script defer="" src="js/main.js"></script>
     <!-- Scripts style two End -->
