@@ -1,5 +1,29 @@
-/*=== Scss File indexing Here===========
+/* footer compact variant (scoped strictly to footer) */
+.rts-footer-area-one.footer-compact {
+  /* extra specificity to override theme spacing */
+  padding-top: 36px !important;
+}
+.rts-footer-area-one .footer-compact__row {
+  padding-bottom: 24px !important;
+}
+@media only screen and (max-width: 991px) {
+  .rts-footer-area-one.footer-compact { padding-top: 20px !important; }
+  .rts-footer-area-one .footer-compact__row { padding-bottom: 16px !important; }
+}
 
+/* footer compact variant for footer two */
+.rts-footer-two-area.footer-compact .footer-compact__inner {
+  padding-top: 40px !important;
+  padding-bottom: 30px !important;
+}
+@media only screen and (max-width: 991px) {
+  .rts-footer-two-area.footer-compact .footer-compact__inner {
+    padding-top: 24px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/*=== Scss File indexing Here===========
 1. variables
 2.typography
 3.spacing
