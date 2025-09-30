@@ -457,10 +457,12 @@
           roundLengths: true,
           loop: true,
           loopAdditionalSlides: 30,
-          mousewheel: {
-            invert: true,
-            releaseOnEdges: true
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
           },
+          mousewheel: false,
           breakpoints: {
             1700: {
               slidesPerView: 3,

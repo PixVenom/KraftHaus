@@ -153,17 +153,20 @@ body {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 @media only screen and (max-width: 767px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 body::before {
@@ -29020,6 +29023,320 @@ body.servi-ce-details .rts-footer-two-area {
   .banner-one-wrapper .hero-title-wrapper .title {
     font-size: 28px;
     line-height: 38px;
+  }
+}
+
+/* ===== COMPREHENSIVE MOBILE RESPONSIVENESS ===== */
+
+/* Mobile Header Improvements */
+@media only screen and (max-width: 991px) {
+  .header-area.header-one {
+    padding: 15px 0;
+  }
+  
+  .header-container-one .header-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-container-one .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .header-container-one .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-area.header-one {
+    padding: 10px 0;
+  }
+  
+  .header-container-one .logo img {
+    max-width: 100px;
+  }
+  
+  .header-container-one .header-right {
+    gap: 10px;
+  }
+}
+
+/* Mobile Hero Section Improvements */
+@media only screen and (max-width: 991px) {
+  .banner-area.banner-style-one {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner-area .container {
+    padding: 0 20px;
+  }
+  
+  .banner-one-wrapper {
+    margin-top: 0 !important;
+    text-align: center;
+  }
+  
+  .banner-one-wrapper .hero-title-wrapper .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-area.banner-style-one {
+    min-height: 70vh;
+    padding: 40px 0;
+  }
+  
+  .banner-area .container {
+    padding: 0 15px;
+  }
+  
+  .banner-one-wrapper .hero-title-wrapper .title {
+    margin-bottom: 25px;
+  }
+  
+  .banner-one-wrapper .para-wraph {
+    position: static !important;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .banner-one-wrapper .para-wraph p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/* Mobile Section Spacing */
+@media only screen and (max-width: 767px) {
+  .rts-section-gap {
+    padding: 40px 0;
+  }
+  
+  .rts-section-gapBottom {
+    padding-bottom: 40px;
+  }
+  
+  .rts-section-gapTop {
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .rts-section-gap {
+    padding: 30px 0;
+  }
+  
+  .rts-section-gapBottom {
+    padding-bottom: 30px;
+  }
+  
+  .rts-section-gapTop {
+    padding-top: 30px;
+  }
+}
+
+/* Mobile Content Sections */
+@media only screen and (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .row {
+    margin: 0 -10px;
+  }
+  
+  .row > [class*="col-"] {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .row {
+    margin: 0 -7.5px;
+  }
+  
+  .row > [class*="col-"] {
+    padding: 0 7.5px;
+    margin-bottom: 30px;
+  }
+  
+  /* Mobile About Section */
+  .rts-about-area-1 .row {
+    flex-direction: column-reverse;
+  }
+  
+  .rts-about-area-1 .col-lg-6:first-child {
+    margin-top: 30px;
+  }
+  
+  /* Mobile Service Cards */
+  .rts-service-area .single-service-card-box-1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .rts-service-area .single-service-card-box-1 .icon {
+    margin: 0 auto 20px;
+  }
+  
+  /* Mobile Portfolio */
+  .rts-use-case-area-one .swiper-slide {
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile Testimonials */
+  .trusted-clients-area-start .single-testimonial {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .trusted-clients-area-start .single-testimonial .client-info {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .row {
+    margin: 0 -5px;
+  }
+  
+  .row > [class*="col-"] {
+    padding: 0 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Extra small mobile adjustments */
+  .rts-about-area-1 .col-lg-6:first-child {
+    margin-top: 20px;
+  }
+  
+  .rts-service-area .single-service-card-box-1 {
+    margin-bottom: 20px;
+  }
+  
+  .trusted-clients-area-start .single-testimonial {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Typography Improvements */
+@media only screen and (max-width: 767px) {
+  h1, .h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  
+  h2, .h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  h3, .h3 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  
+  h4, .h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  h1, .h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  h2, .h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  
+  h3, .h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  h4, .h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Navigation Improvements */
+@media only screen and (max-width: 991px) {
+  .nav-area {
+    display: none;
+  }
+  
+  .mobile-menu-header {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .mobile-menu-header {
+    display: none;
+  }
+}
+
+/* Mobile Button Improvements */
+@media only screen and (max-width: 767px) {
+  .rts-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .rts-btn.btn-primary {
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+  }
+  
+  .rts-btn.btn-primary:hover {
+    background: transparent;
+    color: #fff;
   }
 }
 .rts-light-mood .rts-case-service-area-h2 .rts-btn.btn-radious {
