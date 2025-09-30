@@ -138,10 +138,10 @@
                 if (!texts || texts.length === 0) {
                     texts = [
                         'Creative Digital',
-                        'Innovative Design',
-                        'Strategic Growth',
+                        'Innovation & You',
+                        'Strategic Grow',
                         'Action Marketing',
-                        'Web Development'
+                        'Web Develop'
                     ];
                 }
 
@@ -167,6 +167,9 @@
 </head>
 
 <body class="index-one">
+    <!-- Skip to content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+    
     <!-- header area start -->
     <header class="header-area header-one header--sticky">
         <div class="header-container-one">
@@ -176,24 +179,24 @@
                 </a>
                 <div class="header-right">
 
-                    <nav class="nav-area drop-down-rts">
-                        <ul class="navbar-nav-1">
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="index.html"><span class="rolling-text">
+                    <nav class="nav-area drop-down-rts" role="navigation" aria-label="Main navigation">
+                        <ul class="navbar-nav-1" role="menubar">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="index.html" role="menuitem" aria-current="page"><span class="rolling-text">
                                         <div class="block"><span class="letter">H</span><span
                                                 class="letter">O</span><span class="letter">M</span><span
                                                 class="letter">E</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on">
-                                <a class="menu-link" href="about-style.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on" role="none">
+                                <a class="menu-link" href="about-style.html" role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">A</span><span
                                                 class="letter">B</span><span class="letter">O</span><span
                                                 class="letter">U</span><span class="letter">T</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="portfolio-filter.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="portfolio-filter.html" role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">P</span><span
                                                 class="letter">O</span><span class="letter">R</span><span
                                                 class="letter">T</span><span class="letter">F</span><span
@@ -201,8 +204,8 @@
                                                 class="letter">I</span><span class="letter">O</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="service-3.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="service-3.html" role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">S</span><span
                                                 class="letter">E</span><span class="letter">R</span><span
                                                 class="letter">V</span><span class="letter">I</span><span
@@ -211,15 +214,15 @@
                                         </div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="blog-detailsright-sidebar.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="blog-detailsright-sidebar.html" role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">B</span><span
                                                 class="letter">L</span><span class="letter">O</span><span
                                                 class="letter">G</span><span class="letter">S</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="contact.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="contact.html" role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">C</span><span
                                                 class="letter">O</span><span class="letter">N</span><span
                                                 class="letter">T</span><span class="letter">A</span><span
@@ -231,6 +234,18 @@
                     </nav>
 
                     <div class="action-area">
+                        <!-- Mobile Menu Toggle -->
+                        <div class="mobile-menu-toggle d-lg-none">
+                            <button class="hamburger-menu" type="button" 
+                                    aria-label="Toggle mobile menu" 
+                                    aria-expanded="false" 
+                                    aria-controls="mobile-menu">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                            </button>
+                        </div>
+                        
                         <div class="search-icon-header">
                             <div class="icon search-click">
                                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -259,6 +274,43 @@
     </header>
     <!-- header area end -->
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo" aria-label="KraftHaus Home">
+                <img src="/Krafthaus Logo white version.png" alt="KraftHaus Logo" width="130px" height="27px">
+            </a>
+            <button class="mobile-menu-close" 
+                    aria-label="Close mobile menu" 
+                    aria-expanded="true">
+                <i class="far fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav" role="navigation" aria-label="Main navigation">
+            <ul role="menubar">
+                <li role="none">
+                    <a href="index.html" role="menuitem" tabindex="0">HOME</a>
+                </li>
+                <li role="none">
+                    <a href="about-style.html" role="menuitem" tabindex="0">ABOUT</a>
+                </li>
+                <li role="none">
+                    <a href="portfolio-filter.html" role="menuitem" tabindex="0">PORTFOLIO</a>
+                </li>
+                <li role="none">
+                    <a href="service-3.html" role="menuitem" tabindex="0">SERVICES</a>
+                </li>
+                <li role="none">
+                    <a href="blog-detailsright-sidebar.html" role="menuitem" tabindex="0">BLOGS</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" role="menuitem" tabindex="0">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <div id="smooth-wrapper">
         <div id="smooth-content">
 
@@ -285,19 +337,19 @@
                     </a>
                 </div>
                 <div class="container">
-                    <div class="row  ptb--200 ptb_sm--150">
-                        <div class="col-lg-9">
+                    <div class="row ptb--200 ptb_sm--150">
+                        <div class="col-lg-9 col-md-12">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
                                 <h1 class="title rts_hero__title">
-                                    Driving Results <br>
-                                    with <span class="border-bottom-1">Creative Digital</span> <br>
+                                    Driving Results <br class="d-none d-md-block">
+                                    with <span class="border-bottom-1">Creative Digital</span> <br class="d-none d-md-block">
                                     Solutions
                                 </h1>
                                 <div class="para-wraph">
                                     <p class="disc hero__sub-title">
                                         Our team of experts is dedicated to helping you achieve
-                                        <br> your digital goals. From website design and development
-                                        <br> to SEO, PPC advertising, and social media marketing.
+                                        <br class="d-none d-md-block"> your digital goals. From website design and development
+                                        <br class="d-none d-md-block"> to SEO, PPC advertising, and social media marketing.
                                     </p>
                                 </div>
                                 <div class="bannerJump_animation banner-jump-button rts-scroll-down-circle-wrapper-4">
@@ -352,15 +404,15 @@
                 <!-- about main inner wrapper -->
                 <div class="container mt--100">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-6 col-sm-12">
                             <div class="left-main-about-inner">
-                                <img src="images/about/02.png" alt="about">
+                                <img src="images/about/02.png" alt="about" class="img-fluid">
                                 <div class="shape-about-two">
-                                    <img src="images/about/06.png" alt="about">
+                                    <img src="images/about/06.png" alt="about" class="img-fluid">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 pl--60 pl_sm--15 pt_md--50 pt_sm--30">
+                        <div class="col-lg-7 col-md-6 col-sm-12 pl--60 pl_sm--15 pt_md--50 pt_sm--30">
                             <!-- about right area start -->
                             <div class="about-area-right-start">
                                 <div class="inner-about-wrapper">
@@ -1246,9 +1298,12 @@
                                         </p>
                                         <div class="rts-social-area-one">
                                             <ul>
-                                                <li><a href="#" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                                <li><a href="#" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                                                <li><a href="#" aria-label="Connect with us on LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                                                <li><a href="#" aria-label="Follow us on Facebook"><i
+                                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                                <li><a href="#" aria-label="Follow us on Instagram"><i
+                                                            class="fa-brands fa-instagram"></i></a></li>
+                                                <li><a href="#" aria-label="Connect with us on LinkedIn"><i
+                                                            class="fa-brands fa-linkedin"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1323,7 +1378,6 @@
                 <!-- rts-footer-area one end -->
             </div>
         </div>
-
         <!-- Scripts style two -->
         <div class="loading-screen" id="loading-screen">
             <span class="bar top-bar"></span>

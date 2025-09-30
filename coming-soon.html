@@ -23,15 +23,24 @@
     <div class="header-three">
         <div class="header-three-wrapper">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <a href="index.html" class="logo-area">
-                            <img src="images/logo/03.svg" alt="logo-area">
+                            <img src="images/logo/03.svg" class="img-fluid" alt="logo-area">
                         </a>
                         <a href="index.html" class="logo-area-white">
-                            <img src="images/logo/02.svg" alt="logo-area">
+                            <img src="images/logo/02.svg" class="img-fluid" alt="logo-area">
                         </a>
                         <div class="header-right">
+                        <!-- Mobile Menu Toggle -->
+                        <div class="mobile-menu-toggle d-lg-none">
+                            <button class="hamburger-menu" type="button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        
                             <div class="menu-btn">
                                 <span>Menu</span>
                             </div>
@@ -378,7 +387,7 @@
                 <div id="countdown-time" class="countdown-time rt-coming-soon">
                     <span></span> : <span></span> : <span></span> : <span></span>
                 </div>
-                <p class="desc">Comeback again when we’re live! Thank <br> you for understanding and patience!</p>
+                <p class="desc">Comeback again when we’re live! Thank <br class="d-none d-md-block"> you for understanding and patience!</p>
                 <div class="social-area">
                     <h4 class="title">
                         Follow Us
@@ -477,7 +486,30 @@
 
     <script defer src="js/vendor/waw.js"></script>
     <!-- custom javascripts -->
-    <script defer src="js/main.js"></script>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo">
+                <img src="/Krafthaus Logo white version.png" class="img-fluid" alt="logo" width="130px" height="27px">
+            </a>
+            <button class="mobile-menu-close">
+                <i class="far fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about-style.html">ABOUT</a></li>
+                <li><a href="portfolio-filter.html">PORTFOLIO</a></li>
+                <li><a href="service-3.html">SERVICES</a></li>
+                <li><a href="blog-detailsright-sidebar.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+<script defer src="js/main.js"></script>
     <!-- Scripts style two End -->
 </body>
 
