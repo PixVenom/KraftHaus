@@ -28954,6 +28954,74 @@ body.servi-ce-details .rts-footer-two-area {
 .rts-light-mood .rts-service-area.list .service-area-one-main-wrapper .single-item-service-one a .list-title h3 {
   color: #141414;
 }
+
+/* Mobile Menu Visibility - Hide on desktop, show only on mobile */
+.menu-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Hero Title Brand Name Styling - Force override */
+.banner-one-wrapper .hero-title-wrapper .brand-name {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 15px !important;
+  color: #fff !important;
+  opacity: 0.8 !important;
+  display: block !important;
+  font-family: var(--font-heading, sans-serif) !important;
+  line-height: 1.2 !important;
+}
+
+/* Ensure the brand name appears above the title */
+.banner-one-wrapper .hero-title-wrapper {
+  position: relative;
+}
+
+/* Responsive Hero Title Layout */
+.banner-one-wrapper .hero-title-wrapper .title {
+  line-height: 1.1;
+}
+
+/* Mobile responsiveness for hero title */
+@media only screen and (max-width: 1199px) {
+  .banner-one-wrapper .hero-title-wrapper .title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-one-wrapper .hero-title-wrapper .title {
+    font-size: 46px;
+    line-height: 56px;
+  }
+  
+  .banner-one-wrapper .hero-title-wrapper .title br {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .banner-one-wrapper .hero-title-wrapper .title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .banner-one-wrapper .hero-title-wrapper .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
 .rts-light-mood .rts-case-service-area-h2 .rts-btn.btn-radious {
   color: #141414;
   border: 1px solid #787878;
