@@ -676,7 +676,7 @@ ol ul {
 }
 
 .rts-section-gap {
-  padding: 150px 0;
+  padding: 10px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gap {
@@ -23636,13 +23636,12 @@ main {
   position: relative;
   overflow: hidden;
 }
+/* Testimonial Arrow Position Fix */
 .swiper-testimonails-style-one-main-wrapper .button-area-next-prev {
-  margin-right: 110px;
-}
-@media only screen and (max-width: 575px) {
-  .swiper-testimonails-style-one-main-wrapper .button-area-next-prev {
-    display: none;
-  }
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 120px;
 }
 .swiper-testimonails-style-one-main-wrapper .swiper-button-next,
 .swiper-testimonails-style-one-main-wrapper .swiper-button-prev {
