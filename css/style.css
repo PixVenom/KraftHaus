@@ -29619,12 +29619,26 @@ body.servi-ce-details .rts-footer-two-area {
         font-size: 3.5rem !important;
         line-height: 1.2 !important;
     }
+    
+    /* Ensure revealing text is visible on mobile */
+    .rts_hero__title .border-bottom-1 {
+        color: #fff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
 
 @media (max-width: 991px) {
     .rts_hero__title {
         font-size: 2.8rem !important;
         line-height: 1.3 !important;
+    }
+    
+    /* Ensure revealing text is visible on tablet */
+    .rts_hero__title .border-bottom-1 {
+        color: #fff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .hero__sub-title {
@@ -29647,6 +29661,28 @@ body.servi-ce-details .rts-footer-two-area {
         line-height: 1.3 !important;
     }
     
+    /* Ensure revealing text is visible on mobile */
+    .rts_hero__title .border-bottom-1 {
+        color: #fff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-block !important;
+        position: relative !important;
+    }
+    
+    /* Ensure typing animation works on mobile */
+    .rts_hero__title .border-bottom-1 .typing-wrapper {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .rts_hero__title .border-bottom-1 .typing-caret {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
     .hero__sub-title {
         font-size: 1rem !important;
         line-height: 1.5 !important;
@@ -29666,6 +29702,28 @@ body.servi-ce-details .rts-footer-two-area {
     .rts_hero__title {
         font-size: 1.8rem !important;
         line-height: 1.4 !important;
+    }
+    
+    /* Ensure revealing text is visible on small mobile */
+    .rts_hero__title .border-bottom-1 {
+        color: #fff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-block !important;
+        position: relative !important;
+    }
+    
+    /* Ensure typing animation works on small mobile */
+    .rts_hero__title .border-bottom-1 .typing-wrapper {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .rts_hero__title .border-bottom-1 .typing-caret {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .hero__sub-title {
