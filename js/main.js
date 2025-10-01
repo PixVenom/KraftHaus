@@ -457,10 +457,12 @@
           roundLengths: true,
           loop: true,
           loopAdditionalSlides: 30,
-          mousewheel: {
-            invert: true,
-            releaseOnEdges: true
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
           },
+          mousewheel: false,
           breakpoints: {
             1700: {
               slidesPerView: 3,
@@ -2662,5 +2664,147 @@
 
   rtsJs.m();
 
+  // Mobile Menu Functionality with Enhanced Accessibility
+  function initMobileMenu() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    const mobileMenuItems = document.querySelectorAll('.mobile-nav [role="menuitem"]');
+
+    if (hamburgerMenu && mobileMenu && mobileMenuOverlay) {
+      let currentMenuItemIndex = -1;
+
+      // Open mobile menu
+      hamburgerMenu.addEventListener('click', function() {
+        openMobileMenu();
+      });
+
+      // Close mobile menu
+      function closeMobileMenu() {
+        hamburgerMenu.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
+        mobileMenuClose.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        
+        // Remove focus from menu items
+        mobileMenuItems.forEach(item => item.setAttribute('tabindex', '-1'));
+        
+        // Return focus to hamburger button
+        hamburgerMenu.focus();
+        currentMenuItemIndex = -1;
+      }
+
+      // Open mobile menu
+      function openMobileMenu() {
+        hamburgerMenu.classList.add('active');
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'true');
+        mobileMenuClose.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        
+        // Make menu items focusable
+        mobileMenuItems.forEach(item => item.setAttribute('tabindex', '0'));
+        
+        // Focus first menu item
+        if (mobileMenuItems.length > 0) {
+          mobileMenuItems[0].focus();
+          currentMenuItemIndex = 0;
+        }
+      }
+
+      // Close menu when clicking overlay
+      mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+      // Close menu when clicking close button
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close menu when clicking nav links
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // Enhanced keyboard navigation
+      function handleMenuKeydown(e) {
+        if (!mobileMenu.classList.contains('active')) return;
+
+        switch(e.key) {
+          case 'Escape':
+            closeMobileMenu();
+            break;
+          case 'ArrowDown':
+            e.preventDefault();
+            currentMenuItemIndex = Math.min(currentMenuItemIndex + 1, mobileMenuItems.length - 1);
+            mobileMenuItems[currentMenuItemIndex].focus();
+            break;
+          case 'ArrowUp':
+            e.preventDefault();
+            currentMenuItemIndex = Math.max(currentMenuItemIndex - 1, 0);
+            mobileMenuItems[currentMenuItemIndex].focus();
+            break;
+          case 'Home':
+            e.preventDefault();
+            currentMenuItemIndex = 0;
+            mobileMenuItems[currentMenuItemIndex].focus();
+            break;
+          case 'End':
+            e.preventDefault();
+            currentMenuItemIndex = mobileMenuItems.length - 1;
+            mobileMenuItems[currentMenuItemIndex].focus();
+            break;
+        }
+      }
+
+      // Add keyboard event listeners
+      document.addEventListener('keydown', handleMenuKeydown);
+
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 991 && mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+
+      // Trap focus within mobile menu when open
+      function trapFocus(e) {
+        if (!mobileMenu.classList.contains('active')) return;
+
+        const focusableElements = mobileMenu.querySelectorAll(
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+        );
+        const firstFocusableElement = focusableElements[0];
+        const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      }
+
+      document.addEventListener('keydown', trapFocus);
+    }
+  }
+
+  // Initialize mobile menu when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
 
 })(jQuery, window)

@@ -22,10 +22,10 @@
         <div class="container">
             <div class="section-inner text-center">
                 <h2 class="title-elements-parent">
-                    <span>404</span> <br>
+                    <span>404</span> <br class="d-none d-md-block">
                     Page Not Found
                 </h2>
-                <p class="desc">Sorry , the page you seems looking for, has been <br> moved, redirected or removed
+                <p class="desc">Sorry , the page you seems looking for, has been <br class="d-none d-md-block"> moved, redirected or removed
                     permanently</p>
                 <div class="buttons-main-wrapper-elements justify-content-center">
                     <a href="index.html" class="rts-btn btn-primary">Back To Homepage</a>
@@ -116,7 +116,30 @@
 
     <script defer src="js/vendor/waw.js"></script>
     <!-- custom javascripts -->
-    <script defer src="js/main.js"></script>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo">
+                <img src="/Krafthaus Logo white version.png" class="img-fluid" alt="logo" width="130px" height="27px">
+            </a>
+            <button class="mobile-menu-close">
+                <i class="far fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about-style.html">ABOUT</a></li>
+                <li><a href="portfolio-filter.html">PORTFOLIO</a></li>
+                <li><a href="service-3.html">SERVICES</a></li>
+                <li><a href="blog-detailsright-sidebar.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+<script defer src="js/main.js"></script>
     <!-- Scripts style two End -->
 </body>
 
