@@ -23,39 +23,31 @@
         <div class="header-container-one">
             <div class="header-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="/Krafthaus Logo white version.png" class="img-fluid" alt="logo" width="130px" ,
-                        height="27px">
+                    <img src="/Krafthaus Logo white version.png" alt="logo" width="130px" , height="27px">
                 </a>
                 <div class="header-right">
-                    <!-- Mobile Menu Toggle -->
-                    <div class="mobile-menu-toggle d-lg-none">
-                        <button class="hamburger-menu" type="button" aria-label="Toggle mobile menu"
-                            aria-expanded="false" aria-controls="mobile-menu">
-                            <span class="hamburger-line"></span>
-                            <span class="hamburger-line"></span>
-                            <span class="hamburger-line"></span>
-                        </button>
-                    </div>
 
-
-                    <nav class="nav-area drop-down-rts">
-                        <ul class="navbar-nav-1">
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="index.html"><span class="rolling-text">
+                    <nav class="nav-area drop-down-rts" role="navigation" aria-label="Main navigation">
+                        <ul class="navbar-nav-1" role="menubar">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="index.html" onclick="window.location.href='index.html'" role="menuitem"
+                                    aria-current="page"><span class="rolling-text">
                                         <div class="block"><span class="letter">H</span><span
                                                 class="letter">O</span><span class="letter">M</span><span
                                                 class="letter">E</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on">
-                                <a class="menu-link" href="about-style.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on" role="none">
+                                <a class="menu-link" href="about.html" onclick="window.location.href='about.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">A</span><span
                                                 class="letter">B</span><span class="letter">O</span><span
                                                 class="letter">U</span><span class="letter">T</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="portfolio-filter.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="portfolio-filter.html" onclick="window.location.href='portfolio-filter.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">P</span><span
                                                 class="letter">O</span><span class="letter">R</span><span
                                                 class="letter">T</span><span class="letter">F</span><span
@@ -63,8 +55,9 @@
                                                 class="letter">I</span><span class="letter">O</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="service-3.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="service-3.html" onclick="window.location.href='service-3.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">S</span><span
                                                 class="letter">E</span><span class="letter">R</span><span
                                                 class="letter">V</span><span class="letter">I</span><span
@@ -73,15 +66,18 @@
                                         </div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="blog-detailsright-sidebar.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="blog-detailsright-sidebar.html"
+                                    onclick="window.location.href='blog-detailsright-sidebar.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">B</span><span
                                                 class="letter">L</span><span class="letter">O</span><span
                                                 class="letter">G</span><span class="letter">S</span></div>
                                     </span></a>
                             </li>
-                            <li class="menu-item main-nav-on menu-item-has-children">
-                                <a href="contact.html"><span class="rolling-text">
+                            <li class="menu-item main-nav-on menu-item-has-children" role="none">
+                                <a href="contact.html" onclick="window.location.href='contact.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">C</span><span
                                                 class="letter">O</span><span class="letter">N</span><span
                                                 class="letter">T</span><span class="letter">A</span><span
@@ -93,6 +89,179 @@
                     </nav>
 
                     <div class="action-area">
+                        <!-- Mobile Menu Toggle -->
+                        <div class="menu-btn">
+
+                            <div class="rts-offcanvas-wrapper">
+                                <div class="container-menu">
+                                    <div class="action-menu">
+                                        <div class="close-event" style="display: none;"></div>
+                                        <div class="open-event">
+                                            <!-- <div class="text">
+                        <span>Menu</span>
+                        <span>Close</span>
+                    </div> -->
+                                            <div class="burger">
+                                                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon-close" data-v-649bbaab="">
+                                                    <line x1="13.788" y1="1.28816" x2="1.06011" y2="14.0161"
+                                                        stroke="currentColor" stroke-width="1.2"
+                                                        style="opacity: 0; stroke-dasharray: 0, 999px;"></line>
+                                                    <line x1="1.06049" y1="1.43963" x2="13.7884" y2="14.1675"
+                                                        stroke="currentColor" stroke-width="1.2"
+                                                        style="opacity: 0; stroke-dasharray: 0, 999px;"></line>
+                                                </svg>
+                                                <svg viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon-burger" data-v-649bbaab="">
+                                                    <line x1="18" y1="0.6" y2="0.6" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 0.6000000238418579"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                    <line x1="18" y1="5.7167" y2="5.7167" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 5.716700077056885"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                    <line x1="18" y1="10.8334" y2="10.8334" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 10.833399772644043"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rts-fs-menu">
+                                    <div class="rts-fs-container row">
+
+                                        <div class="rts-fs--nav col-12 col-md-6">
+                                            <ul id="primary-menu" class="navbar-nav-button active">
+                                                <li id="menu-item-76" class="menu-item menu-item-has-children">
+                                                    <a href="index.html"
+                                                        onclick="window.location.href='index.html'">Home<span><svg
+                                                                height="24" viewBox="0 0 24 24" width="24"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                </li>
+                                                <li id="menu-item-767" class="menu-item menu-item-has-children">
+                                                    <a href="about.html"
+                                                        onclick="window.location.href='about.html'">About<span><svg
+                                                                height="24" viewBox="0 0 24 24" width="24"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                </li>
+                                                <li id="menu-item-768" class="menu-item menu-item-has-children">
+                                                    <a href="portfolio-filter.html"
+                                                        onclick="window.location.href='portfolio-filter.html'">Portfolio<span><svg
+                                                                height="24" viewBox="0 0 24 24" width="24"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-3.html">Services<span><svg height="24"
+                                                                viewBox="0 0 24 24" width="24"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="blog-detailsright-sidebar.html"
+                                                        onclick="window.location.href='blog-detailsright-sidebar.html'">Blogs<span><svg
+                                                                height="24" viewBox="0 0 24 24" width="24"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path class="heroicon-ui"
+                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                </li>
+                                                <li class="menu-item"><a href="contact.html"
+                                                        onclick="window.location.href='contact.html'">Contact</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="rts-fs--contacts col-12 col-md-6">
+                                            <div class="contact-inner">
+                                                <div class="contact-information">
+                                                    <h2 class="heading-title">Our Office</h2>
+                                                    <div class="address">
+                                                        <ul>
+                                                            <li>
+                                                                <p>98 Post St, Maxuel Street, Frankfurt</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>575 Market St, Maxuel Street, Frankfurt</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="contact-information">
+                                                    <h2 class="heading-title">Get In Touch</h2>
+                                                    <div class="contact">
+                                                        <ul>
+                                                            <li><a href="mailto:information.mighty.com"
+                                                                    class="mail">information.mighty.com</a></li>
+                                                            <li><a href="tel:28586235932159" class="number">+2858 62359
+                                                                    32159</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="rts-social-area-one">
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="search-icon-header">
                             <div class="icon search-click">
                                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none"

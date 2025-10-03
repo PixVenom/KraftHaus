@@ -2314,15 +2314,18 @@
 
         // Menu Slide Effect
         $('.menu-item-has-children > a').on('click', function (event) {
-          event.preventDefault();
-          var back_text = $(this).text();
-          $(this).closest('ul').removeClass('active');
-          $(this).next('ul.sub-menu').addClass('active').find('.menu-item--back a').text(back_text);
-          gsap.to(".rts-offcanvas-wrapper .navbar-nav-button", {
-            x: "-=100%",
-            ease: Power3.easeOut,
-            duration: .6
-          });
+          // Only prevent default if there's actually a sub-menu
+          if ($(this).next('ul.sub-menu').length > 0) {
+            event.preventDefault();
+            var back_text = $(this).text();
+            $(this).closest('ul').removeClass('active');
+            $(this).next('ul.sub-menu').addClass('active').find('.menu-item--back a').text(back_text);
+            gsap.to(".rts-offcanvas-wrapper .navbar-nav-button", {
+              x: "-=100%",
+              ease: Power3.easeOut,
+              duration: .6
+            });
+          }
         });
 
         $(document).on('click', '.menu-item--back', function () {
