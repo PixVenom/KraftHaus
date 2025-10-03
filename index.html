@@ -190,8 +190,8 @@
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on" role="none">
-                                <a class="menu-link" href="about-style.html"
-                                    onclick="window.location.href='about-style.html'" role="menuitem"><span
+                                <a class="menu-link" href="about.html"
+                                    onclick="window.location.href='about.html'" role="menuitem"><span
                                         class="rolling-text">
                                         <div class="block"><span class="letter">A</span><span
                                                 class="letter">B</span><span class="letter">O</span><span
@@ -1314,12 +1314,56 @@
                                     <div class="main-wrapper-case-studies scrolltext-wrapper">
                                         <div class="scrollingText-three"
                                             style="translate: none; rotate: none; scale: none; transform: translate(4.0788%, 0%) translate3d(553.1px, 0px, 0px);">
-                                            <h2 class="title">
+                                            <h2 class="title" style="color: grey;">
                                                 Our <span>Success</span> Stories .
                                                 Our <span>Success</span> Stories .
                                                 Our <span>Success</span> Stories .
                                             </h2>
                                         </div>
+                                        
+                                        <script>
+                                        // Inline tile-like animation for scrollingText-three
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            const scrollingElement = document.querySelector('.scrollingText-three');
+                                            if (scrollingElement) {
+                                                let isAnimating = false;
+                                                
+                                                function animateTile() {
+                                                    if (isAnimating) return;
+                                                    isAnimating = true;
+                                                    
+                                                    // Reset position
+                                                    scrollingElement.style.transform = 'translateX(0px)';
+                                                    
+                                                    // Stage 1: Slide to 500px
+                                                    setTimeout(() => {
+                                                        scrollingElement.style.transition = 'transform 0.8s ease-out';
+                                                        scrollingElement.style.transform = 'translateX(500px)';
+                                                    }, 100);
+                                                    
+                                                    // Stage 2: Continue to 1000px
+                                                    setTimeout(() => {
+                                                        scrollingElement.style.transform = 'translateX(1000px)';
+                                                    }, 900);
+                                                    
+                                                    // Stage 3: Snap back to start
+                                                    setTimeout(() => {
+                                                        scrollingElement.style.transition = 'transform 0.4s ease-in';
+                                                        scrollingElement.style.transform = 'translateX(0px)';
+                                                    }, 1700);
+                                                    
+                                                    // Reset animation flag and schedule next cycle
+                                                    setTimeout(() => {
+                                                        isAnimating = false;
+                                                        setTimeout(animateTile, 1500); // 1.5 second pause
+                                                    }, 2100);
+                                                }
+                                                
+                                                // Start the animation
+                                                setTimeout(animateTile, 1000); // Initial delay
+                                            }
+                                        });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -1466,6 +1510,7 @@
                 </div>
                 <!-- our trusted clienbts area end -->
 
+                <br><br><br>
                 <!-- rts-footer-area one -->
                 <div id="contact" class="rts-footer-area-one footer-compact">
                     <div class="container">
@@ -1475,7 +1520,7 @@
                                     <!-- footer left area start -->
                                     <div class="footer-left-two">
                                         <a href="index.html" class="logo">
-                                            <img src="/Krafthaus Logo white version.png" alt="logo" width="300px">
+                                            <img src="/Krafthaus Logo white version.png" alt="logo" width="270px">
                                         </a>
                                         <p class="disc">
                                             Ready to scale your story through content,<br> performance, and

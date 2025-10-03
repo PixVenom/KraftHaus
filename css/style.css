@@ -22595,29 +22595,45 @@ main {
 }
 .trusted-clients-area-start .scrollingText-three .title {
   color: #141414;
+  font-size: 80px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
 }
 @media only screen and (max-width: 1199px) {
   .trusted-clients-area-start .scrollingText-three .title {
-    font-size: 60px;
+    font-size: 70px;
     line-height: 80px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1.5px;
   }
 }
 @media only screen and (max-width: 767px) {
   .trusted-clients-area-start .scrollingText-three .title {
-    font-size: 50px;
+    font-size: 60px;
     line-height: 60px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
   }
 }
 @media only screen and (max-width: 575px) {
   .trusted-clients-area-start .scrollingText-three .title {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
   }
 }
 @media only screen and (max-width: 479px) {
   .trusted-clients-area-start .scrollingText-three .title {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
   }
 }
 .trusted-clients-area-start .scrollingText-three .title span {

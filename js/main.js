@@ -274,15 +274,34 @@
         let scrollingTextThree = document.getElementsByClassName('scrollingText-three');
         if (scrollingTextThree.length) {
           gsap.registerPlugin(ScrollTrigger);
-          let tl2 = gsap.timeline();
-          tl2.to(".scrollingText-three", {
-            x: 1000,
-            duration: 50,
-            repeat: -1,
-            ease: 'linear'
+          
+          // Create a timeline that moves the text like tiles every 2 seconds
+          let tl = gsap.timeline({ repeat: -1 });
+          
+          // Set initial position
+          gsap.set(".scrollingText-three", { x: 0 });
+          
+          // Create the tile-like sliding animation
+          tl.to(".scrollingText-three", {
+            x: 500,
+            duration: 0.8,
+            ease: "power2.out"
           })
-          let tl = gsap.timeline();
-          tl.to('.scrollingText-three', {
+          .to(".scrollingText-three", {
+            x: 1000,
+            duration: 0.8,
+            ease: "power2.out"
+          })
+          .to(".scrollingText-three", {
+            x: 0,
+            duration: 0.4,
+            ease: "power2.in"
+          })
+          .to({}, { duration: 1.5 }); // 1.5-second pause between cycles
+          
+          // Keep the scroll trigger for scroll-based movement
+          let scrollTl = gsap.timeline();
+          scrollTl.to('.scrollingText-three', {
             xPercent: 5,
             scrollTrigger: {
               trigger: ".scrollingText-three",
@@ -1818,14 +1837,14 @@
       if (hoverTab.length) {
 
         $(".rts-hover-tab").on("mouseenter", function () {
-            $(this).addClass("active").siblings().removeClass("active");
-          }),
+          $(this).addClass("active").siblings().removeClass("active");
+        }),
 
           gsap.utils.toArray(".rts-show-revel-right").forEach((e) => {
             gsap.set(e, {
-                opacity: 0,
-                y: 100
-              }),
+              opacity: 0,
+              y: 100
+            }),
               gsap.to(e, {
                 scrollTrigger: {
                   trigger: e,
@@ -1869,70 +1888,70 @@
           // scrollTrigger pre-pinning animation
           let beforeST = gsap.fromTo(
             scroller, {
-              x: () => {
-                let distance =
-                  scroller.getBoundingClientRect().top + window.scrollY;
-                return distance * 0.5;
-              },
-              opacity: 0.2
-            }, {
-              x: () => 0,
-              opacity: 1,
-              ease: "none",
-              immediateRender: true,
-              scrollTrigger: {
-                trigger: scroller,
-                start: -10,
-                end: "50% 46.99%",
-                //markers:true,
-                invalidateOnRefresh: true,
-                scrub: true
-              }
+            x: () => {
+              let distance =
+                scroller.getBoundingClientRect().top + window.scrollY;
+              return distance * 0.5;
+            },
+            opacity: 0.2
+          }, {
+            x: () => 0,
+            opacity: 1,
+            ease: "none",
+            immediateRender: true,
+            scrollTrigger: {
+              trigger: scroller,
+              start: -10,
+              end: "50% 46.99%",
+              //markers:true,
+              invalidateOnRefresh: true,
+              scrub: true
             }
+          }
           );
           timelines.push(beforeST);
 
           // scrollTrigger pinned
           let mainST = gsap.fromTo(
             scroller, {
-              x: () => 0
-            }, {
-              x: () => -getToValue(),
-              immediateRender: false,
-              ease: "none",
-              scrollTrigger: {
-                trigger: scroller,
-                start: "50% 47%",
-                end: () =>
-                  "+=" + Math.min(getToValue(), Math.max(window.innerHeight, window.innerWidth) + 200),
-                pin: true,
-                markers: false,
-                invalidateOnRefresh: true,
-                scrub: true,
-                onRefresh: function () {}
-              }
+            x: () => 0
+          }, {
+            x: () => -getToValue(),
+            immediateRender: false,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scroller,
+              start: "50% 47%",
+              end: () =>
+                "+=" + Math.min(getToValue(), Math.max(window.innerHeight, window.innerWidth) + 200),
+              pin: true,
+              markers: false,
+              invalidateOnRefresh: true,
+              scrub: true,
+              onRefresh: function () { }
             }
+          }
           );
           timelines.push(mainST);
 
           // scrollTrigger post-pinning animation
           let afterST = gsap.fromTo(
             scroller, {
-              x: () => -getToValue(),
-              opacity: 1
-            }, {
-              x: () => -getToValue() - window.innerWidth * 0.5,
-              opacity: 0,
-              ease: "none",
-              scrollTrigger: {
-                trigger: scroller,
-                start: () => mainST.scrollTrigger.end,
-                end: () => "+=" + window.innerHeight * 0.75,
-                invalidateOnRefresh: true,
-                markers: false,
-                scrub: true
-              }
+            x: () => -getToValue(),
+            opacity: 1
+          }, {
+            x: () => -getToValue() - window.innerWidth * 0.5,
+            opacity: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scroller,
+              start: () => mainST.scrollTrigger.end,
+              end: () => "+=" + window.innerHeight * 0.75,
+              invalidateOnRefresh: true,
+              markers: false,
+              scrub: true
             }
+          }
           );
           timelines.push(afterST);
 
@@ -2002,10 +2021,10 @@
           });
 
           var maskFillTextScene = new ScrollMagic.Scene({
-              triggerElement: $this[0],
-              triggerHook: 0.8,
-              duration: $thisHeight
-            })
+            triggerElement: $this[0],
+            triggerHook: 0.8,
+            duration: $thisHeight
+          })
             .setTween(maskFillText)
             .addTo(controller);
 
@@ -2042,10 +2061,10 @@
           });
 
           var maskFillTextScene = new ScrollMagic.Scene({
-              triggerElement: $this[0],
-              triggerHook: 0.8,
-              duration: $thisHeight
-            })
+            triggerElement: $this[0],
+            triggerHook: 0.8,
+            duration: $thisHeight
+          })
             .setTween(maskFillText)
             .addTo(controller);
 
@@ -2210,7 +2229,7 @@
           $('.close-event').css('display', block);
           $('.action-menu .open-event').attr('disabled', true);
           $('.action-menu .close-event').attr('disabled', true);
-          if ($('.rts-fs-container ul').hasClass('active')) {} else {
+          if ($('.rts-fs-container ul').hasClass('active')) { } else {
             $('.navbar-nav-button').toggleClass('active');
           }
 
@@ -2369,11 +2388,11 @@
             });
             homeAgency.from(
               split_hero__subtitle.words, {
-                duration: 1,
-                x: 50,
-                autoAlpha: 0,
-                stagger: 0.01
-              },
+              duration: 1,
+              x: 50,
+              autoAlpha: 0,
+              stagger: 0.01
+            },
               "-=1"
             );
             // Your GSAP animation code ends here
@@ -2404,11 +2423,11 @@
         });
         homeAgency.from(
           split_hero__subtitle.words, {
-            duration: 1,
-            x: 50,
-            autoAlpha: 0,
-            stagger: 0.01
-          },
+          duration: 1,
+          x: 50,
+          autoAlpha: 0,
+          stagger: 0.01
+        },
           "-=1"
         );
 
@@ -2677,7 +2696,7 @@
       let currentMenuItemIndex = -1;
 
       // Open mobile menu
-      hamburgerMenu.addEventListener('click', function() {
+      hamburgerMenu.addEventListener('click', function () {
         openMobileMenu();
       });
 
@@ -2689,10 +2708,10 @@
         hamburgerMenu.setAttribute('aria-expanded', 'false');
         mobileMenuClose.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
-        
+
         // Remove focus from menu items
         mobileMenuItems.forEach(item => item.setAttribute('tabindex', '-1'));
-        
+
         // Return focus to hamburger button
         hamburgerMenu.focus();
         currentMenuItemIndex = -1;
@@ -2706,10 +2725,10 @@
         hamburgerMenu.setAttribute('aria-expanded', 'true');
         mobileMenuClose.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
-        
+
         // Make menu items focusable
         mobileMenuItems.forEach(item => item.setAttribute('tabindex', '0'));
-        
+
         // Focus first menu item
         if (mobileMenuItems.length > 0) {
           mobileMenuItems[0].focus();
@@ -2734,7 +2753,7 @@
       function handleMenuKeydown(e) {
         if (!mobileMenu.classList.contains('active')) return;
 
-        switch(e.key) {
+        switch (e.key) {
           case 'Escape':
             closeMobileMenu();
             break;
@@ -2765,7 +2784,7 @@
       document.addEventListener('keydown', handleMenuKeydown);
 
       // Handle window resize
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         if (window.innerWidth > 991 && mobileMenu.classList.contains('active')) {
           closeMobileMenu();
         }
