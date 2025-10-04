@@ -21606,16 +21606,117 @@ body.coming-soon {
 }
 
 .inner-page.service-3 .single-service-card-box-1 {
-  transition: 0.3s;
+  transition: all 0.3s ease;
   background-position: center;
-  background: transparent;
+  background: #F6F6F6;
   position: relative;
   z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 99%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+/* Text reveal overlay */
+.inner-page.service-3 .single-service-card-box-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+/* Content positioning for hover effect */
+.inner-page.service-3 .single-service-card-box-1 .icon,
+.inner-page.service-3 .single-service-card-box-1 .title,
+.inner-page.service-3 .single-service-card-box-1 .check-area-wrapper,
+.inner-page.service-3 .single-service-card-box-1 .plus-btn {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* Initial state - text slightly faded */
+.inner-page.service-3 .single-service-card-box-1 .title {
+  opacity: 0.8;
+  transform: translateY(0);
+  color: #141414;
+  transition: all 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .check-area-wrapper {
+  opacity: 0.7;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .check-area-wrapper .single-check-area p {
+  color: #141414;
+  transition: color 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .check-area-wrapper .single-check-area i {
+  color: #141414;
+  transition: color 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .plus-btn {
+  opacity: 0.6;
+  transform: translateY(10px);
+  color: #141414;
+  transition: all 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .plus-btn i {
+  color: #141414;
+  transition: color 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .icon {
+  opacity: 0.8;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.inner-page.service-3 .single-service-card-box-1 .icon svg path {
+  fill: #141414;
+  transition: fill 0.3s ease;
+}
+
+/* Ensure text returns to black when not hovering */
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .title {
+  color: #141414 !important;
+}
+
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .check-area-wrapper .single-check-area p {
+  color: #141414 !important;
+}
+
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .check-area-wrapper .single-check-area i {
+  color: #141414 !important;
+}
+
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .plus-btn {
+  color: #141414 !important;
+}
+
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .plus-btn i {
+  color: #141414 !important;
+}
+
+.inner-page.service-3 .single-service-card-box-1:not(:hover) .icon svg path {
+  fill: #141414 !important;
 }
 
 /* Service cards adapt to section background */
@@ -21756,7 +21857,123 @@ body.coming-soon {
 }
 
 .inner-page.service-3 .single-service-card-box-1:hover {
+  background: #F6F6F6;
   background-image: url(../images/service/08.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover animation - reveal text */
+.inner-page.service-3 .single-service-card-box-1:hover::before {
+  opacity: 1;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .title {
+  opacity: 1;
+  transform: translateY(-5px);
+  color: #fff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area {
+  animation: slideInUp 0.4s ease forwards;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area p {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .check-area-wrapper .single-check-area i {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .plus-btn {
+  opacity: 1;
+  transform: translateY(0);
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .plus-btn i {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .icon {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.inner-page.service-3 .single-service-card-box-1:hover .icon svg path {
+  fill: #fff !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: iconGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Icon glow animation */
+@keyframes iconGlow {
+  0% {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.inner-page.service-3 .single-service-card-box-1.two:hover {
+  background: #F0F0F0;
+  background-image: url(../images/service/09.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-page.service-3 .single-service-card-box-1.three:hover {
+  background: #EAEAEA;
+  background-image: url(../images/service/10.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-page.service-3 .single-service-card-box-1.four:hover {
+  background: #E5E5E5;
+  background-image: url(../images/service/11.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-page.service-3 .single-service-card-box-1.five:hover {
+  background: #E0E0E0;
+  background-image: url(../images/service/12.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-page.service-3 .single-service-card-box-1.six:hover {
+  background: #DBDBDB;
+  background-image: url(../images/service/13.jpg);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .inner-page.service-3 .single-service-card-box-1:hover svg path {
@@ -21791,29 +22008,85 @@ body.coming-soon {
   color: #fff;
 }
 
+/* Keyframe animation for text reveal */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for plus button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .inner-page.service-3 .single-service-card-box-1:hover::after {
   transform: translate(-50%, -50%) scale(1);
   z-index: -1;
 }
 
 .inner-page.service-3 .single-service-card-box-1.two {
+  background: #F0F0F0;
   background-image: url(../images/service/09.jpg);
 }
 
 .inner-page.service-3 .single-service-card-box-1.three {
+  background: #EAEAEA;
   background-image: url(../images/service/10.jpg);
 }
 
 .inner-page.service-3 .single-service-card-box-1.four {
+  background: #E5E5E5;
   background-image: url(../images/service/11.jpg);
 }
 
 .inner-page.service-3 .single-service-card-box-1.five {
+  background: #E0E0E0;
   background-image: url(../images/service/12.jpg);
 }
 
 .inner-page.service-3 .single-service-card-box-1.six {
+  background: #DBDBDB;
   background-image: url(../images/service/13.jpg);
+}
+
+/* Default background for first service card */
+.inner-page.service-3 .single-service-card-box-1:not(.two):not(.three):not(.four):not(.five):not(.six) {
+  background: #F6F6F6;
+  background-image: url(../images/service/08.jpg);
+}
+
+/* Responsive improvements for service cards */
+@media only screen and (max-width: 768px) {
+  .inner-page.service-3 .single-service-card-box-1 {
+    margin-bottom: 20px;
+    height: auto;
+    min-height: 300px;
+  }
+  
+  .inner-page.service-3 .single-service-card-box-1:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .inner-page.service-3 .single-service-card-box-1 {
+    margin-bottom: 16px;
+    min-height: 280px;
+  }
 }
 
 .single-service-style-seven .icon {
