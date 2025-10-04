@@ -84,6 +84,16 @@
 /* Default  */
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Custom Cursor - Hide default cursor globally */
+* {
+  cursor: none !important;
+}
+
+/* Ensure the custom cursor is always visible */
+.rts-cursor {
+  display: block !important;
+}
+
 :root {
   --color-primary: #ffffff;
   --color-secondary: #1F1F25;
@@ -15248,6 +15258,8 @@ xclip
   -o-transition: transform 0.08s ease-out, opacity 1s ease;
   transition: transform 0.08s ease-out, opacity 1s ease;
   transition: transform 0.08s ease-out, opacity 1s ease, -webkit-transform 0.08s ease-out;
+  display: block !important; /* Ensure outer cursor is always visible */
+  opacity: 1 !important; /* Make sure it's always visible */
 }
 
 .cursor-outer .fn-cursor {
@@ -15276,7 +15288,7 @@ xclip
 }
 
 .cursor-outer.cursor-hover {
-  opacity: 0;
+  opacity: 1 !important; /* Keep cursor visible on hover */
   -webkit-transition: transform 0.08s ease-out, opacity 0.2s ease;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
   transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
@@ -15287,6 +15299,7 @@ xclip
 
 .cursor-inner {
   z-index: 10000001;
+  display: none !important; /* Hide the inner cursor (dot) */
 }
 
 .cursor-inner.cursor-hover .fn-cursor {
@@ -15301,7 +15314,8 @@ xclip
 }
 
 .cursor-outer.cursor-remove {
-  display: none;
+  display: block !important; /* Keep cursor visible even when marked for removal */
+  opacity: 1 !important;
 }
 
 .cursor-inner.cursor-slider:not(.cursor-hover) .fn-cursor {
@@ -15391,7 +15405,7 @@ xclip
 }
 
 .cursor-outer.cursor-remove {
-  opacity: 0;
+  opacity: 1 !important; /* Keep cursor visible even when marked for removal */
   -webkit-transition: transform 0.08s ease-out, opacity 0.2s ease;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
   transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
