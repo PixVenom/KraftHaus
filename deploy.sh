@@ -6,10 +6,10 @@
 echo "🚀 Starting deployment to Hostinger..."
 
 # Configuration
-FTP_HOST="your-ftp-host.com"
-FTP_USER="your-ftp-username"
-FTP_PASS="your-ftp-password"
-REMOTE_DIR="/public_html/"
+FTP_HOST="ftp://82.25.107.242"
+FTP_USER="Arryan"
+FTP_PASS="Krafthaus@123"
+REMOTE_DIR="/public_html/website2/Krafthaus/"
 
 # Files to exclude
 EXCLUDE_LIST="--exclude=.git --exclude=.github --exclude=node_modules --exclude=.DS_Store --exclude=Thumbs.db --exclude=README.md --exclude=deploy.sh"
