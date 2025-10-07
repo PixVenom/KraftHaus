@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Publisher - KraftHaus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .publisher-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .publisher-header {
+            background: linear-gradient(135deg, #1F1F25 0%, #2c3e50 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .publisher-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .publisher-header p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .publish-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .publish-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .publish-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            display: none;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .instructions p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            color: #666;
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .preview-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e1e5e9;
+        }
+
+        .preview-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .preview-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e1e5e9;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .publisher-container {
+                margin: 10px;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="publisher-container">
+        <div class="publisher-header">
+            <h1>📝 Blog Publisher</h1>
+            <p>Create and publish new blog posts for KraftHaus</p>
+        </div>
+
+        <div class="form-container">
+            <a href="blog-detailsright-sidebar.html" class="back-link">← Back to Blog</a>
+
+            <div class="instructions">
+                <h3>📋 How to Publish a Blog Post</h3>
+                <p>Fill out the form below to create a new blog post. The system will:</p>
+                <ul>
+                    <li>Generate a unique blog post file</li>
+                    <li>Update the blog index automatically</li>
+                    <li>Make your post live on the website</li>
+                </ul>
+                <p><strong>Note:</strong> Your blog post will appear on the website immediately after publishing.</p>
+            </div>
+
+            <form id="blogForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="title">Blog Post Title *</label>
+                        <input type="text" id="title" name="title" required
+                            placeholder="Enter an engaging title for your blog post">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="Photography / Module Design">Photography / Module Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Content Creation">Content Creation</option>
+                            <option value="Design">Design</option>
+                            <option value="Business">Business</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="excerpt">Short Excerpt *</label>
+                    <textarea id="excerpt" name="excerpt" required rows="3"
+                        placeholder="Write a brief description of your blog post (this will appear on the blog listing page)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Blog Content *</label>
+                    <textarea id="content" name="content" required rows="10"
+                        placeholder="Write your blog post content here. You can use HTML tags for formatting like &lt;p&gt;, &lt;h2&gt;, &lt;strong&gt;, &lt;ul&gt;, &lt;li&gt;, etc."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="imageUrl">Featured Image URL (Optional)</label>
+                        <input type="url" id="imageUrl" name="imageUrl" 
+                            placeholder="https://example.com/your-image.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author Name</label>
+                        <input type="text" id="author" name="author" value="KraftHaus Team"
+                            placeholder="Author name">
+                    </div>
+                </div>
+
+                <button type="submit" class="publish-btn" id="publishBtn">
+                    🚀 Publish Blog Post
+                </button>
+            </form>
+
+            <div class="preview-section">
+                <h3>📖 Live Preview</h3>
+                <div class="preview-content" id="previewContent">
+                    <p style="color: #666; font-style: italic;">Start typing to see a preview of your blog post...</p>
+                </div>
+            </div>
+
+            <div class="status-message" id="statusMessage"></div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Publishing your blog post...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Blog Publisher JavaScript
+        class BlogPublisher {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.setupFormHandlers();
+                this.setupPreview();
+            }
+
+            setupFormHandlers() {
+                const form = document.getElementById('blogForm');
+                const publishBtn = document.getElementById('publishBtn');
+                
+                form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+                
+                form.addEventListener('submit', function() {
+                    publishBtn.disabled = true;
+                    publishBtn.textContent = 'Publishing...';
+                });
+                
+                const statusEl = document.getElementById('statusMessage');
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                            if (statusEl.classList.contains('status-error')) {
+                                publishBtn.disabled = false;
+                                publishBtn.textContent = '🚀 Publish Blog Post';
+                            }
+                        }
+                    });
+                });
+                observer.observe(statusEl, { attributes: true });
+            }
+
+            setupPreview() {
+                const titleInput = document.getElementById('title');
+                const excerptInput = document.getElementById('excerpt');
+                const contentInput = document.getElementById('content');
+                const previewContent = document.getElementById('previewContent');
+
+                const updatePreview = () => {
+                    const title = titleInput.value;
+                    const excerpt = excerptInput.value;
+                    const content = contentInput.value;
+
+                    if (!title && !excerpt && !content) {
+                        previewContent.innerHTML = '<p style="color: #666; font-style: italic;">Start typing to see a preview of your blog post...</p>';
+                        return;
+                    }
+
+                    previewContent.innerHTML = `
+                        <h2 style="color: #1F1F25; margin-bottom: 15px;">${title || 'Untitled'}</h2>
+                        <p style="color: #666; margin-bottom: 15px; font-style: italic;">${excerpt || 'No excerpt provided'}</p>
+                        <div style="color: #333; line-height: 1.6;">${content || 'No content yet...'}</div>
+                    `;
+                };
+
+                titleInput.addEventListener('input', updatePreview);
+                excerptInput.addEventListener('input', updatePreview);
+                contentInput.addEventListener('input', updatePreview);
+            }
+
+            generateSlug(title) {
+                return title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-+/g, '-')
+                    .trim();
+            }
+
+            generateBlogHTML(postData) {
+                const { title, content, imageUrl, slug, author, category } = postData;
+                const currentDate = new Date().toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} - KraftHaus Blog</title>
+    <meta name="description" content="${postData.excerpt}">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .blog-post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .blog-post-title {
+            font-size: 2.5rem;
+            color: #1F1F25;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .blog-post-meta {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .blog-post-category {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .blog-post-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 30px auto;
+            display: block;
+        }
+        .blog-post-content {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .blog-post-content h2 {
+            color: #1F1F25;
+            margin: 30px 0 15px 0;
+            font-size: 1.8rem;
+        }
+        .blog-post-content h3 {
+            color: #1F1F25;
+            margin: 25px 0 10px 0;
+            font-size: 1.4rem;
+        }
+        .blog-post-content p {
+            margin-bottom: 15px;
+        }
+        .blog-post-content ul, .blog-post-content ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        .blog-post-content li {
+            margin-bottom: 8px;
+        }
+        .back-to-blogs {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-to-blogs:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-post-container">
+        <a href="/blog-detailsright-sidebar.html" class="back-to-blogs">← Back to All Blogs</a>
+        
+        <header class="blog-post-header">
+            <div class="blog-post-category">${category}</div>
+            <h1 class="blog-post-title">${title}</h1>
+            <div class="blog-post-meta">Published on ${currentDate} by ${author}</div>
+        </header>
+        
+        ${imageUrl ? `<img src="${imageUrl}" alt="${title}" class="blog-post-image">` : ''}
+        
+        <div class="blog-post-content">
+            ${content}
+        </div>
+    </div>
+</body>
+</html>`;
+            }
+
+            showStatus(message, type) {
+                const statusEl = document.getElementById('statusMessage');
+                const loadingEl = document.getElementById('loading');
+                
+                loadingEl.style.display = 'none';
+                statusEl.textContent = message;
+                statusEl.className = `status-message status-${type}`;
+                statusEl.style.display = 'block';
+                
+                if (type === 'success') {
+                    setTimeout(() => {
+                        statusEl.style.display = 'none';
+                    }, 8000);
+                }
+            }
+
+            showLoading() {
+                const loadingEl = document.getElementById('loading');
+                const statusEl = document.getElementById('statusMessage');
+                
+                statusEl.style.display = 'none';
+                loadingEl.style.display = 'block';
+            }
+
+            async handleFormSubmit(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(event.target);
+                const title = formData.get('title').trim();
+                const content = formData.get('content').trim();
+                const excerpt = formData.get('excerpt').trim();
+                const imageUrl = formData.get('imageUrl').trim();
+                const category = formData.get('category');
+                const author = formData.get('author').trim();
+                
+                if (!title || !content || !excerpt) {
+                    this.showStatus('Please fill in all required fields.', 'error');
+                    return;
+                }
+                
+                const slug = this.generateSlug(title);
+                const filename = `${slug}.html`;
+                const postData = { 
+                    title, 
+                    content, 
+                    excerpt,
+                    imageUrl, 
+                    slug,
+                    category,
+                    author
+                };
+                
+                try {
+                    this.showLoading();
+                    
+                    // Generate HTML content
+                    const htmlContent = this.generateBlogHTML(postData);
+                    
+                    // Publish the blog post
+                    await this.publishBlogPost(postData, htmlContent);
+                    
+                    this.showStatus(`✅ Blog post "${title}" published successfully! It's now live on your website.`, 'success');
+                    
+                    // Reset form
+                    event.target.reset();
+                    document.getElementById('previewContent').innerHTML = '<p style="color: #666; font-style: italic;">Start typing to see a preview of your blog post...</p>';
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    this.showStatus(`❌ Error publishing blog post: ${error.message}`, 'error');
+                }
+            }
+
+            async publishBlogPost(postData, htmlContent) {
+                try {
+                    // Create the blog post file
+                    const blogPostResponse = await fetch('/api/publish-blog', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            filename: `${postData.slug}.html`,
+                            content: htmlContent,
+                            postData: postData
+                        })
+                    });
+
+                    if (!blogPostResponse.ok) {
+                        throw new Error('Failed to create blog post file');
+                    }
+
+                    // Update the blog index
+                    const indexResponse = await fetch('/api/update-blog-index', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ postData })
+                    });
+
+                    if (!indexResponse.ok) {
+                        throw new Error('Failed to update blog index');
+                    }
+
+                    return true;
+                } catch (error) {
+                    // Fallback: Download files for manual upload
+                    this.downloadBlogFiles(postData, htmlContent);
+                    throw new Error('Blog post generated successfully! Please upload the downloaded files to your hosting.');
+                }
+            }
+
+            downloadBlogFiles(postData, htmlContent) {
+                // Download the blog post file
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${postData.slug}.html`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                // Download updated index (this would need to be generated with existing posts)
+                console.log('Blog post file downloaded. Please upload it to your hosting.');
+            }
+        }
+
+        // Initialize the blog publisher when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            new BlogPublisher();
+        });
+    </script>
+</body>
+
+</html>
