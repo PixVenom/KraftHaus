@@ -415,7 +415,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} - KraftHaus Blog</title>
     <meta name="description" content="${postData.excerpt}">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .blog-post-container {
             max-width: 800px;
@@ -492,7 +492,7 @@
 </head>
 <body>
     <div class="blog-post-container">
-        <a href="/blog-detailsright-sidebar.html" class="back-to-blogs">← Back to All Blogs</a>
+        <a href="blog-detailsright-sidebar.html" class="back-to-blogs">← Back to All Blogs</a>
         
         <header class="blog-post-header">
             <div class="blog-post-category">${category}</div>
@@ -585,8 +585,8 @@
 
             async publishBlogPost(postData, htmlContent) {
                 try {
-                    // Create the blog post file
-                    const blogPostResponse = await fetch('/api/publish-blog', {
+                    // Create the blog post file on Hostinger
+                    const blogPostResponse = await fetch('https://salmon-badger-390791.hostingersite.com/api/publish-blog.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -599,11 +599,12 @@
                     });
 
                     if (!blogPostResponse.ok) {
-                        throw new Error('Failed to create blog post file');
+                        const errorData = await blogPostResponse.json();
+                        throw new Error(errorData.error || 'Failed to create blog post file');
                     }
 
-                    // Update the blog index
-                    const indexResponse = await fetch('/api/update-blog-index', {
+                    // Update the blog index on Hostinger
+                    const indexResponse = await fetch('https://salmon-badger-390791.hostingersite.com/api/update-blog-index.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -612,14 +613,18 @@
                     });
 
                     if (!indexResponse.ok) {
-                        throw new Error('Failed to update blog index');
+                        const errorData = await indexResponse.json();
+                        throw new Error(errorData.error || 'Failed to update blog index');
                     }
 
+                    const result = await indexResponse.json();
+                    console.log('Blog published successfully:', result);
                     return true;
                 } catch (error) {
+                    console.error('API Error:', error);
                     // Fallback: Download files for manual upload
                     this.downloadBlogFiles(postData, htmlContent);
-                    throw new Error('Blog post generated successfully! Please upload the downloaded files to your hosting.');
+                    throw new Error(`Blog post generated successfully! Please upload the downloaded files to your hosting. Error: ${error.message}`);
                 }
             }
 
