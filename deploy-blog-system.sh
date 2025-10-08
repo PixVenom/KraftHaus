@@ -6,9 +6,9 @@
 echo "🚀 Deploying Blog System to Hostinger..."
 
 # Configuration
-HOSTINGER_HOST="salmon-badger-390791.hostingersite.com"
+HOSTINGER_HOST="82.25.107.242"
 FTP_USER="u425323865"
-FTP_PASS="your_ftp_password_here"  # Replace with your actual FTP password
+FTP_PASS="Krafthaus@123"  # Your actual FTP password
 
 # Colors for output
 RED='\033[0;31m'

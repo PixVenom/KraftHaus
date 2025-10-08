@@ -1,10 +1,9 @@
-name: Deploy to Hostinger (SFTP)
+name: Deploy to Hostinger via SFTP
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -12,32 +11,28 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        
-    - name: Install dependencies (if any)
-      run: |
-        if [ -f package.json ]; then
-          npm install
-        fi
-        
-    - name: Deploy to Hostinger via SFTP
+    - name: Deploy via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.HOSTINGER_SFTP_HOST }}
-        username: ${{ secrets.HOSTINGER_SFTP_USERNAME }}
-        password: ${{ secrets.HOSTINGER_SFTP_PASSWORD }}
+        username: ${{ secrets.HOSTINGER_SFTP_USER }}
+        password: ${{ secrets.HOSTINGER_SFTP_PASS }}
         local_path: './*'
-        remote_path: '/public_html/website2/Krafthaus/'
+        remote_path: '/public_html'
         exclude: |
           .git*
           .github/
           node_modules/
-          README.md
           .DS_Store
-          Thumbs.db
-          .gitignore
+          README.md
+          deploy-*.sh
+          create-*.sh
+          webhook.php
+          *.md
+          .vscode/
+          "KraftHaus Website Copy.docx"
+          "Krafthaus Logo*.png"
+          "Reference.docx"
+          "# Code Citations.md"
