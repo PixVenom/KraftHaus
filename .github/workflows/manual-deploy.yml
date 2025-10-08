@@ -1,0 +1,80 @@
+name: Manual Deployment (Alternative Method)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create Deployment Package
+      run: |
+        echo "📦 Creating deployment package..."
+        
+        # Create a zip file with all necessary files
+        zip -r deployment-package.zip . \
+          -x "*.git*" \
+          -x "*.github*" \
+          -x "node_modules/*" \
+          -x "*.DS_Store" \
+          -x "README.md" \
+          -x "deploy-*.sh" \
+          -x "create-*.sh" \
+          -x "webhook.php" \
+          -x "*.md" \
+          -x ".vscode/*" \
+          -x "KraftHaus Website Copy.docx" \
+          -x "Krafthaus Logo*.png" \
+          -x "Reference.docx" \
+          -x "# Code Citations.md"
+        
+        echo "✅ Deployment package created: deployment-package.zip"
+        ls -la deployment-package.zip
+        
+    - name: Upload Deployment Package
+      uses: actions/upload-artifact@v3
+      with:
+        name: hostinger-deployment-package
+        path: deployment-package.zip
+        
+    - name: Display Manual Upload Instructions
+      run: |
+        echo ""
+        echo "🎯 MANUAL DEPLOYMENT INSTRUCTIONS"
+        echo "=================================="
+        echo ""
+        echo "Since automatic FTP deployment is failing, here's how to deploy manually:"
+        echo ""
+        echo "📋 Method 1: Download and Upload via Hostinger File Manager"
+        echo "-----------------------------------------------------------"
+        echo "1. Go to the 'Actions' tab in this repository"
+        echo "2. Click on this workflow run"
+        echo "3. Download the 'hostinger-deployment-package' artifact"
+        echo "4. Extract the zip file"
+        echo "5. Go to your Hostinger File Manager"
+        echo "6. Navigate to public_html folder"
+        echo "7. Upload all the extracted files"
+        echo ""
+        echo "📋 Method 2: Use GitHub Pages (Alternative)"
+        echo "-------------------------------------------"
+        echo "1. Go to Repository Settings"
+        echo "2. Scroll down to 'Pages' section"
+        echo "3. Set source to 'GitHub Actions'"
+        echo "4. This will create a GitHub Pages site"
+        echo "5. Your site will be available at: https://pixvenom.github.io/KraftHaus"
+        echo ""
+        echo "📋 Method 3: Fix FTP Credentials"
+        echo "-------------------------------"
+        echo "1. Check your Hostinger control panel for correct FTP details"
+        echo "2. Update the GitHub secrets with correct values"
+        echo "3. Try the automatic deployment again"
+        echo ""
+        echo "🔧 Current Issues:"
+        echo "- FTP connection is failing"
+        echo "- Check if FTP credentials are correct"
+        echo "- Verify FTP host address"
+        echo "- Ensure FTP service is enabled on Hostinger"
