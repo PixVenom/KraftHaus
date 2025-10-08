@@ -19,6 +19,23 @@ jobs:
         echo "FTP User: ${{ secrets.HOSTINGER_FTP_USER }}"
         echo "FTP Pass: [HIDDEN]"
         
+        if [ -z "${{ secrets.HOSTINGER_FTP_HOST }}" ]; then
+          echo "❌ HOSTINGER_FTP_HOST secret is missing!"
+          exit 1
+        fi
+        
+        if [ -z "${{ secrets.HOSTINGER_FTP_USER }}" ]; then
+          echo "❌ HOSTINGER_FTP_USER secret is missing!"
+          exit 1
+        fi
+        
+        if [ -z "${{ secrets.HOSTINGER_FTP_PASS }}" ]; then
+          echo "❌ HOSTINGER_FTP_PASS secret is missing!"
+          exit 1
+        fi
+        
+        echo "✅ All FTP secrets are configured"
+        
     - name: Deploy to Hostinger (FTP)
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
@@ -47,7 +64,6 @@ jobs:
           **/Krafthaus Logo*.png
           **/Reference.docx
           **/# Code Citations.md
-      continue-on-error: true
       
     - name: Deploy to Hostinger (FTPS)
       if: failure()
