@@ -33994,3 +33994,9 @@ body.servi-ce-details .rts-footer-two-area {
 .mobile-menu {
   z-index: 10000;
 }
+
+/* Custom Fix: Fully Transparent Navigation Bar */
+.header-area.header-one,
+.header--sticky.sticky {
+    background-color: transparent !important;
+}
