@@ -1,0 +1,134 @@
+name: Diagnose Deployment Issues
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Check GitHub Secrets
+      run: |
+        echo "🔍 DIAGNOSING DEPLOYMENT ISSUES"
+        echo "================================="
+        echo ""
+        
+        echo "📋 Checking GitHub Secrets:"
+        echo "---------------------------"
+        
+        # Check FTP secrets
+        if [ -n "${{ secrets.HOSTINGER_FTP_HOST }}" ]; then
+          echo "✅ HOSTINGER_FTP_HOST: ${{ secrets.HOSTINGER_FTP_HOST }}"
+        else
+          echo "❌ HOSTINGER_FTP_HOST: MISSING"
+        fi
+        
+        if [ -n "${{ secrets.HOSTINGER_FTP_USER }}" ]; then
+          echo "✅ HOSTINGER_FTP_USER: ${{ secrets.HOSTINGER_FTP_USER }}"
+        else
+          echo "❌ HOSTINGER_FTP_USER: MISSING"
+        fi
+        
+        if [ -n "${{ secrets.HOSTINGER_FTP_PASS }}" ]; then
+          echo "✅ HOSTINGER_FTP_PASS: [CONFIGURED]"
+        else
+          echo "❌ HOSTINGER_FTP_PASS: MISSING"
+        fi
+        
+        echo ""
+        echo "📋 Checking SFTP Secrets (Optional):"
+        echo "------------------------------------"
+        
+        if [ -n "${{ secrets.HOSTINGER_SFTP_HOST }}" ]; then
+          echo "✅ HOSTINGER_SFTP_HOST: ${{ secrets.HOSTINGER_SFTP_HOST }}"
+        else
+          echo "⚠️  HOSTINGER_SFTP_HOST: MISSING (optional)"
+        fi
+        
+        if [ -n "${{ secrets.HOSTINGER_SFTP_USER }}" ]; then
+          echo "✅ HOSTINGER_SFTP_USER: ${{ secrets.HOSTINGER_SFTP_USER }}"
+        else
+          echo "⚠️  HOSTINGER_SFTP_USER: MISSING (optional)"
+        fi
+        
+        if [ -n "${{ secrets.HOSTINGER_SFTP_PASS }}" ]; then
+          echo "✅ HOSTINGER_SFTP_PASS: [CONFIGURED]"
+        else
+          echo "⚠️  HOSTINGER_SFTP_PASS: MISSING (optional)"
+        fi
+        
+        echo ""
+        echo "🔧 RECOMMENDED ACTIONS:"
+        echo "======================="
+        echo ""
+        
+        # Check if any required secrets are missing
+        missing_secrets=0
+        
+        if [ -z "${{ secrets.HOSTINGER_FTP_HOST }}" ]; then
+          echo "❌ Add HOSTINGER_FTP_HOST secret"
+          missing_secrets=1
+        fi
+        
+        if [ -z "${{ secrets.HOSTINGER_FTP_USER }}" ]; then
+          echo "❌ Add HOSTINGER_FTP_USER secret"
+          missing_secrets=1
+        fi
+        
+        if [ -z "${{ secrets.HOSTINGER_FTP_PASS }}" ]; then
+          echo "❌ Add HOSTINGER_FTP_PASS secret"
+          missing_secrets=1
+        fi
+        
+        if [ $missing_secrets -eq 0 ]; then
+          echo "✅ All required secrets are configured!"
+          echo ""
+          echo "🚀 Next steps:"
+          echo "   1. Try running 'Deploy to Hostinger (Robust)' workflow"
+          echo "   2. Check the logs for connection errors"
+          echo "   3. Verify your Hostinger FTP credentials are correct"
+        else
+          echo ""
+          echo "📝 To add missing secrets:"
+          echo "   1. Go to Repository Settings"
+          echo "   2. Click 'Secrets and variables' → 'Actions'"
+          echo "   3. Click 'New repository secret'"
+          echo "   4. Add each missing secret with the correct values"
+          echo ""
+          echo "💡 Required values:"
+          echo "   - HOSTINGER_FTP_HOST: 82.25.107.242 (or your correct FTP host)"
+          echo "   - HOSTINGER_FTP_USER: u425323865"
+          echo "   - HOSTINGER_FTP_PASS: Your actual FTP password"
+        fi
+        
+    - name: Test Network Connectivity
+      run: |
+        echo ""
+        echo "🌐 Testing Network Connectivity:"
+        echo "-------------------------------"
+        
+        # Test if we can reach common Hostinger FTP hosts
+        echo "Testing FTP host connectivity..."
+        
+        if ping -c 1 82.25.107.242 > /dev/null 2>&1; then
+          echo "✅ Can reach 82.25.107.242"
+        else
+          echo "❌ Cannot reach 82.25.107.242"
+        fi
+        
+        if ping -c 1 files.000webhost.com > /dev/null 2>&1; then
+          echo "✅ Can reach files.000webhost.com"
+        else
+          echo "❌ Cannot reach files.000webhost.com"
+        fi
+        
+        echo ""
+        echo "📋 Common Hostinger FTP Hosts to try:"
+        echo "   - 82.25.107.242"
+        echo "   - files.000webhost.com"
+        echo "   - ftp.hostinger.com"
+        echo "   - salmon-badger-390791.hostingersite.com"
