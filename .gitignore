@@ -3,3 +3,7 @@ HOSTINGER_FTP_PASSWORD - Krafthaus@123
 HOSTINGER_FTP_HOST - ftp://82.25.107.242
 
 SSH PASSWORD - Krafthaus@123
+
+SQL DB NAME - contact_us
+SQL username - contact
+SQL password -Krafthaus@123

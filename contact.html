@@ -328,43 +328,52 @@
                                 <span>Get in touch!</span>
                             </h2>
                         </div>
-                        <form class="appoinment-h2 rts-slide-up-gsap" action="#">
+                        <form id="contactForm" class="appoinment-h2 rts-slide-up-gsap" action="contact-form-handler.php"
+                            method="POST">
+                            <div id="formMessages" class="form-messages" style="display: none;"></div>
                             <div class="input-line">
                                 <div class="input-half">
                                     <label for="name">Your Name*</label>
-                                    <input id="name" type="text" placeholder="Andrew Davis Kino...." required>
+                                    <input id="name" name="name" type="text" placeholder="Andrew Davis Kino...."
+                                        required>
                                 </div>
                                 <div class="input-half">
                                     <label for="email">Your Email*</label>
-                                    <input id="email" type="text" placeholder="info@mighty.net" required>
+                                    <input id="email" name="email" type="email" placeholder="info@mighty.net" required>
                                 </div>
                                 <div class="input-half">
-                                    <label for="Phone">Your Phone*</label>
-                                    <input id="Phone" type="text" placeholder="+91 - 7795 356 168" required>
+                                    <label for="phone">Your Phone*</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="+91 - 7795 356 168" required>
                                 </div>
                             </div>
                             <div class="input-line mt--40">
                                 <div class="input-half">
-                                    <label for="name">What you are interested*</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Your Service</option>
-                                        <option value="1">Branding</option>
-                                        <option value="2">Marketing Strategy</option>
-                                        <option value="3">Social Media Marketing</option>
-                                        <option value="4">Web Development</option>
-                                        <option value="5">UI/UX Design</option>
-                                        <option value="6">Content Production</option>
-                                        <option value="7">Influencer Marketing</option>
-                                        <option value="8">Performance Marketing</option>
+                                    <label for="service">What you are interested*</label>
+                                    <select id="service" name="service" class="form-select"
+                                        aria-label="Default select example" required>
+                                        <option value="">Select Your Service</option>
+                                        <option value="Branding">Branding</option>
+                                        <option value="Marketing Strategy">Marketing Strategy</option>
+                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="UI/UX Design">UI/UX Design</option>
+                                        <option value="Content Production">Content Production</option>
+                                        <option value="Influencer Marketing">Influencer Marketing</option>
+                                        <option value="Performance Marketing">Performance Marketing</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="text-area mt--40">
                                 <label for="message">Message*</label>
-                                <textarea id="message" cols="30" rows="10"
-                                    placeholder="Let tell us about your projects"></textarea>
+                                <textarea id="message" name="message" cols="30" rows="10"
+                                    placeholder="Let tell us about your projects" required></textarea>
                             </div>
-                            <button class="submit-pd">Post Comment</button>
+                            <button type="submit" class="submit-pd" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fa fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
                         </form>
                     </div>
                     <!-- appoinment area two end -->
@@ -579,6 +588,165 @@
         </nav>
     </div>
     <script defer src="js/main.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const formMessages = document.getElementById('formMessages');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+
+            // Add CSS for form messages
+            const style = document.createElement('style');
+            style.textContent = `
+            .form-messages {
+                margin-bottom: 20px;
+                padding: 15px;
+                border-radius: 5px;
+                font-weight: 500;
+            }
+            .form-messages.success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            .form-messages.error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+            .form-messages ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .btn-loading {
+                display: none;
+            }
+            .btn-loading.show {
+                display: inline-block;
+            }
+            .btn-text.hide {
+                display: none;
+            }
+        `;
+            document.head.appendChild(style);
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Show loading state
+                btnText.classList.add('hide');
+                btnLoading.classList.add('show');
+                submitBtn.disabled = true;
+
+                // Hide previous messages
+                formMessages.style.display = 'none';
+
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+
+                // Validate form data
+                const errors = validateForm(data);
+                if (errors.length > 0) {
+                    showMessage('error', 'Please fix the following errors:', errors);
+                    resetButton();
+                    return;
+                }
+
+                // Send form data
+                fetch('contact-form-handler.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.success) {
+                            showMessage('success', result.message);
+                            contactForm.reset();
+                        } else {
+                            if (result.errors && result.errors.length > 0) {
+                                showMessage('error', result.message, result.errors);
+                            } else {
+                                showMessage('error', result.message);
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showMessage('error', 'An error occurred while sending your message. Please try again.');
+                    })
+                    .finally(() => {
+                        resetButton();
+                    });
+            });
+
+            function validateForm(data) {
+                const errors = [];
+
+                // Name validation
+                if (!data.name || data.name.trim().length < 2) {
+                    errors.push('Name must be at least 2 characters long');
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!data.email || !emailRegex.test(data.email)) {
+                    errors.push('Please enter a valid email address');
+                }
+
+                // Phone validation
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                if (!data.phone || !phoneRegex.test(data.phone)) {
+                    errors.push('Please enter a valid phone number');
+                }
+
+                // Service validation
+                if (!data.service) {
+                    errors.push('Please select a service');
+                }
+
+                // Message validation
+                if (!data.message || data.message.trim().length < 10) {
+                    errors.push('Message must be at least 10 characters long');
+                }
+
+                return errors;
+            }
+
+            function showMessage(type, message, errors = []) {
+                formMessages.className = `form-messages ${type}`;
+
+                if (errors.length > 0) {
+                    formMessages.innerHTML = `
+                    <strong>${message}</strong>
+                    <ul>
+                        ${errors.map(error => `<li>${error}</li>`).join('')}
+                    </ul>
+                `;
+                } else {
+                    formMessages.innerHTML = `<strong>${message}</strong>`;
+                }
+
+                formMessages.style.display = 'block';
+
+                // Scroll to message
+                formMessages.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            function resetButton() {
+                btnText.classList.remove('hide');
+                btnLoading.classList.remove('show');
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
     <!-- Scripts style two End -->
 </body>
 
