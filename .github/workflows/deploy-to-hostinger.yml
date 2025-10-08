@@ -21,6 +21,9 @@ jobs:
         password: ${{ secrets.HOSTINGER_FTP_PASS }}
         server-dir: public_html/
         local-dir: ./
+        protocol: ftp
+        port: 21
+        timeout: 60000
         exclude: |
           **/.git*
           **/.git*/**

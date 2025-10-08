@@ -1,0 +1,106 @@
+name: Deploy to Hostinger (Robust)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Debug FTP Settings
+      run: |
+        echo "FTP Host: ${{ secrets.HOSTINGER_FTP_HOST }}"
+        echo "FTP User: ${{ secrets.HOSTINGER_FTP_USER }}"
+        echo "FTP Pass: [HIDDEN]"
+        
+    - name: Deploy to Hostinger (FTP)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.HOSTINGER_FTP_HOST }}
+        username: ${{ secrets.HOSTINGER_FTP_USER }}
+        password: ${{ secrets.HOSTINGER_FTP_PASS }}
+        server-dir: public_html/
+        local-dir: ./
+        protocol: ftp
+        port: 21
+        timeout: 120000
+        log-level: verbose
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/README.md
+          **/.github/**
+          **/deploy-*.sh
+          **/create-*.sh
+          **/webhook.php
+          **/*.md
+          **/.vscode/**
+          **/KraftHaus Website Copy.docx
+          **/Krafthaus Logo*.png
+          **/Reference.docx
+          **/# Code Citations.md
+      continue-on-error: true
+      
+    - name: Deploy to Hostinger (FTPS)
+      if: failure()
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.HOSTINGER_FTP_HOST }}
+        username: ${{ secrets.HOSTINGER_FTP_USER }}
+        password: ${{ secrets.HOSTINGER_FTP_PASS }}
+        server-dir: public_html/
+        local-dir: ./
+        protocol: ftps
+        port: 21
+        timeout: 120000
+        log-level: verbose
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/README.md
+          **/.github/**
+          **/deploy-*.sh
+          **/create-*.sh
+          **/webhook.php
+          **/*.md
+          **/.vscode/**
+          **/KraftHaus Website Copy.docx
+          **/Krafthaus Logo*.png
+          **/Reference.docx
+          **/# Code Citations.md
+      continue-on-error: true
+      
+    - name: Deploy to Hostinger (SFTP)
+      if: failure()
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        server: ${{ secrets.HOSTINGER_SFTP_HOST }}
+        username: ${{ secrets.HOSTINGER_SFTP_USER }}
+        password: ${{ secrets.HOSTINGER_SFTP_PASS }}
+        local_path: './*'
+        remote_path: '/public_html'
+        exclude: |
+          .git*
+          .github/
+          node_modules/
+          .DS_Store
+          README.md
+          deploy-*.sh
+          create-*.sh
+          webhook.php
+          *.md
+          .vscode/
+          "KraftHaus Website Copy.docx"
+          "Krafthaus Logo*.png"
+          "Reference.docx"
+          "# Code Citations.md"
