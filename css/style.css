@@ -34008,3 +34008,28 @@ body.servi-ce-details .rts-footer-two-area {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/* Custom Fix: Responsive font sizes for service cards */
+@media only screen and (max-width: 991px) {
+    /* Targets tablets and smaller devices */
+    .single-service-h2 .title,
+    .single-item-service-one h3 {
+        font-size: 32px; /* Reduces font size for tablets */
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Targets mobile phones */
+    .single-service-h2 .title,
+    .single-item-service-one h3 {
+        font-size: 28px; /* Further reduces font size for mobile */
+    }
+}
+
+/* Custom Fix: Prevent awkward word breaks in service cards */
+.single-service-h2 .title {
+    font-size: 38px; /* Adjust this value if needed */
+    word-break: normal; /* Ensures words don't split randomly */
+    hyphens: auto; /* Adds hyphens for cleaner breaks if needed */
+}
