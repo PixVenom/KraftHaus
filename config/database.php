@@ -37,8 +37,8 @@ define('SMTP_USERNAME', 'noreply@krafthaus.in'); // Your email
 define('SMTP_PASSWORD', 'your_email_password'); // Your email password
 define('FROM_EMAIL', 'noreply@krafthaus.in');
 define('FROM_NAME', 'KraftHaus Contact Form');
-// define('ADMIN_EMAIL', 'hello@krafthaus.in'); // Where to send notifications
-define('ADMIN_EMAIL', 'arryanmalhotra1@gmail.com');
+/define('ADMIN_EMAIL', 'hello@krafthaus.in');  //Where to send notifications
+
 
 // Security settings
 define('MAX_SUBMISSIONS_PER_HOUR', 5); // Rate limiting
