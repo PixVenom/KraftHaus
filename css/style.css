@@ -34000,3 +34000,11 @@ body.servi-ce-details .rts-footer-two-area {
 .header--sticky.sticky {
     background-color: transparent !important;
 }
+
+/* Custom Fix: Increase Navbar Clickable Area */
+.header-area .nav-area .navbar-nav-1 .menu-item a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
