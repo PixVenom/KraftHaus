@@ -33995,10 +33995,17 @@ body.servi-ce-details .rts-footer-two-area {
   z-index: 10000;
 }
 
-/* Custom Fix: Fully Transparent Navigation Bar */
-.header-area.header-one,
-.header--sticky.sticky {
+/* Custom Fix: Translucent Navigation Bar */
+/* This keeps the nav bar transparent when at the top of the page */
+.header-area.header-one {
     background-color: transparent !important;
+}
+
+/* This makes the nav bar translucent with a blur when you scroll */
+.header--sticky.sticky {
+    background-color: rgba(25, 25, 25, 0.5) !important;  /* Semi-transparent dark background */
+    backdrop-filter: blur(10px) !important;              /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px) !important;      /* For Safari compatibility */
 }
 
 /* Custom Fix: Increase Navbar Clickable Area */
@@ -34019,6 +34026,16 @@ body.servi-ce-details .rts-footer-two-area {
     }
 }
 
+/* Custom Fix: Make Navigation Bar Smaller */
+.header-area .header-container-one {
+    min-height: 80px; /* Reduces the minimum height of the header */
+}
+
+.header-area .nav-area .navbar-nav-1 .menu-item a {
+    padding-top: 20px;    /* Reduces top padding */
+    padding-bottom: 20px; /* Reduces bottom padding */
+}
+
 @media only screen and (max-width: 767px) {
     /* Targets mobile phones */
     .single-service-h2 .title,
@@ -34033,3 +34050,4 @@ body.servi-ce-details .rts-footer-two-area {
     word-break: normal; /* Ensures words don't split randomly */
     hyphens: auto; /* Adds hyphens for cleaner breaks if needed */
 }
+
