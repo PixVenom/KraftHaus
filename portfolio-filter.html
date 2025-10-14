@@ -29,29 +29,29 @@
             transition: all 0.3s ease;
             pointer-events: none;
         }
-        
+
         .portfolio-preview-tooltip.show {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .preview-content {
             text-align: center;
         }
-        
+
         .preview-title {
             font-size: 16px;
             font-weight: 600;
             color: #141414;
             margin-bottom: 8px;
         }
-        
+
         .preview-description {
             font-size: 14px;
             color: #666;
             margin-bottom: 10px;
         }
-        
+
         .preview-link {
             display: inline-block;
             background: #141414;
@@ -63,16 +63,16 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        
+
         .preview-link:hover {
             background: #333;
             color: #fff;
         }
-        
+
         .signle-portfolio-style-four-inner {
             position: relative;
         }
-        
+
         .signle-portfolio-style-four-inner:hover .portfolio-preview-tooltip {
             opacity: 1;
             visibility: visible;
@@ -419,7 +419,8 @@
                                 <div class="portfolio-preview-tooltip">
                                     <div class="preview-content">
                                         <div class="preview-title">Milk Mantra Ltd</div>
-                                        <div class="preview-description">Social media marketing campaign for a dairy company, focusing on brand awareness and engagement.</div>
+                                        <div class="preview-description">Social media marketing campaign for a dairy
+                                            company, focusing on brand awareness and engagement.</div>
                                         <a href="https://milkmantra.com/" class="preview-link">Visit Site</a>
                                     </div>
                                 </div>
@@ -442,7 +443,8 @@
                                 <div class="portfolio-preview-tooltip">
                                     <div class="preview-content">
                                         <div class="preview-title">Modern Crypto Trading</div>
-                                        <div class="preview-description">A cutting-edge cryptocurrency trading platform with advanced features and real-time market data.</div>
+                                        <div class="preview-description">A cutting-edge cryptocurrency trading platform
+                                            with advanced features and real-time market data.</div>
                                         <a href="https://pi42.com/" class="preview-link">Visit Site</a>
                                     </div>
                                 </div>
@@ -465,7 +467,8 @@
                                 <div class="portfolio-preview-tooltip">
                                     <div class="preview-content">
                                         <div class="preview-title">Intelligent Defi Investing</div>
-                                        <div class="preview-description">AI-powered DeFi investment platform with intelligent portfolio management and automated strategies.</div>
+                                        <div class="preview-description">AI-powered DeFi investment platform with
+                                            intelligent portfolio management and automated strategies.</div>
                                         <a href="https://www.aarna.ai/" class="preview-link">Visit Site</a>
                                     </div>
                                 </div>
@@ -488,7 +491,8 @@
                                 <div class="portfolio-preview-tooltip">
                                     <div class="preview-content">
                                         <div class="preview-title">Intelligent Hospitality</div>
-                                        <div class="preview-description">Smart hospitality solutions with AI-powered guest services and automated hotel management systems.</div>
+                                        <div class="preview-description">Smart hospitality solutions with AI-powered
+                                            guest services and automated hotel management systems.</div>
                                         <a href="https://intelity.com/" class="preview-link">Visit Site</a>
                                     </div>
                                 </div>
@@ -511,7 +515,8 @@
                                 <div class="portfolio-preview-tooltip">
                                     <div class="preview-content">
                                         <div class="preview-title">Premium Coffee Brand</div>
-                                        <div class="preview-description">Social media marketing campaign for a premium coffee brand, focusing on brand storytelling and community engagement.</div>
+                                        <div class="preview-description">Social media marketing campaign for a premium
+                                            coffee brand, focusing on brand storytelling and community engagement.</div>
                                         <a href="https://byramudicoffee.com/" class="preview-link">Visit Site</a>
                                     </div>
                                 </div>
@@ -728,50 +733,50 @@
         </nav>
     </div>
     <script defer src="js/main.js"></script>
-    
+
     <!-- Portfolio Preview Tooltip JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const portfolioItems = document.querySelectorAll('.signle-portfolio-style-four-inner');
-            
-            portfolioItems.forEach(function(item) {
+
+            portfolioItems.forEach(function (item) {
                 const tooltip = item.querySelector('.portfolio-preview-tooltip');
                 if (!tooltip) return;
-                
-                item.addEventListener('mouseenter', function(e) {
+
+                item.addEventListener('mouseenter', function (e) {
                     // Position tooltip
                     const rect = item.getBoundingClientRect();
                     const tooltipRect = tooltip.getBoundingClientRect();
                     const viewportWidth = window.innerWidth;
                     const viewportHeight = window.innerHeight;
-                    
+
                     // Reset positioning
                     tooltip.style.top = '';
                     tooltip.style.left = '';
                     tooltip.style.right = '';
                     tooltip.style.bottom = '';
-                    
+
                     // Calculate position
                     let top = rect.bottom + 10;
                     let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-                    
+
                     // Adjust if tooltip goes off screen
                     if (left < 10) {
                         left = 10;
                     } else if (left + tooltipRect.width > viewportWidth - 10) {
                         left = viewportWidth - tooltipRect.width - 10;
                     }
-                    
+
                     if (top + tooltipRect.height > viewportHeight - 10) {
                         top = rect.top - tooltipRect.height - 10;
                     }
-                    
+
                     tooltip.style.top = top + 'px';
                     tooltip.style.left = left + 'px';
                     tooltip.classList.add('show');
                 });
-                
-                item.addEventListener('mouseleave', function() {
+
+                item.addEventListener('mouseleave', function () {
                     tooltip.classList.remove('show');
                 });
             });
