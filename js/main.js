@@ -2631,51 +2631,15 @@
 
 
     darkLight: function () {
-
-      let darkLightCondition = document.querySelectorAll(".rts-dark-light");
-
-      if (darkLightCondition.length) {
-        $(document).ready(function () {
-          // Get references to elements and local storage
-          var htmlTagMain = $("html");
-          var godarkrts = $('.rts-go-dark');
-          var golightrts = $('.rts-go-light');
-
-          // Function to toggle to dark theme
-          function darkTheme() {
-            htmlTagMain.removeClass("rts-light-mood");
-            htmlTagMain.addClass("rts-dark");
-            localStorage.setItem('rtstheme', 'rts-dark');
-          }
-
-          // Function to toggle to light theme
-          function lightTheme() {
-            htmlTagMain.removeClass("rts-dark");
-            htmlTagMain.addClass("rts-light-mood");
-            localStorage.setItem('rtstheme', 'rts-light-mood');
-          }
-
-          // Check local storage for theme preference on page load
-          var rtstheme = localStorage.getItem('rtstheme');
-          if (rtstheme === 'rts-dark') {
-            darkTheme();
-          } else {
-            lightTheme(); // Default to light theme if not found in local storage
-          }
-
-          // Event listeners for theme toggles
-          godarkrts.click(function () {
-            darkTheme();
-          });
-
-          golightrts.click(function () {
-            lightTheme();
-          });
-
-        });
-
-      }
-
+      // Always set dark mode as default
+      $(document).ready(function () {
+        var htmlTagMain = $("html");
+        
+        // Force dark theme
+        htmlTagMain.removeClass("rts-light-mood");
+        htmlTagMain.addClass("rts-dark");
+        localStorage.setItem('rtstheme', 'rts-dark');
+      });
     },
 
 
