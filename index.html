@@ -35,6 +35,56 @@
                 opacity: 0
             }
         }
+
+        /* --- ADD THIS CODE FOR RESPONSIVENESS --- */
+
+        /* Target mobile and tablet screens */
+        @media (max-width: 767px) {
+            .rts_hero__title {
+                /* You can adjust this value! Try numbers between 40px and 60px */
+                font-size: 50px !important; 
+                line-height: 1.2; /* Improves spacing between lines */
+            }
+
+            .solutions-text {
+                /* Make the "Solutions" text slightly smaller */
+                font-size: 40px !important;
+            }
+        }
+
+        /* --- ADD THIS CODE FOR RESPONSIVENESS --- */
+
+        /* Target mobile and tablet screens */
+        @media (max-width: 767px) {
+            .rts_hero__title {
+                font-size: 50px !important; 
+                line-height: 1.2;
+            }
+            /* --- ADD THIS RULE FOR THE SERVICES TITLE --- */
+            .rts-service-area .title-area .sub-title {
+                font-size: 45px !important;
+                line-height: 1.1 !important; /* Improves line spacing */
+            }
+
+            .solutions-text {
+                font-size: 40px !important;
+            }
+
+            /* --- NEW STYLES TO FIX OVERLAPPING --- */
+
+            /* Hide the rotating circle on mobile */
+            .top-center-image {
+                display: none !important;
+            }
+
+            /* Reposition the 'Explore Our Services' button */
+            .banner-jump-button {
+                position: relative; /* Reset positioning */
+                display: block; /* Make it a block element */
+                text-align: center; /* Center the button */
+                margin-top: 40px; /* Add space above the button */
+            }
+        }
     </style>
     <script>
         (function () {
@@ -516,7 +566,7 @@
                                     <h1 class="title rts_hero__title">
                                         Driving Results <br>
                                         with <span class="border-bottom-1">Creative Digital</span> <br>
-                                        <h1 class="title rts_hero__title" style="font-size: 80px;">Solutions</h1>
+                                        <span class="solutions-text">Solutions</span>
                                     </h1>
                                 </div>
                                 <!-- <div class="para-wraph">
