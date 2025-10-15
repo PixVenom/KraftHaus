@@ -78,6 +78,37 @@
             visibility: visible;
         }
 
+        /* Video Hover Effect Styles */
+        .thumbnail {
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+
+        .hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .thumbnail:hover .hover-video {
+            opacity: 1;
+        }
+
+        .thumbnail:hover .img-fluid {
+            opacity: 0;
+        }
+
+        .img-fluid {
+            transition: opacity 0.3s ease;
+        }
+
         /* --- ADD THIS CODE FOR PORTFOLIO PAGE RESPONSIVENESS --- */
 
         @media (max-width: 767px) {
@@ -406,6 +437,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://pixelscientist.netlify.app/" class="thumbnail">
                                     <img src="images/product/23.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/01.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>Designer</span>
@@ -421,6 +455,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://milkmantra.com/" class="thumbnail">
                                     <img src="images/product/24.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/02.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>Social Media Marketing</span>
@@ -445,6 +482,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://pi42.com/" class="thumbnail">
                                     <img src="images/product/25.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/03.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>Development</span>
@@ -469,6 +509,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://www.aarna.ai/" class="thumbnail">
                                     <img src="images/product/26.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/04.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>UI/UX Design</span>
@@ -493,6 +536,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://intelity.com/" class="thumbnail">
                                     <img src="images/product/27.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/05.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>Marketing Strategist</span>
@@ -517,6 +563,9 @@
                             <div class="signle-portfolio-style-four-inner ptb--20">
                                 <a href="https://byramudicoffee.com/" class="thumbnail">
                                     <img src="images/product/28.jpg" class="img-fluid" alt="product">
+                                    <video class="hover-video" muted loop>
+                                        <source src="videos/06.mp4" type="video/mp4">
+                                    </video>
                                 </a>
                                 <div class="inner-content">
                                     <span>Social Media Marketing</span>
@@ -754,44 +803,60 @@
 
             portfolioItems.forEach(function (item) {
                 const tooltip = item.querySelector('.portfolio-preview-tooltip');
-                if (!tooltip) return;
+                const hoverVideo = item.querySelector('.hover-video');
 
-                item.addEventListener('mouseenter', function (e) {
-                    // Position tooltip
-                    const rect = item.getBoundingClientRect();
-                    const tooltipRect = tooltip.getBoundingClientRect();
-                    const viewportWidth = window.innerWidth;
-                    const viewportHeight = window.innerHeight;
+                if (tooltip) {
+                    item.addEventListener('mouseenter', function (e) {
+                        // Position tooltip
+                        const rect = item.getBoundingClientRect();
+                        const tooltipRect = tooltip.getBoundingClientRect();
+                        const viewportWidth = window.innerWidth;
+                        const viewportHeight = window.innerHeight;
 
-                    // Reset positioning
-                    tooltip.style.top = '';
-                    tooltip.style.left = '';
-                    tooltip.style.right = '';
-                    tooltip.style.bottom = '';
+                        // Reset positioning
+                        tooltip.style.top = '';
+                        tooltip.style.left = '';
+                        tooltip.style.right = '';
+                        tooltip.style.bottom = '';
 
-                    // Calculate position
-                    let top = rect.bottom + 10;
-                    let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+                        // Calculate position
+                        let top = rect.bottom + 10;
+                        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
 
-                    // Adjust if tooltip goes off screen
-                    if (left < 10) {
-                        left = 10;
-                    } else if (left + tooltipRect.width > viewportWidth - 10) {
-                        left = viewportWidth - tooltipRect.width - 10;
-                    }
+                        // Adjust if tooltip goes off screen
+                        if (left < 10) {
+                            left = 10;
+                        } else if (left + tooltipRect.width > viewportWidth - 10) {
+                            left = viewportWidth - tooltipRect.width - 10;
+                        }
 
-                    if (top + tooltipRect.height > viewportHeight - 10) {
-                        top = rect.top - tooltipRect.height - 10;
-                    }
+                        if (top + tooltipRect.height > viewportHeight - 10) {
+                            top = rect.top - tooltipRect.height - 10;
+                        }
 
-                    tooltip.style.top = top + 'px';
-                    tooltip.style.left = left + 'px';
-                    tooltip.classList.add('show');
-                });
+                        tooltip.style.top = top + 'px';
+                        tooltip.style.left = left + 'px';
+                        tooltip.classList.add('show');
+                    });
 
-                item.addEventListener('mouseleave', function () {
-                    tooltip.classList.remove('show');
-                });
+                    item.addEventListener('mouseleave', function () {
+                        tooltip.classList.remove('show');
+                    });
+                }
+
+                // Handle video hover effect
+                if (hoverVideo) {
+                    item.addEventListener('mouseenter', function () {
+                        hoverVideo.play().catch(function (error) {
+                            console.log('Video play failed:', error);
+                        });
+                    });
+
+                    item.addEventListener('mouseleave', function () {
+                        hoverVideo.pause();
+                        hoverVideo.currentTime = 0; // Reset to beginning
+                    });
+                }
             });
         });
     </script>
