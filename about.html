@@ -13,12 +13,28 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style id="theia-sticky-sidebar-stylesheet-TSS">
-        .theiaStickySidebar:after {
-            content: "";
-            display: table;
-            clear: both;
+    .theiaStickySidebar:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* --- RESPONSIVENESS FOR ABOUT.HTML --- */
+    @media (max-width: 767px) {
+        /* "Who Are We?" title */
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 60px !important; /* Adjust as needed */
+            line-height: 1.1 !important;
+            word-wrap: break-word; 
         }
-    </style>
+
+        /* "EXPERT IN STRATEGY..." title */
+        .approch-area-left .title.quote {
+            font-size: 32px !important; /* Adjust as needed */
+            line-height: 1.2 !important;
+        }
+    }
+</style>
 </head>
 
 <body class="inner-page about" data-new-gr-c-s-check-loaded="14.1256.0" data-gr-ext-installed="">
