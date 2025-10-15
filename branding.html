@@ -14,53 +14,46 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* --- Custom Styles for Branding Page --- */
+    /* --- Custom Styles for Branding Page --- */
+    .bottom-content .disc strong {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    .single-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    .single-check i {
+        margin-right: 15px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .single-check p {
+        line-height: 1.6;
+    }
+    .single-check p strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
 
-        /* 1. Make the subtitle bigger and add space below it */
-        .bottom-content .disc strong {
-            font-size: 22px;
-            /* Increased font size */
-            display: block;
-            margin-bottom: 15px;
-            /* Adds space between subtitle and paragraph */
-            line-height: 1.4;
+    /* --- ADD THIS FOR MOBILE RESPONSIVENESS --- */
+    @media (max-width: 767px) {
+        /* Pushes the entire top section down to clear the header */
+        .service-details-area .pt--120 {
+            padding-top: 100px !important; 
         }
 
-        /* 2. Improve alignment and spacing for the checklist */
-        .single-check {
-            display: flex;
-            /* Use flexbox for better alignment */
-            align-items: flex-start;
-            /* Vertically align icon to the top of the text */
-            margin-bottom: 25px;
-            /* Add more space between each checklist item */
+        /* Resizes the "Branding" title */
+        .main-page-title-service-left-area .title-page {
+            font-size: 80px !important; /* This can be adjusted if it's too big */
+            line-height: 1.1;
         }
-
-        /* 3. Adjust the checkmark icon */
-        .single-check i {
-            margin-right: 15px;
-            /* Add space between the icon and the text */
-            margin-top: 5px;
-            /* Nudge the icon down slightly to align better */
-            font-size: 18px;
-        }
-
-        /* 4. Style the text within the checklist */
-        .single-check p {
-            line-height: 1.6;
-            /* Improve readability of the description */
-        }
-
-        /* 5. Style the title within each checklist item */
-        .single-check p strong {
-            display: block;
-            /* Puts the description on a new line */
-            margin-bottom: 5px;
-            /* Adds a small space below the title */
-            font-size: 18px;
-            /* Makes the title slightly bigger */
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
