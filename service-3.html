@@ -13,12 +13,21 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style id="theia-sticky-sidebar-stylesheet-TSS">
-        .theiaStickySidebar:after {
-            content: "";
-            display: table;
-            clear: both;
+    .theiaStickySidebar:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* --- RESPONSIVENESS FOR SERVICES PAGE --- */
+    @media (max-width: 767px) {
+        /* "Our Services" title */
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 70px !important; /* Matches the portfolio page for consistency */
+            line-height: 1.1 !important;
         }
-    </style>
+    }
+</style>
 </head>
 
 <body class="inner-page service-3 about contact-page" style="" data-new-gr-c-s-check-loaded="14.1256.0"
@@ -314,7 +323,7 @@
                 <div class="col-lg-12">
                     <div class="baread-crumb-main-wrapper pt--100">
                         <div class="inner">
-                            <h1 class="title rts_hero__title" style="font-size: 130px !important;">
+                            <<h1 class="title rts_hero__title">
                                 Our Services
                             </h1>
                             <span class="bg-text">Services</span>
