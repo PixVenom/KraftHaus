@@ -33,8 +33,35 @@
         50% { opacity: 0 }
     }
 
-    /* --- MOBILE RESPONSIVENESS FIXES (Universal) --- */
+    /* --- GLOBAL FIXES (All Screen Sizes) --- */
+
+    /* NEW: Remove underline from "Solutions" text */
+    .solutions-text {
+        text-decoration: none !important;
+        border-bottom: none !important;
+    }
+
+    /* Footer: Center the logo and social icons by default (Desktop) */
+    .footer-left-two {
+        text-align: center;
+    }
+    .footer-left-two .rts-social-area-one {
+        margin-top: 25px;
+    }
+    .footer-left-two .rts-social-area-one ul {
+        padding: 0;
+        list-style: none;
+        display: inline-flex; /* Allows the list to be centered */
+    }
+
+
+    /* --- MOBILE RESPONSIVENESS FIXES --- */
     @media (max-width: 767px) {
+        
+        /* Footer: Override to align left on mobile */
+        .footer-left-two {
+            text-align: left;
+        }
 
         /* 1. Hero Title Fix */
         .rts_hero__title {
@@ -47,9 +74,9 @@
             text-wrap: balance;
         }
 
-        /* 2. "Our Core Services" Title Fix - ADJUSTED VALUES */
+        /* 2. "Our Core Services" Title Fix */
         .rts-service-area .title-area .sub-title {
-            font-size: clamp(42px, 13vw, 65px) !important; /* <-- This line is updated */
+            font-size: clamp(42px, 13vw, 65px) !important;
             line-height: 1.2 !important;
             text-wrap: balance;
         }
@@ -567,13 +594,11 @@
                     <div class="row ptb--200 ptb_sm--150">
                         <div class="col-lg-9 col-md-12">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
-                                <div class="hero-title-wrapper">
-                                    <h1 class="title rts_hero__title">
-                                        Driving Results <br>
-                                        with <span class="border-bottom-1">Creative Digital</span> <br>
-                                        <span class="solutions-text">Solutions</span>
-                                    </h1>
-                                </div>
+                                <h1 class="title rts_hero__title">
+                                    Driving Results <br>
+                                    with <span class="border-bottom-1">Creative Digital</span> <br>
+                                    Solutions
+                                </h1>
                                 <!-- <div class="para-wraph">
                                     <p class="disc hero__sub-title">
                                         Our team of experts is dedicated to helping you achieve
@@ -1228,8 +1253,7 @@
                                             Ready to scale your story through content,<br> performance, and
                                             purpose-driven design?
                                         </p> -->
-                                        <div class="rts-social-area-one"
-                                            style="position: relative; top: 20px; left: 30px;">
+                                        <div class="rts-social-area-one">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/profile.php?id=61580125714254"
                                                         aria-label="Follow us on Facebook"><i
