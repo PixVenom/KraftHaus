@@ -138,6 +138,328 @@
             }
         }
 
+        /* --- RESPONSIVE STYLES FOR 768x1024 (TABLET PORTRAIT) --- */
+        @media (min-width: 431px) and (max-width: 768px) {
+
+            /* Container adjustments for tablet */
+            .container {
+                padding: 0 20px !important;
+            }
+
+            .container-150 {
+                padding: 0 20px !important;
+            }
+
+            .container-160 {
+                padding: 0 20px !important;
+            }
+
+            /* Header adjustments for tablet */
+            .header-area.header-one .header-container-one {
+                padding: 20px 15px !important;
+            }
+
+            .header-area.header-one .logo img {
+                width: 120px !important;
+                height: auto !important;
+            }
+
+            /* Hero section for tablet */
+            .banner-area {
+                padding: 80px 0 60px 0 !important;
+            }
+
+            .rts_hero__title {
+                font-size: clamp(80px, 15vw, 120px) !important;
+                line-height: 1.0 !important;
+                margin-bottom: 40px !important;
+            }
+
+            .solutions-text {
+                font-size: clamp(120px, 25vw, 150px) !important;
+                line-height: 1.0 !important;
+            }
+
+            /* Service cards for tablet - Vertical layout */
+            .service-area-one-main-wrapper {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+                width: 100% !important;
+            }
+
+            .single-item-service-one {
+                margin-bottom: 0 !important;
+                padding: 20px !important;
+                background: rgba(255, 255, 255, 0.05) !important;
+                border-radius: 12px !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                transition: all 0.3s ease !important;
+                width: 100% !important;
+            }
+
+            .single-item-service-one:hover {
+                background: rgba(255, 255, 255, 0.08) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+            }
+
+            .single-item-service-one a {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                text-decoration: none !important;
+                width: 100% !important;
+            }
+
+            .single-item-service-one .rts-img-contaciner {
+                flex-shrink: 0 !important;
+                width: 120px !important;
+                height: 120px !important;
+                margin-right: 20px !important;
+            }
+
+            .single-item-service-one .rts-img-contaciner img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 8px !important;
+            }
+
+            .single-item-service-one .list-title {
+                flex: 1 !important;
+                margin-right: 20px !important;
+            }
+
+            .single-item-service-one .list-title h3 {
+                font-size: 20px !important;
+                line-height: 1.3 !important;
+                margin-bottom: 8px !important;
+                font-weight: 600 !important;
+                color: white !important;
+            }
+
+            .single-item-service-one .list-info {
+                flex: 2 !important;
+                margin-right: 20px !important;
+            }
+
+            .single-item-service-one .list-info p {
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+                margin: 0 !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .single-item-service-one .button-area {
+                flex-shrink: 0 !important;
+                align-self: center !important;
+            }
+
+            .single-item-service-one .button-area svg {
+                width: 24px !important;
+                height: 24px !important;
+                fill: white !important;
+                transition: transform 0.3s ease !important;
+            }
+
+            .single-item-service-one:hover .button-area svg {
+                transform: translateX(3px) !important;
+            }
+
+            /* Service area title for tablet */
+            .rts-service-area .title-area .sub-title {
+                font-size: clamp(70px, 12vw, 90px) !important;
+                line-height: 1.0 !important;
+                margin-bottom: 60px !important;
+            }
+
+            /* About section for tablet */
+            .rts-about-area-1 .title.quote {
+                font-size: clamp(70px, 12vw, 90px) !important;
+                line-height: 1.0 !important;
+                margin-bottom: 40px !important;
+            }
+
+            .rts-about-area-1 .disc {
+                font-size: 22px !important;
+                line-height: 1.5 !important;
+            }
+
+            /* Counter section for tablet - 2x2 grid */
+            .counter-up-wrapper {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 20px !important;
+                margin-top: 40px !important;
+            }
+
+            .counter-single {
+                padding: 20px 15px !important;
+            }
+
+            .counter-single .title {
+                font-size: 50px !important;
+                line-height: 1.0 !important;
+            }
+
+            .counter-single p {
+                font-size: 20px !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Footer adjustments for tablet */
+            .footer-compact {
+                padding: 30px 0 !important;
+            }
+
+            .footer-compact__row {
+                padding-bottom: 20px !important;
+            }
+
+            .footer-left-two .logo img {
+                width: 140px !important;
+                height: auto !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 18px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-nav li a {
+                font-size: 15px !important;
+            }
+
+            /* Subscription form for tablet */
+            .subscribtion-input {
+                flex-direction: row !important;
+                gap: 15px !important;
+            }
+
+            .subscribtion-input input[type="email"] {
+                flex: 1 !important;
+                padding: 14px 16px !important;
+                font-size: 16px !important;
+            }
+
+            .subscribtion-input button {
+                flex-shrink: 0 !important;
+                padding: 14px 24px !important;
+                font-size: 14px !important;
+                min-width: 120px !important;
+            }
+
+            /* Section spacing for tablet */
+            .rts-section-gap {
+                padding: 60px 0 !important;
+            }
+
+            .rts-section-gapBottom {
+                padding-bottom: 60px !important;
+            }
+
+            .rts-section-gapTop {
+                padding-top: 60px !important;
+            }
+
+            /* Scrolling text optimization for tablet */
+            .scrolltext-wrapper {
+                margin: 20px 0 !important;
+                overflow: hidden !important;
+            }
+
+            .scrollingText .title {
+                font-size: clamp(60px, 12vw, 80px) !important;
+                line-height: 1.0 !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .scrollingText .title span {
+                color: #ffffff !important;
+                font-weight: 800 !important;
+            }
+
+            /* Portfolio/Use case scrolling text */
+            .scrollingText-two .title {
+                font-size: clamp(20px, 4vw, 30px) !important;
+                line-height: 1.2 !important;
+                font-weight: 700 !important;
+            }
+
+            /* Portfolio slides - Vertical layout for tablet */
+            .slide {
+                padding: 20px 0 !important;
+            }
+
+            .container-full-150 {
+                padding: 0 20px !important;
+            }
+
+            .flot-right-150 {
+                width: 100% !important;
+                float: none !important;
+            }
+
+            .use-case-area-start {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 30px !important;
+                width: 100% !important;
+            }
+
+            .use-case-area-start .content-wrapper {
+                order: 1 !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .use-case-area-start .content-wrapper .sub-title {
+                font-size: 14px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin-bottom: 15px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+            }
+
+            .use-case-area-start .content-wrapper .title {
+                font-size: clamp(60px, 12vw, 80px) !important;
+                line-height: 1.0 !important;
+                margin-bottom: 30px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .use-case-area-start .content-wrapper p {
+                font-size: 22px !important;
+                line-height: 1.5 !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                margin: 0 !important;
+                max-width: 600px !important;
+                margin: 0 auto !important;
+            }
+
+            .use-case-area-start .img-wrapper {
+                order: 2 !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .use-case-area-start .img-wrapper img {
+                width: 100% !important;
+                max-width: 500px !important;
+                height: auto !important;
+                border-radius: 12px !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+                transition: transform 0.3s ease !important;
+            }
+
+            .use-case-area-start .img-wrapper:hover img {
+                transform: scale(1.02) !important;
+            }
+        }
+
         /* --- SPECIFIC RESPONSIVE STYLES FOR 430x932 DIMENSIONS --- */
         @media (max-width: 430px) {
 
@@ -237,7 +559,7 @@
             }
 
             .solutions-text {
-                font-size: clamp(24px, 7vw, 30px) !important;
+                font-size: clamp(100px, 20vw, 70px) !important;
                 line-height: 1.1 !important;
             }
 
@@ -439,7 +761,7 @@
                 margin-top: 30px !important;
                 width: 100% !important;
             }
-            
+
             .counter-single {
                 text-align: center !important;
                 padding: 15px 10px !important;
@@ -448,13 +770,13 @@
                 border-radius: 8px !important;
                 border: 1px solid rgba(255, 255, 255, 0.1) !important;
             }
-            
+
             .counter-single .title {
                 font-size: 24px !important;
                 line-height: 1.1 !important;
                 margin-bottom: 8px !important;
             }
-            
+
             .counter-single p {
                 font-size: 12px !important;
                 line-height: 1.3 !important;
