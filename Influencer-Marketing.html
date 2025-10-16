@@ -14,17 +14,46 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* --- MOBILE RESPONSIVENESS FIX --- */
-    @media (max-width: 767px) {
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* FIX: Slogan Spacing (Styles for the HTML structure provided below) */
+    /* Target the strong slogan text to force it to be a block and add a bottom margin. */
+    .service-details-area .bottom-content .slogan-strong {
+        display: block; 
+        margin-bottom: 15px; /* Adds space after the slogan */
+        font-size: 22px !important; 
+    }
+    
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 8vw !important;
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Further aggressive scaling to fit the long title */
+        .main-page-title-service-left-area .title-page {
+            font-size: 7.2vw !important; /* Slightly increased from 6.5vw, as this might be the sweet spot for this screen size. */
+            line-height: 1.1 !important;
+        }
+        
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
-        }
-
-        /* Resizes the page title and prevents word breaking */
-        .main-page-title-service-left-area .title-page {
-            font-size: 40px !important; /* Further reduced size to prevent word breaks */
-            line-height: 1.2 !important;
         }
     }
 </style>
@@ -316,9 +345,11 @@
                                 Influencer Marketing
                             </h1>
                             <div class="bottom-content">
-                                <p class="disc">
-                                    <strong style="font-size: 22px;">Building India’s next generation of sports
-                                        influencers.</strong><br class="d-none d-md-block">
+                                <p class="disc slogan-title">
+                                    <strong class="slogan-strong">Building India’s next generation of sports influencers.</strong>
+                                </p>
+
+                                <p class="disc slogan-body" style="margin-top: 15px;">
                                     At KraftHaus, we’re redefining how brands collaborate with athletes. Our influencer
                                     marketing vertical<br> helps non-cricket athletes grow their personal brand, build a
                                     powerful online presence, and connect<br> with brands that align with their values —
