@@ -129,6 +129,15 @@
             }
         }
 
+        /* --- DESKTOP FONT SIZE FOR CORE SERVICES --- */
+        @media (min-width: 768px) {
+            .rts-service-area .title-area .sub-title {
+                font-size: 60px !important;
+                line-height: 1.2 !important;
+                justify-self: center;
+            }
+        }
+
         /* --- SPECIFIC RESPONSIVE STYLES FOR 430x932 DIMENSIONS --- */
         @media (max-width: 430px) {
 
@@ -159,14 +168,14 @@
             .banner-area {
                 padding: 60px 0 40px 0 !important;
             }
-            
+
             /* Hero title container adjustments */
             .banner-one-wrapper {
                 width: 100% !important;
                 max-width: 100% !important;
                 overflow: hidden !important;
             }
-            
+
             .banner-one-wrapper .title {
                 width: auto !important;
                 max-width: 100% !important;
@@ -184,9 +193,9 @@
                 overflow-wrap: break-word !important;
                 hyphens: auto !important;
             }
-            
+
             /* Fix for individual character divs in hero title */
-            .rts_hero__title > div {
+            .rts_hero__title>div {
                 display: inline !important;
                 position: static !important;
                 transform: none !important;
@@ -195,20 +204,20 @@
                 margin: 0 !important;
                 padding: 0 !important;
             }
-            
+
             /* Ensure the typing animation span works properly */
             .rts_hero__title .border-bottom-1 {
                 display: inline !important;
                 position: static !important;
                 transform: none !important;
             }
-            
+
             .rts_hero__title .typing-text {
                 display: inline !important;
                 position: static !important;
                 transform: none !important;
             }
-            
+
             /* Override inline styles for character divs */
             .rts_hero__title div[style*="position: relative"] {
                 position: static !important;
@@ -219,7 +228,7 @@
                 margin: 0 !important;
                 padding: 0 !important;
             }
-            
+
             /* Ensure proper text flow */
             .rts_hero__title {
                 white-space: normal !important;
@@ -353,29 +362,29 @@
                 line-height: 1.1 !important;
                 margin-bottom: 20px !important;
             }
-            
+
             .rts-about-area-1 .disc {
                 font-size: 14px !important;
                 line-height: 1.5 !important;
             }
-            
+
             /* About section container optimizations */
             .rts-about-area-1 {
                 padding: 40px 0 !important;
             }
-            
+
             .rts-about-area-1 .container-full {
                 padding: 0 15px !important;
             }
-            
+
             .rts-about-area-1 .row {
                 margin: 0 !important;
             }
-            
+
             .rts-about-area-1 .col-lg-12 {
                 padding: 0 !important;
             }
-            
+
             /* About section image container */
             .gsap-inner.sec1 {
                 width: 100% !important;
@@ -493,19 +502,19 @@
                 padding: 12px 20px !important;
                 font-size: 14px !important;
             }
-            
+
             /* Subscription area specific optimizations for 430px */
             .subscribtion-area {
                 margin-top: 20px !important;
             }
-            
+
             .subscribtion-area .disc {
                 font-size: 13px !important;
                 line-height: 1.5 !important;
                 margin-bottom: 20px !important;
                 color: rgba(255, 255, 255, 0.8) !important;
             }
-            
+
             .subscribtion-input {
                 display: flex !important;
                 flex-direction: column !important;
@@ -515,12 +524,13 @@
                 box-sizing: border-box !important;
                 overflow: hidden !important;
             }
-            
+
             .subscribtion-input input[type="email"] {
                 width: 100% !important;
                 max-width: 100% !important;
                 padding: 12px 14px !important;
-                font-size: 16px !important; /* Prevents zoom on iOS */
+                font-size: 16px !important;
+                /* Prevents zoom on iOS */
                 border: 1px solid rgba(255, 255, 255, 0.2) !important;
                 border-radius: 8px !important;
                 background: rgba(255, 255, 255, 0.1) !important;
@@ -529,23 +539,24 @@
                 box-sizing: border-box !important;
                 margin: 0 !important;
             }
-            
+
             .subscribtion-input input[type="email"]:focus {
                 outline: none !important;
                 border-color: rgba(255, 255, 255, 0.5) !important;
                 background: rgba(255, 255, 255, 0.15) !important;
                 box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important;
             }
-            
+
             .subscribtion-input input[type="email"]::placeholder {
                 color: rgba(255, 255, 255, 0.6) !important;
                 font-size: 14px !important;
             }
-            
+
             .subscribtion-input label {
-                display: none !important; /* Hide the envelope icon label */
+                display: none !important;
+                /* Hide the envelope icon label */
             }
-            
+
             .subscribtion-input button {
                 width: 100% !important;
                 max-width: 100% !important;
@@ -565,38 +576,38 @@
                 box-sizing: border-box !important;
                 margin: 0 !important;
             }
-            
+
             .subscribtion-input button:hover {
                 background: rgba(255, 255, 255, 0.9) !important;
                 transform: translateY(-1px) !important;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
             }
-            
+
             .subscribtion-input button:active {
                 transform: translateY(0) !important;
             }
-            
+
             /* Responsive adjustments for subscription form */
             @media (max-width: 430px) {
                 .subscribtion-area {
                     padding: 0 10px !important;
                 }
-                
+
                 .subscribtion-area .disc {
                     text-align: center !important;
                     font-size: 12px !important;
                     line-height: 1.4 !important;
                 }
-                
+
                 .subscribtion-input {
                     gap: 10px !important;
                 }
-                
+
                 .subscribtion-input input[type="email"] {
                     padding: 12px 14px !important;
                     font-size: 16px !important;
                 }
-                
+
                 .subscribtion-input button {
                     padding: 10px 14px !important;
                     font-size: 12px !important;
@@ -709,7 +720,7 @@
                 height: auto !important;
                 margin-bottom: 20px !important;
             }
-            
+
             /* Optimize the main about image for 430px */
             .image-wrapper-main-about {
                 width: 100% !important;
@@ -717,7 +728,7 @@
                 margin: 0 auto !important;
                 padding: 0 10px !important;
             }
-            
+
             .image-wrapper-main-about img {
                 width: 100% !important;
                 max-width: 100% !important;
@@ -727,18 +738,18 @@
                 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
                 transition: transform 0.3s ease !important;
             }
-            
+
             .image-wrapper-main-about img:hover {
                 transform: scale(1.02) !important;
             }
-            
+
             /* Responsive adjustments for the about image */
             @media (max-width: 430px) {
                 .image-wrapper-main-about {
                     padding: 0 5px !important;
                     margin-bottom: 20px !important;
                 }
-                
+
                 .image-wrapper-main-about img {
                     max-height: 250px !important;
                     object-fit: cover !important;
