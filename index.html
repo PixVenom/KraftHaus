@@ -139,7 +139,7 @@
         }
 
         /* --- RESPONSIVE STYLES FOR 768x1024 (TABLET PORTRAIT) --- */
-        @media (min-width: 431px) and (max-width: 768px) {
+        @media (min-width: 414px) and (max-width: 896px) {
 
             /* Container adjustments for tablet */
             .container {
@@ -170,14 +170,14 @@
             }
 
             .rts_hero__title {
-                font-size: clamp(80px, 15vw, 120px) !important;
-                line-height: 1.0 !important;
-                margin-bottom: 40px !important;
+                font-size: clamp(100px, 18vw, 140px) !important;
+                line-height: 0.9 !important;
+                margin-bottom: 50px !important;
             }
 
             .solutions-text {
-                font-size: clamp(120px, 25vw, 150px) !important;
-                line-height: 1.0 !important;
+                font-size: clamp(140px, 30vw, 180px) !important;
+                line-height: 0.9 !important;
             }
 
             /* Service cards for tablet - Vertical layout */
@@ -269,21 +269,21 @@
 
             /* Service area title for tablet */
             .rts-service-area .title-area .sub-title {
-                font-size: clamp(70px, 12vw, 90px) !important;
-                line-height: 1.0 !important;
-                margin-bottom: 60px !important;
+                font-size: clamp(100px, 18vw, 140px) !important;
+                line-height: 0.9 !important;
+                margin-bottom: 70px !important;
             }
 
             /* About section for tablet */
             .rts-about-area-1 .title.quote {
-                font-size: clamp(70px, 12vw, 90px) !important;
-                line-height: 1.0 !important;
-                margin-bottom: 40px !important;
+                font-size: clamp(100px, 18vw, 140px) !important;
+                line-height: 0.9 !important;
+                margin-bottom: 50px !important;
             }
 
             .rts-about-area-1 .disc {
-                font-size: 22px !important;
-                line-height: 1.5 !important;
+                font-size: 26px !important;
+                line-height: 1.4 !important;
             }
 
             /* Counter section for tablet - 2x2 grid */
@@ -299,19 +299,19 @@
             }
 
             .counter-single .title {
-                font-size: 50px !important;
-                line-height: 1.0 !important;
+                font-size: 65px !important;
+                line-height: 0.9 !important;
             }
 
             .counter-single p {
-                font-size: 20px !important;
-                line-height: 1.2 !important;
+                font-size: 24px !important;
+                line-height: 1.1 !important;
             }
 
             /* Footer adjustments for tablet - Centered and larger fonts */
             .footer-compact {
                 padding: 40px 0 !important;
-                justify-self: center !important;
+                text-align: center !important;
             }
 
             .footer-compact__row {
@@ -321,19 +321,36 @@
             .footer-main-wrapper-one {
                 display: flex !important;
                 flex-direction: column !important;
-                justify-self: center !important;
+                align-items: center !important;
                 gap: 30px !important;
+                text-align: center !important;
             }
 
             .footer-left-two {
-                justify-self: center !important;
+                text-align: center !important;
                 order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
             }
 
             .footer-left-two .logo img {
                 width: 180px !important;
                 height: auto !important;
                 margin-bottom: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
             }
 
             .footer-single-wized-start {
@@ -343,8 +360,8 @@
             }
 
             .footer-single-wized-start .title {
-                font-size: 24px !important;
-                margin-bottom: 25px !important;
+                font-size: 32px !important;
+                margin-bottom: 30px !important;
                 font-weight: 700 !important;
                 color: white !important;
             }
@@ -361,7 +378,7 @@
             }
 
             .footer-nav li a {
-                font-size: 18px !important;
+                font-size: 22px !important;
                 color: rgba(255, 255, 255, 0.9) !important;
                 text-decoration: none !important;
                 transition: color 0.3s ease !important;
@@ -380,7 +397,7 @@
             }
 
             .mail-contact-area .single-con-info a {
-                font-size: 18px !important;
+                font-size: 22px !important;
                 color: rgba(255, 255, 255, 0.9) !important;
                 text-decoration: none !important;
                 transition: color 0.3s ease !important;
@@ -395,9 +412,9 @@
             }
 
             .subscribtion-area .disc {
-                font-size: 16px !important;
-                line-height: 1.5 !important;
-                margin-bottom: 25px !important;
+                font-size: 20px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 30px !important;
                 color: rgba(255, 255, 255, 0.9) !important;
             }
 
@@ -407,7 +424,7 @@
             }
 
             .copyright-area p {
-                font-size: 16px !important;
+                font-size: 20px !important;
                 color: rgba(255, 255, 255, 0.8) !important;
                 margin: 0 !important;
             }
@@ -456,8 +473,8 @@
             }
 
             .scrollingText .title {
-                font-size: clamp(60px, 12vw, 80px) !important;
-                line-height: 1.0 !important;
+                font-size: clamp(80px, 15vw, 100px) !important;
+                line-height: 0.9 !important;
                 font-weight: 700 !important;
                 color: white !important;
             }
@@ -510,16 +527,16 @@
             }
 
             .use-case-area-start .content-wrapper .title {
-                font-size: clamp(60px, 12vw, 80px) !important;
-                line-height: 1.0 !important;
-                margin-bottom: 30px !important;
+                font-size: clamp(80px, 15vw, 100px) !important;
+                line-height: 0.9 !important;
+                margin-bottom: 40px !important;
                 font-weight: 700 !important;
                 color: white !important;
             }
 
             .use-case-area-start .content-wrapper p {
-                font-size: 22px !important;
-                line-height: 1.5 !important;
+                font-size: 26px !important;
+                line-height: 1.4 !important;
                 color: rgba(255, 255, 255, 0.9) !important;
                 margin: 0 !important;
                 max-width: 600px !important;
@@ -1699,8 +1716,7 @@
         <div id="smooth-content">
 
             <!-- rts banenr area start -->
-            <div id="home" class="banner-area banner-style-one banner-bg-1 hero__area-3 banner__jump"
-                style="background-image: url('https://cdn.wallpapersafari.com/43/89/NEe6LB.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div id="home" class="banner-area banner-style-one banner-bg-1 hero__area-3 banner__jump">
                 <div class="shape-image">
                     <img src="images/banner/06.png" alt="banner">
                 </div>
@@ -1724,7 +1740,7 @@
                     <div class="row ptb--200 ptb_sm--150">
                         <div class="col-lg-9 col-md-12">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
-                                <h1 class="title rts_hero__title">
+                                <h1 class="title rts_hero__title" style="font-size: 50px !important;">
                                     Driving Results <br>
                                     with <span class="border-bottom-1">Creative Digital</span> <br>
                                     Solutions
@@ -1946,15 +1962,6 @@
                                                         audiences and create long-term impact.
                                                     </p>
                                                 </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
                                             </a>
                                         </div>
                                         <div class="single-item-service-one">
@@ -1975,15 +1982,6 @@
                                                         map opportunities, and build strategies that drive business
                                                         results.
                                                     </p>
-                                                </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
                                                 </div>
                                             </a>
                                         </div>
@@ -2006,15 +2004,6 @@
                                                         Instagram, Facebook, LinkedIn, and YouTube.
                                                     </p>
                                                 </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
                                             </a>
                                         </div>
                                         <div class="single-item-service-one">
@@ -2034,15 +2023,6 @@
                                                         business
                                                         goals.
                                                     </p>
-                                                </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
                                                 </div>
                                             </a>
                                         </div>
@@ -2064,15 +2044,6 @@
                                                         conversions.
                                                     </p>
                                                 </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
                                             </a>
                                         </div>
                                         <div class="single-item-service-one">
@@ -2093,15 +2064,6 @@
                                                         copy.
                                                     </p>
                                                 </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
                                             </a>
                                         </div>
                                         <div class="single-item-service-one">
@@ -2121,15 +2083,6 @@
                                                         audiences.
                                                     </p>
                                                 </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
                                             </a>
                                         </div>
                                         <div class="single-item-service-one">
@@ -2143,20 +2096,11 @@
                                                 <div class="list-title col-md-6">
                                                     <h3>Search Engine Optimization</h3>
                                                 </div>
-                                                <div class="list-info col-md-3">
-                                                    <p class="disc" style="color: white;">
+                                                <div class="list-info col-md-3" style="color: white;">
+                                                    <p class="disc">
                                                         We improve your search engine rankings to attract qualified
                                                         customers, driving long-term organic traffic and revenue growth.
                                                     </p>
-                                                </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
                                                 </div>
                                             </a>
                                         </div>
@@ -2176,15 +2120,6 @@
                                                         Drive scalable revenue with paid campaigns, optimization, and
                                                         ROI-backed strategy.
                                                     </p>
-                                                </div>
-                                                <div class="button-area">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.67 384.67">
-                                                        <g>
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 45.26l276.05 276.05H22.63v63.36h362.04V22.63h-63.36v253.42L45.26 0 0 45.26z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
                                                 </div>
                                             </a>
                                         </div>
@@ -2222,7 +2157,6 @@
                                             <div class="flot-right-150">
                                                 <div class="use-case-area-start">
                                                     <div class="content-wrapper">
-                                                        <span class="sub-title">Our Approach</span>
                                                         <h2 class="title">
                                                             Digital First <br> Growth Agency
                                                         </h2>
@@ -2245,7 +2179,6 @@
                                             <div class="flot-right-150">
                                                 <div class="use-case-area-start">
                                                     <div class="content-wrapper">
-                                                        <span class="sub-title">Our Approach</span>
                                                         <h2 class="title">
                                                             Dedicated External <br> Growth Team
                                                         </h2>
@@ -2267,7 +2200,6 @@
                                             <div class="flot-right-150">
                                                 <div class="use-case-area-start">
                                                     <div class="content-wrapper">
-                                                        <span class="sub-title">Our Approach</span>
                                                         <h2 class="title">
                                                             Data Driven <br>
                                                             & AI Focused
@@ -2379,10 +2311,6 @@
                                         <a href="index.html" class="logo">
                                             <img src="/Krafthaus Logo white version.png" alt="logo" width="200px">
                                         </a>
-                                        <!-- <p class="disc">
-                                            Ready to scale your story through content,<br> performance, and
-                                            purpose-driven design?
-                                        </p> -->
                                         <div class="rts-social-area-one">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/profile.php?id=61580125714254"

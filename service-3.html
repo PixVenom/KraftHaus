@@ -56,6 +56,157 @@
             font-size: 9vw !important; 
         }
     }
+
+    /* ------------------------------------------------------------------ */
+    /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
+    /* ------------------------------------------------------------------ */
+    
+    /* Footer adjustments for tablet - Centered and larger fonts */
+    @media (min-width: 414px) and (max-width: 896px) {
+        .footer-compact {
+            padding: 40px 0 !important;
+            text-align: center !important;
+        }
+
+        .footer-compact__row {
+            padding-bottom: 30px !important;
+        }
+
+        .footer-main-wrapper-one {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 30px !important;
+            text-align: center !important;
+        }
+
+        .footer-left-two {
+            text-align: center !important;
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .footer-left-two .logo img {
+            width: 180px !important;
+            height: auto !important;
+            margin-bottom: 20px !important;
+        }
+
+        .footer-left-two .rts-social-area-one {
+            display: flex !important;
+            justify-content: center !important;
+            margin-top: 20px !important;
+        }
+
+        .footer-left-two .rts-social-area-one ul {
+            display: flex !important;
+            gap: 20px !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .footer-single-wized-start {
+            text-align: center !important;
+            margin-bottom: 0 !important;
+            order: 2 !important;
+        }
+
+        .footer-single-wized-start .title {
+            font-size: 24px !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+            color: white !important;
+        }
+
+        .footer-nav {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 12px !important;
+        }
+
+        .footer-nav li {
+            margin-bottom: 0 !important;
+        }
+
+        .footer-nav li a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .footer-nav li a:hover {
+            color: white !important;
+        }
+
+        .mail-contact-area {
+            text-align: center !important;
+        }
+
+        .mail-contact-area .single-con-info {
+            margin-bottom: 15px !important;
+        }
+
+        .mail-contact-area .single-con-info a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .mail-contact-area .single-con-info a:hover {
+            color: white !important;
+        }
+
+        .subscribtion-area {
+            text-align: center !important;
+        }
+
+        .subscribtion-area .disc {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 25px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .copyright-area {
+            text-align: center !important;
+            padding: 20px 0 !important;
+        }
+
+        .copyright-area p {
+            font-size: 16px !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin: 0 !important;
+        }
+
+        .copyright-area a {
+            color: white !important;
+            text-decoration: none !important;
+        }
+
+        /* Subscription form for tablet */
+        .subscribtion-input {
+            flex-direction: row !important;
+            gap: 15px !important;
+        }
+
+        .subscribtion-input input[type="email"] {
+            flex: 1 !important;
+            padding: 12px 14px !important;
+            font-size: 14px !important;
+        }
+
+        .subscribtion-input button {
+            padding: 12px 20px !important;
+            font-size: 14px !important;
+            white-space: nowrap !important;
+            margin-top: -4px !important;
+        }
+    }
 </style>
 </head>
 
@@ -352,7 +503,7 @@
                 <div class="col-lg-12">
                     <div class="baread-crumb-main-wrapper pt--100">
                         <div class="inner">
-                            <<h1 class="title rts_hero__title">
+                            <h1 class="title rts_hero__title">
                                 Our Services
                             </h1>
                             <span class="bg-text">Services</span>
