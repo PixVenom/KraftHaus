@@ -14,17 +14,49 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* --- MOBILE RESPONSIVENESS FIX --- */
-    @media (max-width: 767px) {
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SMM PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        /* Core word-break prevention */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+    /* Targets the strong slogan text to isolate it as a block and add margin. */
+    .service-details-area .bottom-content .slogan-strong {
+        display: block; /* Forces the slogan text onto its own line */
+        margin-bottom: 15px !important; /* Adds space after the slogan/before the next text */
+        font-size: 24px !important; /* Locks the font size */
+        line-height: 1.4; /* Improves readability of the slogan itself */
+    }
+
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 8vw !important;
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Aggressive scaling (similar to the SEO page) to fit the title cleanly. */
+        .main-page-title-service-left-area .title-page {
+            font-size: 6vw !important; /* Aggressively scaled for long title */
+            line-height: 1.1 !important;
+        }
+        
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
-        }
-
-        /* Resizes the page title to prevent word breaks */
-        .main-page-title-service-left-area .title-page {
-            font-size: 60px !important;
-            line-height: 1.2 !important;
         }
     }
 </style>
@@ -316,14 +348,18 @@
                                 Social Media Marketing
                             </h1>
                             <div class="bottom-content">
-                                <p class="disc">
-                                    <strong>Turning audiences into communities.</strong><br>
-                                    At KraftHaus, we help brands move beyond just posting - we build social<br> identities
-                                    that engage, inspire, and convert.
-                                    Our social media marketing<br> approach blends strategy, storytelling, and design to
-                                    make every post <br>count.
-                                </p>
-                                <div class="check-area-main-sd">
+                                    <p class="disc slogan-title">
+                                        <strong class="slogan-strong">Turning audiences into communities.</strong>
+                                    </p>
+
+                                    <p class="disc slogan-body" style="margin-top: 0;">
+                                        At KraftHaus, we help brands move beyond just posting - we build social<br> identities
+                                        that engage, inspire, and convert.
+                                        Our social media marketing<br> approach blends strategy, storytelling, and design to
+                                        make every post <br>count.
+                                    </p>
+
+                                    <div class="check-area-main-sd">
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
                                         <p><strong>Discovery & Brand Understanding</strong><br>

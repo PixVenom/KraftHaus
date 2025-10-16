@@ -14,65 +14,70 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* --- Custom Styles for Branding Page --- */
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SEO PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
 
-        /* 1. Make the subtitle bigger and add space below it */
-        .bottom-content .disc strong {
-            font-size: 22px;
-            /* Increased font size */
-            display: block;
-            margin-bottom: 15px;
-            /* Adds space between subtitle and paragraph */
-            line-height: 1.4;
-        }
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        /* Core word-break prevention */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* Custom styles for slogan (retained from your code) */
+    .bottom-content .disc strong {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
 
-        /* 2. Improve alignment and spacing for the checklist */
-        .single-check {
-            display: flex;
-            /* Use flexbox for better alignment */
-            align-items: flex-start;
-            /* Vertically align icon to the top of the text */
-            margin-bottom: 25px;
-            /* Add more space between each checklist item */
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 7vw !important; /* Starting to scale down */
         }
+    }
 
-        /* 3. Adjust the checkmark icon */
-        .single-check i {
-            margin-right: 15px;
-            /* Add space between the icon and the text */
-            margin-top: 5px;
-            /* Nudge the icon down slightly to align better */
-            font-size: 18px;
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Aggressive scaling to fit the extremely long title without breaking words. */
+        .main-page-title-service-left-area .title-page {
+            font-size: 5.5vw !important; /* Very aggressive scaling to ensure fit */
+            line-height: 1.1 !important;
         }
-
-        /* 4. Style the text within the checklist */
-        .single-check p {
-            line-height: 1.6;
-            /* Improve readability of the description */
-        }
-
-        /* 5. Style the title within each checklist item */
-        .single-check p strong {
-            display: block;
-            /* Puts the description on a new line */
-            margin-bottom: 5px;
-            /* Adds a small space below the title */
-            font-size: 18px;
-            /* Makes the title slightly bigger */
-        }
-        @media (max-width: 767px) {
+        
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
         }
-
-        /* Resizes the page title to prevent word breaks */
-        .main-page-title-service-left-area .title-page {
-            font-size: 57px !important;
-            line-height: 1.2 !important;
-        }
     }
-    </style>
+    
+    /* Checklist styles (retained from your code) */
+    .single-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    .single-check i {
+        margin-right: 15px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .single-check p {
+        line-height: 1.6;
+    }
+    .single-check p strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+</style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">

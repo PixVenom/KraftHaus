@@ -14,21 +14,50 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* --- MOBILE RESPONSIVENESS FIX --- */
-        @media (max-width: 767px) {
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
 
-            /* Pushes the content down to clear the header */
-            .service-details-area .pt--120 {
-                padding-top: 100px !important;
-            }
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+    /* Target the strong slogan text to force it to be a block and add a bottom margin. */
+    .service-details-area .bottom-content .slogan-strong {
+        display: block; /* Forces the slogan text onto its own line */
+        margin-bottom: 15px; /* Adds space after the slogan/before the next text */
+        font-size: 22px !important; /* Locks the font size */
+    }
 
-            /* Resizes the page title to prevent word breaks */
-            .main-page-title-service-left-area .title-page {
-                font-size: 38px !important;
-                line-height: 1.2 !important;
-            }
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 7.5vw !important; /* Starting to scale down */
         }
-    </style>
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Aggressive scaling to ensure the full title fits without breaking words. */
+        .main-page-title-service-left-area .title-page {
+            font-size: 6vw !important; /* Very aggressive scaling for this extremely long title */
+            line-height: 1.1 !important;
+        }
+        
+        /* Pushes the content down to clear the header */
+        .service-details-area .pt--120 {
+            padding-top: 100px !important; 
+        }
+    }
+</style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -315,12 +344,14 @@
                     <div class="main-page-title-service-left-area">
                         <div class="left">
                             <h1 class="title-page rts_hero__title">
-                                Performance Marketing
+                                Performance Marketing <br> & Growth Strategy
                             </h1>
                             <div class="bottom-content">
-                                <p class="disc">
-                                    <strong style="font-size: 22px;">Data-driven growth that delivers measurable
-                                        ROI.</strong><br class="d-none d-md-block">
+                                <p class="disc slogan-title">
+                                    <strong class="slogan-strong">Data-driven growth that delivers measurable ROI.</strong>
+                                </p>
+
+                                <p class="disc slogan-body" style="margin-top: 15px;">
                                     Performance marketing at KraftHaus is about clarity — clear goals, clear data, and
                                     clear results.<br> We design campaigns that don’t just bring clicks, but
                                     conversions.
