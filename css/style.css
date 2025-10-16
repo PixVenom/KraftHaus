@@ -15258,8 +15258,10 @@ xclip
   -o-transition: transform 0.08s ease-out, opacity 1s ease;
   transition: transform 0.08s ease-out, opacity 1s ease;
   transition: transform 0.08s ease-out, opacity 1s ease, -webkit-transform 0.08s ease-out;
-  display: block !important; /* Ensure outer cursor is always visible */
-  opacity: 1 !important; /* Make sure it's always visible */
+  display: block !important;
+  /* Ensure outer cursor is always visible */
+  opacity: 1 !important;
+  /* Make sure it's always visible */
 }
 
 .cursor-outer .fn-cursor {
@@ -15288,7 +15290,8 @@ xclip
 }
 
 .cursor-outer.cursor-hover {
-  opacity: 1 !important; /* Keep cursor visible on hover */
+  opacity: 1 !important;
+  /* Keep cursor visible on hover */
   -webkit-transition: transform 0.08s ease-out, opacity 0.2s ease;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
   transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
@@ -15299,7 +15302,8 @@ xclip
 
 .cursor-inner {
   z-index: 10000001;
-  display: none !important; /* Hide the inner cursor (dot) */
+  display: none !important;
+  /* Hide the inner cursor (dot) */
 }
 
 .cursor-inner.cursor-hover .fn-cursor {
@@ -15314,7 +15318,8 @@ xclip
 }
 
 .cursor-outer.cursor-remove {
-  display: block !important; /* Keep cursor visible even when marked for removal */
+  display: block !important;
+  /* Keep cursor visible even when marked for removal */
   opacity: 1 !important;
 }
 
@@ -15405,7 +15410,8 @@ xclip
 }
 
 .cursor-outer.cursor-remove {
-  opacity: 1 !important; /* Keep cursor visible even when marked for removal */
+  opacity: 1 !important;
+  /* Keep cursor visible even when marked for removal */
   -webkit-transition: transform 0.08s ease-out, opacity 0.2s ease;
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
   transition: opacity 0.2s ease, -webkit-transform 0.08s ease-out;
@@ -21950,6 +21956,7 @@ body.coming-soon {
   0% {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
+
   100% {
     filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
@@ -22028,6 +22035,7 @@ body.coming-soon {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -22039,9 +22047,11 @@ body.coming-soon {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -22090,7 +22100,7 @@ body.coming-soon {
     height: auto;
     min-height: 300px;
   }
-  
+
   .inner-page.service-3 .single-service-card-box-1:hover {
     transform: translateY(-3px);
   }
@@ -33998,56 +34008,68 @@ body.servi-ce-details .rts-footer-two-area {
 /* Custom Fix: Translucent Navigation Bar */
 /* This keeps the nav bar transparent when at the top of the page */
 .header-area.header-one {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 /* This makes the nav bar translucent with a blur when you scroll */
 .header--sticky.sticky {
-    background-color: rgba(25, 25, 25, 0.5) !important;  /* Semi-transparent dark background */
-    backdrop-filter: blur(10px) !important;              /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px) !important;      /* For Safari compatibility */
+  background-color: rgba(25, 25, 25, 0.5) !important;
+  /* Semi-transparent dark background */
+  backdrop-filter: blur(10px) !important;
+  /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px) !important;
+  /* For Safari compatibility */
 }
 
 /* Custom Fix: Increase Navbar Clickable Area */
 .header-area .nav-area .navbar-nav-1 .menu-item a {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Custom Fix: Responsive font sizes for service cards */
 @media only screen and (max-width: 991px) {
-    /* Targets tablets and smaller devices */
-    .single-service-h2 .title,
-    .single-item-service-one h3 {
-        font-size: 32px; /* Reduces font size for tablets */
-        line-height: 1.2;
-    }
+
+  /* Targets tablets and smaller devices */
+  .single-service-h2 .title,
+  .single-item-service-one h3 {
+    font-size: 32px;
+    /* Reduces font size for tablets */
+    line-height: 1.2;
+  }
 }
 
 /* Custom Fix: Make Navigation Bar Smaller */
 .header-area .header-container-one {
-    min-height: 80px; /* Reduces the minimum height of the header */
+  min-height: 80px;
+  /* Reduces the minimum height of the header */
 }
 
 .header-area .nav-area .navbar-nav-1 .menu-item a {
-    padding-top: 20px;    /* Reduces top padding */
-    padding-bottom: 20px; /* Reduces bottom padding */
+  padding-top: 20px;
+  /* Reduces top padding */
+  padding-bottom: 20px;
+  /* Reduces bottom padding */
 }
 
 @media only screen and (max-width: 767px) {
-    /* Targets mobile phones */
-    .single-service-h2 .title,
-    .single-item-service-one h3 {
-        font-size: 28px; /* Further reduces font size for mobile */
-    }
+
+  /* Targets mobile phones */
+  .single-service-h2 .title,
+  .single-item-service-one h3 {
+    font-size: 28px;
+    /* Further reduces font size for mobile */
+  }
 }
 
 /* Custom Fix: Prevent awkward word breaks in service cards */
 .single-service-h2 .title {
-    font-size: 38px; /* Adjust this value if needed */
-    word-break: normal; /* Ensures words don't split randomly */
-    hyphens: auto; /* Adds hyphens for cleaner breaks if needed */
+  font-size: 38px;
+  /* Adjust this value if needed */
+  word-break: normal;
+  /* Ensures words don't split randomly */
+  hyphens: auto;
+  /* Adds hyphens for cleaner breaks if needed */
 }
-
