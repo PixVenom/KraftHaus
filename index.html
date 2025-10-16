@@ -15,91 +15,109 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Typing animation styles and script for .border-bottom-1 -->
     <style id="typing-anim-styles">
-        .typing-wrapper {
-            display: inline-block;
+    /* --- Base Typing Animation Styles --- */
+    .typing-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+    .typing-caret {
+        display: inline-block;
+        width: 2px;
+        background: currentColor;
+        margin-left: 6px;
+        animation: blink 1s steps(2, end) infinite;
+        vertical-align: bottom;
+        height: 1.2em;
+    }
+    @keyframes blink {
+        50% { opacity: 0 }
+    }
+
+    /* --- GLOBAL FIXES (All Screen Sizes) --- */
+
+    /* NEW: Remove underline from "Solutions" text */
+    .solutions-text {
+        text-decoration: none !important;
+        border-bottom: none !important;
+    }
+
+    /* Footer: Center the logo and social icons by default (Desktop) */
+    .footer-left-two {
+        text-align: center;
+    }
+    .footer-left-two .rts-social-area-one {
+        margin-top: 25px;
+    }
+    .footer-left-two .rts-social-area-one ul {
+        padding: 0;
+        list-style: none;
+        display: inline-flex; /* Allows the list to be centered */
+    }
+
+
+    /* --- MOBILE RESPONSIVENESS FIXES --- */
+    @media (max-width: 767px) {
+        
+        /* Footer: Override to align left on mobile */
+        .footer-left-two {
+            text-align: left;
+        }
+
+        /* 1. Hero Title Fix */
+        .rts_hero__title {
+            font-size: clamp(38px, 12vw, 55px) !important;
+            line-height: 1.2;
+            text-wrap: balance;
+        }
+        .solutions-text {
+            font-size: clamp(30px, 9vw, 45px) !important;
+            text-wrap: balance;
+        }
+
+        /* 2. "Our Core Services" Title Fix */
+        .rts-service-area .title-area .sub-title {
+            font-size: clamp(42px, 13vw, 65px) !important;
+            line-height: 1.2 !important;
+            text-wrap: balance;
+        }
+
+        /* 3. "Our Expertise" Title Fix */
+        .large-image-option-start .title.quote {
+            font-size: clamp(45px, 14vw, 70px) !important;
+            line-height: 1.1 !important;
+            text-wrap: balance;
+        }
+
+        /* 4. Button Arrow Color Fix */
+        .rts-btn-mouse-move i {
+            color: white !important;
+        }
+
+        /* 5. Footer Subscribe Form Fix */
+        .subscribtion-input {
+            display: flex;
+            width: 100%;
+        }
+        .subscribtion-input input[type="email"] {
+            flex-grow: 1;
+            width: auto;
+        }
+        .subscribtion-input button {
+            flex-shrink: 0;
+        }
+
+        /* Hiding/Adjusting desktop-only elements */
+        .top-center-image {
+            display: none !important;
+        }
+        .banner-jump-button {
             position: relative;
+            display: block;
+            text-align: center;
+            margin-top: 40px;
         }
-
-        .typing-caret {
-            display: inline-block;
-            width: 2px;
-            background: currentColor;
-            margin-left: 6px;
-            animation: blink 1s steps(2, end) infinite;
-            vertical-align: bottom;
-            height: 1.2em;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0
-            }
-        }
-
-        /* --- ADD THIS CODE FOR RESPONSIVENESS --- */
-
-        /* Target mobile and tablet screens */
-        @media (max-width: 767px) {
-            .rts_hero__title {
-                /* You can adjust this value! Try numbers between 40px and 60px */
-                font-size: 50px !important;
-                line-height: 1.2;
-                /* Improves spacing between lines */
-            }
-
-            .solutions-text {
-                /* Make the "Solutions" text slightly smaller */
-                font-size: 40px !important;
-            }
-
-            /* --- ADD THIS RULE FOR THE "OUR EXPERTISE" TITLE --- */
-            .large-image-option-start .title.quote {
-                font-size: 55px !important;
-                /* Adjust this value as needed */
-                line-height: 1.1 !important;
-            }
-        }
-
-        /* --- ADD THIS CODE FOR RESPONSIVENESS --- */
-
-        /* Target mobile and tablet screens */
-        @media (max-width: 767px) {
-            .rts_hero__title {
-                font-size: 50px !important;
-                line-height: 1.2;
-            }
-
-            /* --- ADD THIS RULE FOR THE SERVICES TITLE --- */
-            .rts-service-area .title-area .sub-title {
-                font-size: 45px !important;
-                line-height: 1.1 !important;
-                /* Improves line spacing */
-            }
-
-            .solutions-text {
-                font-size: 40px !important;
-            }
-
-            /* --- NEW STYLES TO FIX OVERLAPPING --- */
-
-            /* Hide the rotating circle on mobile */
-            .top-center-image {
-                display: none !important;
-            }
-
-            /* Reposition the 'Explore Our Services' button */
-            .banner-jump-button {
-                position: relative;
-                /* Reset positioning */
-                display: block;
-                /* Make it a block element */
-                text-align: center;
-                /* Center the button */
-                margin-top: 40px;
-                /* Add space above the button */
-            }
-        }
-    </style>
+    }
+</style>
     <script>
         (function () {
             // prevent double-initialization
@@ -576,13 +594,11 @@
                     <div class="row ptb--200 ptb_sm--150">
                         <div class="col-lg-9 col-md-12">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
-                                <div class="hero-title-wrapper">
-                                    <h1 class="title rts_hero__title">
-                                        Driving Results <br>
-                                        with <span class="border-bottom-1">Creative Digital</span> <br>
-                                        <span class="solutions-text">Solutions</span>
-                                    </h1>
-                                </div>
+                                <h1 class="title rts_hero__title">
+                                    Driving Results <br>
+                                    with <span class="border-bottom-1">Creative Digital</span> <br>
+                                    Solutions
+                                </h1>
                                 <!-- <div class="para-wraph">
                                     <p class="disc hero__sub-title">
                                         Our team of experts is dedicated to helping you achieve
@@ -775,8 +791,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="title-area">
-                                        <span class="sub-title" style="font-size: 80px; justify-self: center;">Our CORE
-                                            SERVICES</span>
+                                        <span class="sub-title">Our CORE SERVICES</span>
                                     </div>
                                 </div>
                             </div>
@@ -1238,8 +1253,7 @@
                                             Ready to scale your story through content,<br> performance, and
                                             purpose-driven design?
                                         </p> -->
-                                        <div class="rts-social-area-one"
-                                            style="position: relative; top: 20px; left: 30px;">
+                                        <div class="rts-social-area-one">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/profile.php?id=61580125714254"
                                                         aria-label="Follow us on Facebook"><i
