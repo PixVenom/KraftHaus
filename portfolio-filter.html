@@ -14,114 +14,149 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Portfolio Preview Tooltip Styles */
-        .portfolio-preview-tooltip {
-            position: absolute;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            z-index: 1000;
-            max-width: 300px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            pointer-events: none;
+    /* Portfolio Preview Tooltip Styles (Keep Existing Styles) */
+    .portfolio-preview-tooltip {
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        z-index: 1000;
+        max-width: 300px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    .portfolio-preview-tooltip.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .preview-content {
+        text-align: center;
+    }
+
+    .preview-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #141414;
+        margin-bottom: 8px;
+    }
+
+    .preview-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .preview-link {
+        display: inline-block;
+        background: #141414;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+
+    .preview-link:hover {
+        background: #333;
+        color: #fff;
+    }
+
+    .signle-portfolio-style-four-inner {
+        position: relative;
+    }
+
+    .signle-portfolio-style-four-inner:hover .portfolio-preview-tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Video Hover Effect Styles (Keep Existing Styles) */
+    .thumbnail {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+
+    .hover-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .thumbnail:hover .hover-video {
+        opacity: 1;
+    }
+
+    .thumbnail:hover .img-fluid {
+        opacity: 0;
+    }
+
+    .img-fluid {
+        transition: opacity 0.3s ease;
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FOR "Explore Our Work" --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words never break at all times for the title element */
+    .rts-breadcrumb-area .rts_hero__title {
+        font-size: 160px; /* The original large size */
+        line-height: 1.1;
+        word-break: normal; /* Prevents character-level breaks (e.g., Wo-rk) */
+        overflow-wrap: normal; /* Ensures words break only at spaces, not inside the word */
+        hyphens: none; /* Explicitly turn off hyphenation */
+    }
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 10vw !important; 
         }
+    }
 
-        .portfolio-preview-tooltip.show {
-            opacity: 1;
-            visibility: visible;
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* Further reduce the font size to ensure all 3 words fit on 3 lines,
+           even with padding/margins present on the container. */
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 10vw !important; /* Adjusted back to 10vw for a good balance */
+            line-height: 1.1 !important;
+            
+            /* Apply a max limit to the font size in case 10vw is too large on 
+               some screens that fall under this category but are wider. */
+            max-font-size: 60px; 
         }
-
-        .preview-content {
-            text-align: center;
+    }
+    
+    /* Dedicated query for extra small devices (e.g., iPhone 5/SE, smallest Android phones) */
+    @media (max-width: 400px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Reduced to 9vw, which on a 320px screen is ~28.8px, guaranteeing fit. */
+            font-size: 9vw !important; 
         }
-
-        .preview-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #141414;
-            margin-bottom: 8px;
-        }
-
-        .preview-description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .preview-link {
-            display: inline-block;
-            background: #141414;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 500;
-            transition: background 0.3s ease;
-        }
-
-        .preview-link:hover {
-            background: #333;
-            color: #fff;
-        }
-
-        .signle-portfolio-style-four-inner {
-            position: relative;
-        }
-
-        .signle-portfolio-style-four-inner:hover .portfolio-preview-tooltip {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Video Hover Effect Styles */
-        .thumbnail {
-            position: relative;
-            display: block;
-            overflow: hidden;
-        }
-
-        .hover-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .thumbnail:hover .hover-video {
-            opacity: 1;
-        }
-
-        .thumbnail:hover .img-fluid {
-            opacity: 0;
-        }
-
-        .img-fluid {
-            transition: opacity 0.3s ease;
-        }
-
-        /* --- ADD THIS CODE FOR PORTFOLIO PAGE RESPONSIVENESS --- */
-
-        @media (max-width: 767px) {
-
-            /* "Explore Our Work" title */
-            .rts-breadcrumb-area .rts_hero__title {
-                font-size: 70px !important;
-                /* Drastically reduces the size from 200px */
-                line-height: 1.1 !important;
-                /* Keeps the lines tight if they wrap */
-            }
-        }
-    </style>
+    }
+    
+    /* Ensure padding adjusts for better spacing on tiny screens */
+    .rts-breadcrumb-area .baread-crumb-main-wrapper {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+</style>
 </head>
 
 <body class="inner-page">

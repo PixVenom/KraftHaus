@@ -12,13 +12,52 @@
     <link rel="stylesheet" href="css/plugins/animate.min.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style id="theia-sticky-sidebar-stylesheet-TSS">
-        .theiaStickySidebar:after {
-            content: "";
-            display: table;
-            clear: both;
+    <style>
+    /* ----------------------------------------------------------- */
+    /* --- MOBILE RESPONSIVENESS FIX FOR "Our Blogs" TITLE --- */
+    /* ----------------------------------------------------------- */
+
+    .theiaStickySidebar:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Default size (large screen) */
+    .rts-breadcrumb-area .rts_hero__title {
+        /* You didn't specify the default size here, so setting a large base size. */
+        font-size: 160px; 
+        line-height: 1.1;
+        /* Core fix: Prevents words from breaking mid-word */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    /* Media query for tablets and larger phones (max-width: 991px) */
+    @media (max-width: 991px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 12vw !important; /* Scale title based on viewport width */
         }
-    </style>
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Reduce font size to ensure "Blogs" doesn't break, e.g., on two lines: Our/Blogs */
+            font-size: 11vw !important;
+            line-height: 1.1 !important;
+        }
+    }
+
+    /* Dedicated query for extra small devices (max-width: 400px) */
+    @media (max-width: 400px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Aggressively reduce font size for the smallest screens */
+            font-size: 10vw !important; 
+        }
+    }
+</style>
 </head>
 
 <body class="inner-page" style="" data-new-gr-c-s-check-loaded="14.1256.0" data-gr-ext-installed="">

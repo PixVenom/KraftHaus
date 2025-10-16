@@ -19,12 +19,41 @@
         clear: both;
     }
 
-    /* --- RESPONSIVENESS FOR SERVICES PAGE --- */
-    @media (max-width: 767px) {
-        /* "Our Services" title */
+    /* ------------------------------------------------------------------ */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FOR "Our Services" TITLE --- */
+    /* ------------------------------------------------------------------ */
+
+    .rts-breadcrumb-area .rts_hero__title {
+        /* Default size (large screen) - Based on previous pages, the initial large size is missing, 
+           so we set the default for large screens to ensure it scales down correctly. */
+        font-size: 160px; 
+        line-height: 1.1;
+        /* Core fix: Prevents words from breaking mid-word */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    /* Media query for tablets and larger phones (max-width: 991px) */
+    @media (max-width: 991px) {
         .rts-breadcrumb-area .rts_hero__title {
-            font-size: 70px !important; /* Matches the portfolio page for consistency */
+            font-size: 10vw !important; /* Scale title based on viewport width */
+        }
+    }
+
+    /* Media query for mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 10vw !important;
             line-height: 1.1 !important;
+        }
+    }
+
+    /* Dedicated query for extra small devices (e.g., iPhone SE/5) */
+    @media (max-width: 400px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Reduce font size further to guarantee "Services" fits on one line */
+            font-size: 9vw !important; 
         }
     }
 </style>

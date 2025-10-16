@@ -19,19 +19,62 @@
         clear: both;
     }
 
-    /* --- RESPONSIVENESS FOR ABOUT.HTML --- */
-    @media (max-width: 767px) {
-        /* "Who Are We?" title */
+    /* ------------------------------------------------------------------ */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FOR ABOUT.HTML HEADINGS --- */
+    /* ------------------------------------------------------------------ */
+
+    /* Default large size for the main title (Who Are We?) */
+    .rts-breadcrumb-area .rts_hero__title {
+        /* Prevents character-level breaks (e.g., Wo-rk, A-re) */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+        line-height: 1.1; /* Keep lines tight */
+    }
+
+    /* Default large size for the secondary title (Expert in Strategy...) */
+    .approch-area-left .title.quote {
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    /* Media query for tablets and larger phones (max-width: 991px) */
+    @media (max-width: 991px) {
+        /* "Who Are We?" scaling */
         .rts-breadcrumb-area .rts_hero__title {
-            font-size: 60px !important; /* Adjust as needed */
-            line-height: 1.1 !important;
-            word-wrap: break-word; 
+            font-size: 10vw !important; /* Start scaling down with viewport width */
         }
 
-        /* "EXPERT IN STRATEGY..." title */
+        /* "Expert in Strategy..." scaling */
         .approch-area-left .title.quote {
-            font-size: 32px !important; /* Adjust as needed */
+            font-size: 5vw !important;
             line-height: 1.2 !important;
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* Further reduce font size for small phones */
+        .rts-breadcrumb-area .rts_hero__title {
+            font-size: 10vw !important; /* Adjusted slightly */
+        }
+        
+        /* Reduce the Expert in Strategy... heading even more */
+        .approch-area-left .title.quote {
+            font-size: 8vw !important;
+        }
+    }
+
+    /* Dedicated query for extra small devices (e.g., iPhone SE/5) */
+    @media (max-width: 400px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Aggressively reduce font size to guarantee fit */
+            font-size: 9vw !important; 
+        }
+        
+        .approch-area-left .title.quote {
+            font-size: 7vw !important;
         }
     }
 </style>
