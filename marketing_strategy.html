@@ -14,17 +14,47 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* --- MOBILE RESPONSIVENESS FIX --- */
-    @media (max-width: 767px) {
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+    /* Target the strong slogan text to force it to be a block and add a bottom margin. */
+    .service-details-area .bottom-content .slogan-strong {
+        display: block; /* Forces the slogan text onto its own line */
+        margin-bottom: 15px; /* Adds space after the slogan/before the next text */
+        font-size: 24px !important; /* Lock the font size */
+    }
+
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 8vw !important;
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Aggressive scaling to fit the title on a single line */
+        .main-page-title-service-left-area .title-page {
+            font-size: 8.5vw !important; /* Scaled to fit the two words cleanly */
+            line-height: 1.1 !important;
+        }
+        
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
-        }
-
-        /* Resizes the page title to prevent word breaks */
-        .main-page-title-service-left-area .title-page {
-            font-size: 42px !important; /* Further reduced size to prevent word breaks */
-            line-height: 1.2 !important;
         }
     }
 </style>
@@ -316,13 +346,16 @@
                                 Marketing Strategy
                             </h1>
                             <div class="bottom-content">
-                                <p class="disc">
-                                    <strong style="font-size: 24px;">Turning insights into impact.</strong><br
-                                        class="d-none d-md-block">
+                                <p class="disc slogan-title">
+                                    <strong class="slogan-strong">Turning insights into impact.</strong>
+                                </p>
+
+                                <p class="disc slogan-body" style="margin-top: 15px;">
                                     Every great campaign begins with a clear strategy. At KraftHaus, we combine
                                     research,<br> creativity, and analytics to build marketing strategies that don’t
                                     just look good on paper —<br> they deliver real, measurable growth.
                                 </p>
+
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
@@ -484,21 +517,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                            <div class="col-lg-7 col-md-12 col-sm-12">
-                                <div class="thumbnail-service">
-                                    <img src="images/service/06.jpg" class="img-fluid" alt="service">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-section-start-left-img mt--80">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                                <div class="thumbnail">
-                                    <img src="images/service/07.png" class="img-fluid" alt="service_images">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
+                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <!-- accordion area start -->
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">Market Strategy Growth FAQ</h3>
@@ -596,6 +615,10 @@
                                 </div>
                                 <!-- accordion area end -->
                             </div>
+                        </div>
+                    </div>
+                    <div class="faq-section-start-left-img mt--80">
+                        <div class="row">
                         </div>
                     </div>
                 </div>

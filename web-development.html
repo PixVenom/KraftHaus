@@ -14,18 +14,70 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* --- MOBILE RESPONSIVENESS FIX --- */
-    @media (max-width: 767px) {
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR WEB DEV PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px;
+        line-height: 1.1;
+        /* Core word-break prevention (using aggressive scaling as the fix) */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+    
+    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+    /* Targets the strong slogan text to isolate it as a block and add margin. */
+    .service-details-area .bottom-content .slogan-strong {
+        display: block; 
+        margin-bottom: 15px !important; /* Adds space after the slogan/before the next text */
+        font-size: 24px !important; /* Locks the font size */
+        line-height: 1.4; 
+    }
+
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            font-size: 7.5vw !important;
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Highly aggressive scaling to fit the entire title cleanly. */
+        .main-page-title-service-left-area .title-page {
+            font-size: 6vw !important; /* Most aggressive scaling for this very long title */
+            line-height: 1.1 !important;
+        }
+        
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
         }
-
-        /* Resizes the page title to prevent word breaks */
-        .main-page-title-service-left-area .title-page {
-            font-size: 55px !important;
-            line-height: 1.2 !important;
-        }
+    }
+    
+    /* Checklist styles from your original code (retained) */
+    .single-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    .single-check i {
+        margin-right: 15px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .single-check p {
+        line-height: 1.6;
+    }
+    .single-check p strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
     }
 </style>
 </head>
@@ -316,12 +368,15 @@
                                 Web Design & Development
                             </h1>
                             <div class="bottom-content">
-                                <p class="disc">
-                                    <strong style="font-size: 24px;">Beautiful, functional websites built to perform.</strong><br
-                                        class="d-none d-md-block">
+                                <p class="disc slogan-title">
+                                    <strong class="slogan-strong">Beautiful, functional websites built to perform.</strong>
+                                </p>
+
+                                <p class="disc slogan-body" style="margin-top: 15px;">
                                     Your website is your digital home. At KraftHaus, we create websites that are not
                                     just<br> visually stunning but strategically designed to convert visitors into clients.
                                 </p>
+
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
