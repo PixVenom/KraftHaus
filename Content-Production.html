@@ -14,18 +14,39 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* --- MOBILE RESPONSIVENESS FIX --- */
-    @media (max-width: 767px) {
-        /* Pushes the content down to clear the header */
+    /* ---------------------------------------------------------------------- */
+    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+    /* ---------------------------------------------------------------------- */
+
+    /* Ensure words don't break at the character level across all screen sizes */
+    .main-page-title-service-left-area .title-page {
+        /* Default style for large screens */
+        font-size: 80px; /* Setting a moderate default size here */
+        line-height: 1.1;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    /* Media query for tablets and smaller (max-width: 991px) */
+    @media (max-width: 991px) {
+        .main-page-title-service-left-area .title-page {
+            /* Start scaling down for tablets/large phones */
+            font-size: 8vw !important; 
+        }
+    }
+
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* Further adjust the size to prevent breaks like 'Creati-on' */
+        .main-page-title-service-left-area .title-page {
+            font-size: 10vw !important; /* Larger VW to ensure adequate height/readability on narrow screens */
+            line-height: 1.1 !important;
+        }
+        
+        /* Pushes the content down to clear the header (kept your original fix) */
         .service-details-area .pt--120 {
             padding-top: 100px !important; 
-        }
-
-        /* Resizes the page title */
-        .main-page-title-service-left-area .title-page {
-            /* Using a smaller font size for this longer title */
-            font-size: 48px !important; 
-            line-height: 1.2;
         }
     }
 </style>
