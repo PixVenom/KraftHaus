@@ -13,71 +13,227 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style id="theia-sticky-sidebar-stylesheet-TSS">
-    .theiaStickySidebar:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+        .theiaStickySidebar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-    /* ------------------------------------------------------------------ */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FOR ABOUT.HTML HEADINGS --- */
-    /* ------------------------------------------------------------------ */
+        /* ------------------------------------------------------------------ */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FOR ABOUT.HTML HEADINGS --- */
+        /* ------------------------------------------------------------------ */
 
-    /* Default large size for the main title (Who Are We?) */
-    .rts-breadcrumb-area .rts_hero__title {
-        /* Prevents character-level breaks (e.g., Wo-rk, A-re) */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-        line-height: 1.1; /* Keep lines tight */
-    }
-
-    /* Default large size for the secondary title (Expert in Strategy...) */
-    .approch-area-left .title.quote {
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-
-    /* Media query for tablets and larger phones (max-width: 991px) */
-    @media (max-width: 991px) {
-        /* "Who Are We?" scaling */
+        /* Default large size for the main title (Who Are We?) */
         .rts-breadcrumb-area .rts_hero__title {
-            font-size: 10vw !important; /* Start scaling down with viewport width */
+            /* Prevents character-level breaks (e.g., Wo-rk, A-re) */
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
+            line-height: 1.1;
+            /* Keep lines tight */
         }
 
-        /* "Expert in Strategy..." scaling */
+        /* Default large size for the secondary title (Expert in Strategy...) */
         .approch-area-left .title.quote {
-            font-size: 5vw !important;
-            line-height: 1.2 !important;
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
-    }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* Further reduce font size for small phones */
-        .rts-breadcrumb-area .rts_hero__title {
-            font-size: 10vw !important; /* Adjusted slightly */
-        }
-        
-        /* Reduce the Expert in Strategy... heading even more */
-        .approch-area-left .title.quote {
-            font-size: 8vw !important;
-        }
-    }
+        /* Media query for tablets and larger phones (max-width: 991px) */
+        @media (max-width: 991px) {
 
-    /* Dedicated query for extra small devices (e.g., iPhone SE/5) */
-    @media (max-width: 400px) {
-        .rts-breadcrumb-area .rts_hero__title {
-            /* Aggressively reduce font size to guarantee fit */
-            font-size: 9vw !important; 
+            /* "Who Are We?" scaling */
+            .rts-breadcrumb-area .rts_hero__title {
+                font-size: 10vw !important;
+                /* Start scaling down with viewport width */
+            }
+
+            /* "Expert in Strategy..." scaling */
+            .approch-area-left .title.quote {
+                font-size: 5vw !important;
+                line-height: 1.2 !important;
+            }
         }
-        
-        .approch-area-left .title.quote {
-            font-size: 7vw !important;
+
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            /* Further reduce font size for small phones */
+            .rts-breadcrumb-area .rts_hero__title {
+                font-size: 10vw !important;
+                /* Adjusted slightly */
+            }
+
+            /* Reduce the Expert in Strategy... heading even more */
+            .approch-area-left .title.quote {
+                font-size: 8vw !important;
+            }
         }
-    }
-</style>
+
+        /* Dedicated query for extra small devices (e.g., iPhone SE/5) */
+        @media (max-width: 400px) {
+            .rts-breadcrumb-area .rts_hero__title {
+                /* Aggressively reduce font size to guarantee fit */
+                font-size: 9vw !important;
+            }
+
+            .approch-area-left .title.quote {
+                font-size: 7vw !important;
+            }
+        }
+
+        /* ------------------------------------------------------------------ */
+        /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
+        /* ------------------------------------------------------------------ */
+
+        /* Footer adjustments for tablet - Centered and larger fonts */
+        @media (min-width: 414px) and (max-width: 896px) {
+            .footer-compact {
+                padding: 40px 0 !important;
+                text-align: center !important;
+            }
+
+            .footer-compact__row {
+                padding-bottom: 30px !important;
+            }
+
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .footer-left-two .logo img {
+                width: 180px !important;
+                height: auto !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                order: 2 !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 24px !important;
+                margin-bottom: 20px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+            }
+
+            .footer-nav li {
+                margin-bottom: 0 !important;
+            }
+
+            .footer-nav li a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .footer-nav li a:hover {
+                color: white !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .mail-contact-area .single-con-info {
+                margin-bottom: 15px !important;
+            }
+
+            .mail-contact-area .single-con-info a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .mail-contact-area .single-con-info a:hover {
+                color: white !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area .disc {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 25px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .copyright-area p {
+                font-size: 16px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin: 0 !important;
+            }
+
+            .copyright-area a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            /* Subscription form for tablet */
+            .subscribtion-input {
+                flex-direction: row !important;
+                gap: 15px !important;
+            }
+
+            .subscribtion-input input[type="email"] {
+                flex: 1 !important;
+                padding: 12px 14px !important;
+                font-size: 14px !important;
+            }
+
+            .subscribtion-input button {
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+                white-space: nowrap !important;
+                margin-top: -4px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about" data-new-gr-c-s-check-loaded="14.1256.0" data-gr-ext-installed="">
@@ -361,8 +517,7 @@
     <!-- header area two end -->
 
     <!-- rts bread crumba rea start -->
-    <div class="rts-breadcrumb-area bg_image"
-        style="background-image: url('https://cdn.wallpapersafari.com/43/89/NEe6LB.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 60vh; width: 100%;">
+    <div class="rts-breadcrumb-area bg_image">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
