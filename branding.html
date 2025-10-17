@@ -14,49 +14,119 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR BRANDING PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR BRANDING PAGE TITLE --- */
+/* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
+/* Ensure words don't break at the character level across all screen sizes */
+.main-page-title-service-left-area .title-page {
+    /* Default style for large screens */
+    font-size: 80px;
+    line-height: 1.1;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+/* Custom styles for slogan (retained from your code) */
+.bottom-content .disc strong {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Fix: Ensure page content does NOT center on mobile/tablet */
+.bottom-content .disc {
+    text-align: left !important; /* Forces content text to remain left-aligned */
+}
+
+/* Media query for tablets and smaller (max-width: 991px) */
+@media (max-width: 991px) {
     .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
+        font-size: 8vw !important;
+    }
+}
+
+/* Media query for typical mobile phones (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Scaling to ensure even short titles fit well */
+    .main-page-title-service-left-area .title-page {
+        font-size: 10vw !important;
+        line-height: 1.1 !important;
     }
     
-    /* Custom styles for slogan (retained from your code) */
-    .bottom-content .disc strong {
-        font-size: 22px;
-        display: block;
-        margin-bottom: 15px;
-        line-height: 1.4;
+    /* Pushes the content down to clear the header */
+    .service-details-area .pt--120 {
+        padding-top: 100px !important; 
     }
-    /* ... (rest of your custom .single-check styles are fine) ... */
+}
 
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
-        .main-page-title-service-left-area .title-page {
-            font-size: 8vw !important; /* Start scaling down for tablets/large phones */
-        }
+
+/* ---------------------------------------------------------------------- */
+/* --- MOBILE/TABLET FOOTER CENTERING FIX (Separated from Slogan) --- */
+/* ---------------------------------------------------------------------- */
+
+@media (min-width: 414px) and (max-width: 896px) {
+
+    .footer-main-wrapper-one {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; 
+        gap: 30px !important;
+        text-align: center !important;
     }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* Scaling to ensure even short titles fit well */
-        .main-page-title-service-left-area .title-page {
-            font-size: 10vw !important; /* Scale to fill narrow screen, preventing breaks */
-            line-height: 1.1 !important;
-        }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
-        }
+    .footer-left-two {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
+    
+    /* Override inline style and center social media section */
+    .footer-left-two .rts-social-area-one {
+        position: static !important;
+        left: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 20px !important;
+    }
+
+    .footer-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-single-wized-start {
+        text-align: center !important;
+    }
+
+    .mail-contact-area {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .footer-compact {
+        padding: 20px 0 !important;
+    }
+
+    .footer-single-wized-start .title {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .footer-nav li a {
+        font-size: 14px !important;
+    }
+    
+    .copyright-area {
+        text-align: center !important;
+    }
+}
 </style>
 </head>
 
