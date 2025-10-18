@@ -45,10 +45,18 @@
             border-bottom: none !important;
         }
 
-        /* Hero title font size control */
+        /* Hero title font size control - Desktop default */
         .rts_hero__title {
-            font-size: 50px !important;
+            font-size: 100px !important;
             line-height: 1.1 !important;
+        }
+
+        /* Hero title font size for 430x932 dimensions only */
+        @media (max-width: 430px) {
+            .rts_hero__title {
+                font-size: 50px !important;
+                line-height: 1.1 !important;
+            }
         }
 
         /* Footer: Center the logo and social icons by default (Desktop) */
@@ -1746,7 +1754,7 @@
                     <div class="row ptb--200 ptb_sm--150">
                         <div class="col-lg-9 col-md-12">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
-                                <h1 class="title rts_hero__title" style="font-size: 50px !important;">
+                                <h1 class="title rts_hero__title" style="font-size: 100px">
                                     Driving Results <br>
                                     with <span class="border-bottom-1">Creative Digital</span> <br>
                                     Solutions
