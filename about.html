@@ -84,6 +84,198 @@
         }
 
         /* ------------------------------------------------------------------ */
+        /* --- EMAIL INPUT WRAPPER STYLING --- */
+        /* ------------------------------------------------------------------ */
+
+        .email-input-wrapper {
+            position: relative;
+            flex-grow: 1; /* Allows the wrapper to expand, and thus the input inside it */
+        }
+
+        .email-input-wrapper input[type="email"] {
+            width: 100%; /* Ensure input fills its new wrapper */
+            /* Add padding to the left for the icon */
+            padding-left: 40px !important; 
+            /* The !important may be needed due to existing inline/plugin styles */
+        }
+
+        .email-input-wrapper label {
+            /* Absolute position to take it out of the flex flow */
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; /* Prevents interference with input focus */
+            color: #333; /* Adjust color for visibility against the input box */
+            z-index: 10;
+        }
+
+        /* ------------------------------------------------------------------ */
+        /* --- FOOTER CENTERING FOR MOBILE DEVICES --- */
+        /* ------------------------------------------------------------------ */
+
+        /* Footer adjustments for mobile devices - Center aligned */
+        @media (max-width: 768px) {
+            .footer-compact {
+                padding: 40px 0 !important;
+                text-align: center !important;
+            }
+
+            .footer-compact__row {
+                padding-bottom: 30px !important;
+            }
+
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .footer-left-two .logo img {
+                width: 180px !important;
+                height: auto !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+                position: relative !important;
+                left: 0 !important;
+            }
+
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                order: 2 !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 24px !important;
+                margin-bottom: 20px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+            }
+
+            .footer-nav li {
+                margin-bottom: 0 !important;
+            }
+
+            .footer-nav li a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .footer-nav li a:hover {
+                color: white !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .mail-contact-area .single-con-info {
+                margin-bottom: 15px !important;
+            }
+
+            .mail-contact-area .single-con-info a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .mail-contact-area .single-con-info a:hover {
+                color: white !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area .disc {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 25px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .copyright-area p {
+                font-size: 16px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin: 0 !important;
+            }
+
+            .copyright-area a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            /* Subscription form for mobile */
+            .subscribtion-input {
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 10px !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                max-width: 350px !important;
+                margin: 0 auto !important;
+            }
+
+            .subscribtion-input .email-input-wrapper input[type="email"] {
+                /* Remove flex control as the wrapper now handles sizing */
+                flex: none !important;
+                min-width: auto !important;
+                padding: 12px 14px !important;
+                font-size: 14px !important;
+                border-radius: 4px !important;
+                border: 1px solid #ccc !important;
+            }
+
+            .subscribtion-input button {
+                flex-shrink: 0 !important;
+                padding: 12px 16px !important;
+                font-size: 12px !important;
+                white-space: nowrap !important;
+                border-radius: 4px !important;
+                min-width: fit-content !important;
+            }
+        }
+
+        /* ------------------------------------------------------------------ */
         /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
         /* ------------------------------------------------------------------ */
 
@@ -979,8 +1171,10 @@
                                         <br> Don’t worry we don’t spam your email address
                                     </p>
                                     <form action="#" class="subscribtion-input">
-                                        <input id="email" type="email" placeholder="Enter your email..." required="">
-                                        <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                        <div class="email-input-wrapper">
+                                            <input id="email" type="email" placeholder="Enter your email..." required="">
+                                            <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                        </div>
                                         <button type="submit" class="rts-btn btn-dark">subscribe</button>
                                     </form>
                                 </div>
