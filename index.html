@@ -43,10 +43,56 @@
         margin-bottom: 0px !important; /* Resetting external space */
         }
         
-        /* FIX 2: TARGET THE INTERNAL PADDING ON THE LINK TO REDUCE THE SPACE ABOVE AND BELOW CONTENT */
-        .single-item-service-one a {
-            padding-top: 20px !important; /* Adjust this value to reduce space above the content */
-            padding-bottom: 20px !important; /* Adjust this value to reduce space below the content */
+        /* Desktop Service Card Styles */
+        .service-area-one-main-wrapper .single-item-service-one {
+            margin-bottom: 0px;
+            padding: 20px 20px 20px 0px;
+        }
+        .service-area-one-main-wrapper .single-item-service-one a {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        /* Mobile Styles (767px) */
+        @media only screen and (max-width: 767px) {
+            .service-area-one-main-wrapper .single-item-service-one {
+                margin-bottom: 5px !important;
+                padding: 15px 20px !important;
+            }
+            .service-area-one-main-wrapper .single-item-service-one a {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                width: 100% !important;
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+            .service-area-one-main-wrapper .single-item-service-one .list-title h3,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p.dsic,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p.disc {
+                text-align: center !important;
+                word-wrap: break-word !important;
+            }
+            .service-area-one-main-wrapper .single-item-service-one .list-title,
+            .service-area-one-main-wrapper .single-item-service-one .list-info,
+            .service-area-one-main-wrapper .single-item-service-one .rts-img-contaciner {
+                margin-right: 0px !important;
+                margin-bottom: 5px !important;
+                flex: unset !important;
+            }
+            .service-area-one-main-wrapper .single-item-service-one .button-area {
+                align-self: center !important;
+            }
+        }
+
+        /* Small Phones (430px) */
+        @media only screen and (max-width: 430px) {
+            .service-area-one-main-wrapper .single-item-service-one {
+                margin-bottom: 5px !important;
+                padding: 10px 15px !important;
+            }
         }
 
         /* FIX 3: Reduces the overall vertical padding around the entire service section (for desktop views) */
@@ -219,8 +265,8 @@
             }
 
             .single-item-service-one {
-                margin-bottom: 0 !important;
-                padding: 20px !important;
+                /* margin-bottom: 0 !important; <--- This original line seems to have been removed/changed, but set to 0. */
+                padding: 10px 20px !important; /* Reduced vertical padding from 20px to 10px */
                 background: rgba(255, 255, 255, 0.05) !important;
                 border-radius: 12px !important;
                 border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -236,12 +282,15 @@
 
             .single-item-service-one a {
                 display: flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
+                flex-direction: column !important; /* Stack items vertically */
+                align-items: center !important; /* Centers content horizontally */
+                text-align: center !important; /* Centers text itself */
                 text-decoration: none !important;
                 width: 100% !important;
+                padding-top: 15px !important; /* Tighter vertical padding */
+                padding-bottom: 15px !important;
             }
-
+                        
             .single-item-service-one .rts-img-contaciner {
                 flex-shrink: 0 !important;
                 width: 120px !important;
@@ -698,8 +747,8 @@
 
             /* Service cards mobile optimization */
             .single-item-service-one {
-                margin-bottom: 20px !important;
-                padding: 15px !important;
+                margin-bottom: 0px !important; 
+                padding: 20px 20px 20px 0px !important; /* Forces vertical padding while preserving left/right alignment */
             }
 
             .single-item-service-one .list-title h3 {
