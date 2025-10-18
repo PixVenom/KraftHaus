@@ -14,53 +14,123 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+/* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
+/* Ensure words don't break at the character level across all screen sizes */
+.main-page-title-service-left-area .title-page {
+    /* Default style for large screens */
+    font-size: 80px;
+    line-height: 1.1;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+/* FIX: Slogan Spacing (Guarantees separation) */
+/* Add a large bottom margin to the slogan block */
+.service-details-area .bottom-content .slogan-title {
+    margin-bottom: 30px !important; /* Force a large gap after the slogan block */
+}
+
+/* FIX: Slogan Font Size (Ensures it is separate from HTML style attribute) */
+.slogan-strong {
+    display: block; 
+    font-size: 22px !important; /* Lock the font size */
+}
+
+
+/* Media query for tablets and smaller (max-width: 991px) */
+@media (max-width: 991px) {
     .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
+        font-size: 8vw !important;
+    }
+}
+
+/* Media query for typical mobile phones (max-width: 576px) */
+@media (max-width: 576px) {
+    /* FIX: Header Breaking - Further aggressive scaling to fit the long title */
+    .main-page-title-service-left-area .title-page {
+        font-size: 6.5vw !important; 
+        line-height: 1.1 !important;
     }
     
-    /* FIX: Slogan Spacing (Guarantees separation) */
-    /* Add a large bottom margin to the slogan block */
-    .service-details-area .bottom-content .slogan-title {
-        margin-bottom: 30px !important; /* Force a large gap after the slogan block */
+    /* Pushes the content down to clear the header */
+    .service-details-area .pt--120 {
+        padding-top: 100px !important; 
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- MOBILE/TABLET FOOTER CENTERING FIX (Consistent across pages) --- */
+/* ---------------------------------------------------------------------- */
+
+/* Ensure main content elements remain left-aligned on smaller screens (overrides accidental inheritance) */
+.service-details-area .disc {
+    text-align: left !important;
+}
+
+@media (min-width: 414px) and (max-width: 896px) {
+
+    .footer-main-wrapper-one {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; 
+        gap: 30px !important;
+        text-align: center !important;
+    }
+
+    .footer-left-two {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
-    /* Ensure the strong text within the paragraph maintains its font size */
-    .service-details-area .bottom-content .slogan-strong {
-        display: block; 
-        font-size: 22px !important; /* Lock the font size */
+    /* Override inline style of social media section and ensure centering */
+    .footer-left-two .rts-social-area-one {
+        position: static !important;
+        left: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 20px !important;
     }
 
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
-        .main-page-title-service-left-area .title-page {
-            font-size: 8vw !important;
-        }
+    .footer-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FIX: Header Breaking - Further aggressive scaling to fit the long title */
-        .main-page-title-service-left-area .title-page {
-            font-size: 6.5vw !important; 
-            line-height: 1.1 !important;
-        }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
-        }
+    .footer-single-wized-start {
+        text-align: center !important;
     }
+
+    .mail-contact-area {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .footer-compact {
+        padding: 20px 0 !important;
+    }
+
+    .footer-single-wized-start .title {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .footer-nav li a {
+        font-size: 14px !important;
+    }
+    
+    .copyright-area {
+        text-align: center !important;
+    }
+}
 </style>
 </head>
 
@@ -354,16 +424,6 @@
                                         shoots, product<br> photography, or social reels.</span>
                                 </p>
                                 <div class="check-area-main-sd">
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p class="disc">
-                                            <strong style="font-size: 22px;">Creating visuals that make people stop, feel, and
-                                                remember.</strong>
-                                            <br> We help brands tell their story through powerful content — whether it’s lifestyle
-                                            shoots, product<br> photography, or social reels.
-                                        </p>
-                                        <br>
-                                    </div>
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
                                         <p><strong>Shoot Planning & Execution</strong><br>
