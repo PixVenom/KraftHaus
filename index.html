@@ -39,6 +39,22 @@
 
         /* --- GLOBAL FIXES (All Screen Sizes) --- */
 
+        .single-item-service-one {
+        margin-bottom: 0px !important; /* Resetting external space */
+        }
+        
+        /* FIX 2: TARGET THE INTERNAL PADDING ON THE LINK TO REDUCE THE SPACE ABOVE AND BELOW CONTENT */
+        .single-item-service-one a {
+            padding-top: 20px !important; /* Adjust this value to reduce space above the content */
+            padding-bottom: 20px !important; /* Adjust this value to reduce space below the content */
+        }
+
+        /* FIX 3: Reduces the overall vertical padding around the entire service section (for desktop views) */
+        .rts-service-area {
+            padding-top: 50px !important;
+            padding-bottom: 50px !important; 
+        }
+
         /* NEW: Remove underline from "Solutions" text */
         .solutions-text {
             text-decoration: none !important;
@@ -2514,13 +2530,6 @@
             </span>
         </div>
         <!-- pre loader end -->
-
-
-
-
-
-
-
         <script defer src="js/vendor/jquery.min.js"></script>
         <script defer src="js/plugins/bootstrap.min.js"></script>
         <script defer src="js/plugins/contact.form.js"></script>
