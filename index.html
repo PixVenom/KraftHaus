@@ -113,6 +113,14 @@
             line-height: 1.1 !important;
         }
 
+        /* Force override for all screen sizes except mobile */
+        @media (min-width: 431px) {
+            .rts_hero__title {
+                font-size: 100px !important;
+                line-height: 1.1 !important;
+            }
+        }
+
         /* Hero title font size for 430x932 dimensions only */
         @media (max-width: 430px) {
             .rts_hero__title {
