@@ -1,68 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="rts-dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-style-mode" content="1">
-    <link rel="shortcut icon" type="image/x-icon" href="/Krafthaus Logo white version.png">
-    <title>Social Media Marketing - KraftHaus</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Krafthaus Logo white version.png">
+    <title>Portfolio - KraftHaus</title>
     <link rel="stylesheet" href="css/plugins/fontawesome-6.css">
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <link rel="stylesheet" href="css/vendor/metismenu.css">
     <link rel="stylesheet" href="css/plugins/animate.min.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SMM PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
-
-    /* Ensure words don't break at the character level across all screen sizes */
-    .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        /* Core word-break prevention */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
-    /* Targets the strong slogan text to isolate it as a block and add margin. */
-    .service-details-area .bottom-content .slogan-strong {
-        display: block; /* Forces the slogan text onto its own line */
-        margin-bottom: 15px !important; /* Adds space after the slogan/before the next text */
-        font-size: 24px !important; /* Locks the font size */
-        line-height: 1.4; /* Improves readability of the slogan itself */
-    }
-
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
-        .main-page-title-service-left-area .title-page {
-            font-size: 8vw !important;
-        }
-    }
-
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FINAL FIX: Header Breaking - Aggressive scaling (similar to the SEO page) to fit the title cleanly. */
-        .main-page-title-service-left-area .title-page {
-            font-size: 6vw !important; /* Aggressively scaled for long title */
-            line-height: 1.1 !important;
-        }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
-        }
-    }
-</style>
 </head>
 
-<body class="inner-page about contact-page servi-ce-details">
+<body class="inner-page">
 
     <!-- Scripts style two -->
     <!-- header area two start -->
@@ -77,21 +30,24 @@
                     <nav class="nav-area drop-down-rts" role="navigation" aria-label="Main navigation">
                         <ul class="navbar-nav-1" role="menubar">
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
-                                <a href="index.html" role="menuitem" aria-current="page"><span class="rolling-text">
+                                <a href="index.html" onclick="window.location.href='index.html'" role="menuitem"
+                                    aria-current="page"><span class="rolling-text">
                                         <div class="block"><span class="letter">H</span><span
                                                 class="letter">O</span><span class="letter">M</span><span
                                                 class="letter">E</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on" role="none">
-                                <a class="menu-link" href="about.html" role="menuitem"><span class="rolling-text">
+                                <a class="menu-link" href="about.html" onclick="window.location.href='about.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">A</span><span
                                                 class="letter">B</span><span class="letter">O</span><span
                                                 class="letter">U</span><span class="letter">T</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
-                                <a href="portfolio-one.html" role="menuitem"><span class="rolling-text">
+                                <a href="portfolio-one.html" onclick="window.location.href='portfolio-one.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">P</span><span
                                                 class="letter">O</span><span class="letter">R</span><span
                                                 class="letter">T</span><span class="letter">F</span><span
@@ -100,7 +56,8 @@
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
-                                <a href="service-3.html" role="menuitem"><span class="rolling-text">
+                                <a href="service-3.html" onclick="window.location.href='service-3.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">S</span><span
                                                 class="letter">E</span><span class="letter">R</span><span
                                                 class="letter">V</span><span class="letter">I</span><span
@@ -110,14 +67,17 @@
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
-                                <a href="blog-detailsright-sidebar.html" role="menuitem"><span class="rolling-text">
+                                <a href="blog-detailsright-sidebar.html"
+                                    onclick="window.location.href='blog-detailsright-sidebar.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">B</span><span
                                                 class="letter">L</span><span class="letter">O</span><span
                                                 class="letter">G</span><span class="letter">S</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
-                                <a href="contact.html" role="menuitem"><span class="rolling-text">
+                                <a href="contact.html" onclick="window.location.href='contact.html'"
+                                    role="menuitem"><span class="rolling-text">
                                         <div class="block"><span class="letter">C</span><span
                                                 class="letter">O</span><span class="letter">N</span><span
                                                 class="letter">T</span><span class="letter">A</span><span
@@ -194,8 +154,8 @@
                                                             </svg></span></a>
                                                 </li>
                                                 <li id="menu-item-767" class="menu-item menu-item-has-children">
-                                                    <a href="about-style.html"
-                                                        onclick="window.location.href='about-style.html'">About<span><svg
+                                                    <a href="about.html"
+                                                        onclick="window.location.href='about.html'">About<span><svg
                                                                 height="24" viewBox="0 0 24 24" width="24"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path class="heroicon-ui"
@@ -224,8 +184,9 @@
                                                             </svg></span></a>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
-                                                    <a href="service-3.html">Services<span><svg height="24"
-                                                                viewBox="0 0 24 24" width="24"
+                                                    <a href="service-3.html"
+                                                        onclick="window.location.href='service-3.html'">Services<span><svg
+                                                                height="24" viewBox="0 0 24 24" width="24"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path class="heroicon-ui"
                                                                     d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
@@ -338,308 +299,160 @@
     <!-- Scripts style two End -->
 
 
-    <div class="service-details-area rts-section-gapTop bg-dark-s">
-        <div class="container-150">
-            <div class="row  pt--120 pb--80 pt_lg--50 pt_md--60 pt_sm--10">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="main-page-title-service-left-area">
-                        <div class="left">
-                            <h1 class="title-page rts_hero__title">
-                                Social Media Marketing
-                            </h1>
-                            <div class="bottom-content">
-                                    <p class="disc slogan-title">
-                                        <strong class="slogan-strong">Turning audiences into communities.</strong>
-                                    </p>
-
-                                    <p class="disc slogan-body" style="margin-top: 0;">
-                                        At KraftHaus, we help brands move beyond just posting - we build social<br> identities
-                                        that engage, inspire, and convert.
-                                        Our social media marketing<br> approach blends strategy, storytelling, and design to
-                                        make every post <br>count.
-                                    </p>
-
-                                    <div class="check-area-main-sd">
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Discovery & Brand Understanding</strong><br>
-                                            We start by understanding your brand - who you are, what you stand<br> for, and
-                                            who your audience is.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Strategy & Calendar Planning</strong><br>
-                                            We craft a tailored content strategy and posting calendar that balances<br>
-                                            brand-building and engagement.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Content Creation & Design</strong><br>
-                                            From static posts to reels and stories — our team creates scroll-stopping<br>
-                                            visuals and impactful copy.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Publishing & Optimization</strong><br>
-                                            We manage your pages across platforms (Instagram, Facebook, LinkedIn,<br> etc.)
-                                            ensuring timing, tone, and trends align.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Analytics & Growth Review</strong><br>
-                                            Monthly reports and insights to measure performance, audience growth,<br> and
-                                            engagement — with recommendations to scale.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <blockquote class="rts-quote-style"
-                                    style="font-style: italic; font-size: 30px; text-align: center; margin-top: 100px; margin-bottom: 40px; color: #ccc;">
-                                    We don’t run ads for visibility — we run ads for results.
-                                </blockquote>
-
-                                <div class="d-flex justify-content-center">
-                                    <div class="rts-mouse-move-button mt-4">
-                                        <div class="btn_wrapper">
-                                            <a href="contact.html" class="rts-btn-mouse-move btn-hover btn-item"
-                                                style="font-size: 16px; padding: 15px 30px; padding-left: 65px;">
-                                                <span></span>Launch Your Campaign with KraftHaus
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="top-center-image circle-speen rts-scroll-down-circle-wrapper-3">
-                                <a href="portfolio-one.html" class="speen-shape scroll-down-circle-3">
-                                    <svg class="uni-circle-text-path uk-text-secondary uni-animation-spin"
-                                        viewBox="0 0 100 100" width="180" height="180">
-                                        <defs>
-                                            <path id="circle"
-                                                d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0">
-                                            </path>
-                                        </defs>
-                                        <text font-size="11.75">
-                                            <textPath xlink:href="#circle">Project SHowcase • Project SHowcase •
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                    <i class="fa-solid fa-star-sharp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt--80 pt_md--10 pt_sm--0">
-                <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 pr--60 pr_md--15 pr_sm--10 pb_sm--30">
-                    <!-- service details left area start -->
-                    <div class="service-details-left">
-                        <div class="thumbnaiul-large">
-                            <img src="images/service/04.jpg" class="img-fluid" alt="service-details">
-                        </div>
-                    </div>
-                    <!-- service details left area end -->
-                    <div class="single-para-title-service-details mt--40">
-                        <h3 class="title">How We Do It</h3>
-                        <p class="disc" style="color: white;">
-                            Our process is strategic from day one. We begin with a deep-dive audit of your current
-                            social presence and competitive landscape to identify key opportunities. Based on these
-                            insights, we develop a tailored, platform-specific strategy, complete with content calendars
-                            and an engagement plan. Our team then moves into ongoing content production, creating
-                            scroll-stopping visuals and copy while actively engaging with your audience daily to build a
-                            genuine community. Finally, we close the loop with monthly performance analysis, allowing us
-                            to optimize what isn't working and scale what is for maximum impact and continuous growth.
-                        </p>
-                    </div>
-
-                    <div class="service-short-quote mt--50">
-
-                        <div class="check-area-main-sd">
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Platform-Specific Strategy</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Content Creation & Production</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Community Building</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Social Media Advertising</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Performance Analytics</p>
-                            </div>
-                        </div>
-
-                        <div class="right-info-service-short-quote">
-                            <h6 class="title">Why It Matters</h6>
-                            <p class="disc">
-                                In today's social media landscape, it's easy to get lost chasing vanity metrics like
-                                likes and shares. That’s why our approach is different. We believe that social media's
-                                true value lies in its ability to drive tangible business outcomes. We measure success
-                                the same way you do: by the revenue it generates, the qualified leads it captures, and
-                                the customers it acquires. Every post we create serves a distinct purpose within your
-                                conversion funnel, transforming your social channels from a simple broadcasting tool
-                                into a powerful customer acquisition machine that delivers a measurable return on
-                                investment.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div class="image-thumbnail-2-service-d mt--50">
-                        <div class="row g-4">
-                            <div class="col-lg-5 col-md-12 col-sm-12">
-                                <div class="thumbnail-service">
-                                    <img src="images/service/05.jpg" class="img-fluid" alt="service">
-                                </div>
-                            </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
-                                <!-- accordion area start -->
-                                <div class="service-details-accordion-area">
-                                    <h3 class="title">Social Media Marketing FAQ</h3>
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="true"
-                                                    aria-controls="collapseOne">
-                                                    How is your approach different from other social media agencies that
-                                                    just focus on getting more likes and followers?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Our core difference is that we measure success the same way you
-                                                        do: by the tangible results it brings to your business. While
-                                                        other agencies focus on vanity metrics like likes and shares, we
-                                                        build strategies designed to turn your social media into a
-                                                        customer acquisition machine. Every post, campaign, and
-                                                        engagement serves a purpose in your conversion funnel, with the
-                                                        ultimate goal of generating qualified leads and measurable
-                                                        revenue.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    What is your process after you take over our social media accounts?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Our proven process is a five-step cycle. We begin with a
-                                                        Deep-Dive Audit of your current presence and competitors. Next,
-                                                        we move to Strategy Development, creating platform-specific
-                                                        content calendars and engagement plans. From there, it’s ongoing
-                                                        Content Production and daily Community Engagement to build
-                                                        genuine relationships. Finally, we conduct monthly Performance
-                                                        Optimization, analyzing the data to scale what's working and
-                                                        refine our approach for maximum impact.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    Do you only create and post content, or is community management
-                                                    included?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Community management is a critical part of our service. We don't
-                                                        just "post and ghost." We believe that building a loyal
-                                                        community requires active, daily engagement. Our team interacts
-                                                        with your audience, responds to comments and messages, and
-                                                        fosters conversations to build the genuine relationships that
-                                                        turn passive followers into loyal customers.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    My business is in a niche industry (like sports or B2B). Can you
-                                                    create content that works for my specific audience?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Yes, absolutely. We have specialized expertise in several key
-                                                        industries, including Sports & Athlete Marketing, B2B Social
-                                                        Selling for professional services, and E-commerce Growth. We
-                                                        understand the unique challenges and audience behaviors in these
-                                                        niches and develop custom strategies that build thought
-                                                        leadership and resonate authentically, whether we're engaging
-                                                        with athletic communities or generating enterprise leads.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- accordion area end -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-section-start-left-img mt--80">
-                        <div class="row">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 mt_lg--50 rts-sticky-column-item">
-                    <div class="theiaStickySidebar">
-                        <div class="rts-single-wized Categories">
-                            <div class="wized-header">
-                                <h5 class="title">
-                                    Let's start new project.
-                                </h5>
-                            </div>
-                            <div class="wized-body">
-                                <form class="service-details-form" action="#">
-                                    <input type="text" placeholder="Your name">
-                                    <input type="text" placeholder="Phone number">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button>Start Project</button>
-                                </form>
-                            </div>
+    <!-- Scripts style two -->
+    <!-- rts bread crumba rea start -->
+    <div class="rts-breadcrumb-area bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="baread-crumb-main-wrapper pt--100">
+                        <div class="inner">
+                            <h1 class="title rts_hero__title">Explore Our Work</h1>
+                            <span class="bg-text">Showcase</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br><br>
     </div>
-    <!-- rts footer two area start -->
-    <div id="contact" class="rts-footer-area-one footer-compact">
+
+    <!-- rts case studyes area start -->
+    <div class="rts-case-studys-area rts-section-gap parallax-case">
         <br><br>
+        <div class="container-140">
+            <div class="row g-80">
+                <div class="col-lg-6">
+                    <!-- single product -->
+                    <div class="single-product-case-4 mb--80">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/11.jpg"
+                                        data-src="images/product/11.jpg" alt="image">
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>Creative</span>
+                            <a href="https://pixelscientist.netlify.app/">
+                                <h5 class="name">Modern Collective Flowers</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                    <!-- single product -->
+                    <div class="single-product-case-4  mb--80">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/53.jpg"
+                                        data-src="images/product/53.jpg" alt="image">
+
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>Product</span>
+                            <a href="https://milkmantra.com/">
+                                <h5 class="name">Unleashed Artistry Showcase</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                    <!-- single product -->
+                    <div class="single-product-case-4">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/17.jpg"
+                                        data-src="images/product/17.jpg" alt="image">
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>Modifying</span>
+                            <a href="https://pi42.com/">
+                                <h5 class="name">Boundless Creative Vault</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                </div>
+                <div class="col-lg-6">
+                    <!-- single product -->
+                    <div class="single-product-case-4 mb--80 mt--100">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/13.jpg"
+                                        data-src="images/product/13.jpg" alt="image">
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>Development</span>
+                            <a href="https://www.aarna.ai/">
+                                <h5 class="name">Innovative Vision Gallery</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                    <!-- single product -->
+                    <div class="single-product-case-4  mb--80">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/14.jpg"
+                                        data-src="images/product/14.jpg" alt="image">
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>App Development</span>
+                            <a href="https://intelity.com/">
+                                <h5 class="name">InspireX Design Exhibition</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                    <!-- single product -->
+                    <div class="single-product-case-4">
+                        <div class="pli-image-link">
+                            <div class="pli-image-holder">
+                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+                                <figure class="pli-image">
+                                    <img class="anim-image-parallax tt-lazy" src="images/product/12.jpg"
+                                        data-src="images/product/12.jpg" alt="image">
+                                </figure> <!-- /.pli-image -->
+                            </div> <!-- /.pli-image-holder -->
+
+                        </div> <!-- /.pli-image-link -->
+                        <div class="inner-content">
+                            <span>Ui/ Ux</span>
+                            <a href="https://byramudicoffee.com/">
+                                <h5 class="name">Creative Chronicles Expo</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single product end -->
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+
+    <div id="contact" class="rts-footer-area-one footer-compact">
         <div class="container">
             <div class="row footer-compact__row">
                 <div class="col-lg-12">
@@ -649,11 +462,7 @@
                             <a href="index.html" class="logo">
                                 <img src="/Krafthaus Logo white version.png" alt="logo" width="200px">
                             </a>
-                            <!-- <p class="disc">
-                                Ready to scale your story through content,<br> performance, and
-                                purpose-driven design?
-                            </p> -->
-                            <div class="rts-social-area-one" style="position: relative; top: 20px; left: 30px;">
+                            <div class="rts-social-area-one">
                                 <ul>
                                     <li><a href="https://www.facebook.com/profile.php?id=61580125714254"
                                             aria-label="Follow us on Facebook"><i
@@ -734,8 +543,6 @@
             </div>
         </div>
     </div>
-    <!-- rts footer two area end -->
-
 
     <!-- Scripts style two -->
     <div class="loading-screen" id="loading-screen">
@@ -773,6 +580,14 @@
 
 
 
+    <!-- dark light switcher start-->
+    <div class="modal-sidebar-scroll rts-dark-light">
+        <ul>
+            <li class="go-dark-w"><span>Dark</span><i class="rts-go-dark fal fa-moon"></i></li>
+            <li class="go-light-w"><span>Light</span><i class="rts-go-light fa-light fa-brightness"></i></li>
+        </ul>
+    </div>
+    <!-- dark light switcher end -->
 
 
 
@@ -810,29 +625,6 @@
 
     <script defer src="js/vendor/waw.js"></script>
     <!-- custom javascripts -->
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-overlay"></div>
-    <div class="mobile-menu">
-        <div class="mobile-menu-header">
-            <a href="index.html" class="mobile-logo">
-                <img src="/Krafthaus Logo white version.png" class="img-fluid" alt="logo" width="130px" height="27px">
-            </a>
-            <button class="mobile-menu-close">
-                <i class="far fa-times"></i>
-            </button>
-        </div>
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about-style.html">ABOUT</a></li>
-                <li><a href="portfolio-one.html">PORTFOLIO</a></li>
-                <li><a href="service-3.html">SERVICES</a></li>
-                <li><a href="blog-detailsright-sidebar.html">BLOGS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
     <script defer src="js/main.js"></script>
     <!-- Scripts style two End -->
 </body>
