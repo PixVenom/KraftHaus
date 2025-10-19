@@ -14,56 +14,111 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
-    .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
-    /* Target the strong slogan text to force it to be a block and add a bottom margin. */
-    .service-details-area .bottom-content .slogan-strong {
-        display: block; /* Forces the slogan text onto its own line */
-        margin-bottom: 15px; /* Adds space after the slogan/before the next text */
-        font-size: 22px !important; /* Locks the font size */
-    }
-
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
+        /* Ensure words don't break at the character level across all screen sizes */
         .main-page-title-service-left-area .title-page {
-            font-size: 7.5vw !important; /* Starting to scale down */
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
-    }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FINAL FIX: Header Breaking - Aggressive scaling to ensure the full title fits without breaking words. */
-        .main-page-title-service-left-area .title-page {
-            font-size: 6vw !important; /* Very aggressive scaling for this extremely long title */
-            line-height: 1.1 !important;
+        /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+        /* Target the strong slogan text to force it to be a block and add a bottom margin. */
+        .service-details-area .bottom-content .slogan-strong {
+            display: block;
+            /* Forces the slogan text onto its own line */
+            margin-bottom: 15px;
+            /* Adds space after the slogan/before the next text */
+            font-size: 22px !important;
+            /* Locks the font size */
         }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
+
+
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 7.5vw !important;
+                /* Starting to scale down */
+            }
         }
-    }
-</style>
+
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+            /* FINAL FIX: Header Breaking - Aggressive scaling to ensure the full title fits without breaking words. */
+            .main-page-title-service-left-area .title-page {
+                font-size: 6vw !important;
+                /* Very aggressive scaling for this extremely long title */
+                line-height: 1.1 !important;
+            }
+
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
+
+        /* ---------------------------------------------------------------------- */
+        /* --- FOOTER CENTER ALIGNMENT FIX FOR MOBILE ONLY (MAX 767px) --- */
+        /* ---------------------------------------------------------------------- */
+        @media (max-width: 767px) {
+            /* Target the main wrapper inside the footer */
+            .rts-footer-area-one .footer-main-wrapper-one {
+                display: block;
+                /* Changes to block layout for better stacking on mobile */
+                text-align: center;
+                /* Centers inline content */
+            }
+
+            /* Target the main footer columns */
+            .rts-footer-area-one .footer-left-two,
+            .rts-footer-area-one .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 40px;
+                /* Add space between stacked sections */
+            }
+
+            /* Center the logo container/image */
+            .rts-footer-area-one .footer-left-two .logo {
+                display: block;
+                margin: 0 auto 15px auto;
+            }
+
+            /* Center the social media links container */
+            .rts-footer-area-one .footer-left-two .rts-social-area-one {
+                display: flex;
+                /* Enables flex for the social icons */
+                justify-content: center;
+                /* Centers the social icons horizontally */
+                /* Overrides the original inline/theme styles for positioning */
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+            }
+
+            /* Center the list items in the Quick Links section */
+            .rts-footer-area-one .footer-single-wized-start .footer-nav {
+                padding-left: 0;
+                list-style: none;
+                /* To center the text of the <li> elements themselves */
+                display: inline-block;
+            }
+
+            /* Center the mail/phone info. It might contain <br>, so centering the text works. */
+            .rts-footer-area-one .mail-contact-area .single-con-info {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
 
-    <!-- Scripts style two -->
-    <!-- header area two start -->
     <header class="header-area header-one header--sticky">
         <div class="header-container-one">
             <div class="header-wrapper">
@@ -77,50 +132,49 @@
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="index.html" role="menuitem" aria-current="page"
                                     onclick="window.location.href='index.html'"><span class="rolling-text">
-                                        <div class="block"><span class="letter">H</span><span
-                                                class="letter">O</span><span class="letter">M</span><span
-                                                class="letter">E</span></div>
+                                        <div class="block"><span class="letter">H</span><span class="letter">O</span><span
+                                                class="letter">M</span><span class="letter">E</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on" role="none">
                                 <a class="menu-link" href="about.html" role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">A</span><span
-                                                class="letter">B</span><span class="letter">O</span><span
-                                                class="letter">U</span><span class="letter">T</span></div>
+                                        <div class="block"><span class="letter">A</span><span class="letter">B</span><span
+                                                class="letter">O</span><span class="letter">U</span><span
+                                                class="letter">T</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="portfolio-filter.html" role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">P</span><span
-                                                class="letter">O</span><span class="letter">R</span><span
-                                                class="letter">T</span><span class="letter">F</span><span
-                                                class="letter">O</span><span class="letter">L</span><span
-                                                class="letter">I</span><span class="letter">O</span></div>
+                                        <div class="block"><span class="letter">P</span><span class="letter">O</span><span
+                                                class="letter">R</span><span class="letter">T</span><span
+                                                class="letter">F</span><span class="letter">O</span><span
+                                                class="letter">L</span><span class="letter">I</span><span
+                                                class="letter">O</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="service-3.html" role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">S</span><span
-                                                class="letter">E</span><span class="letter">R</span><span
-                                                class="letter">V</span><span class="letter">I</span><span
-                                                class="letter">C</span><span class="letter">E<span class="letter">S
+                                        <div class="block"><span class="letter">S</span><span class="letter">E</span><span
+                                                class="letter">R</span><span class="letter">V</span><span
+                                                class="letter">I</span><span class="letter">C</span><span
+                                                class="letter">E<span class="letter">S
                                                 </span>
                                         </div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="blog-detailsright-sidebar.html" role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">B</span><span
-                                                class="letter">L</span><span class="letter">O</span><span
-                                                class="letter">G</span><span class="letter">S</span></div>
+                                        <div class="block"><span class="letter">B</span><span class="letter">L</span><span
+                                                class="letter">O</span><span class="letter">G</span><span
+                                                class="letter">S</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="contact.html" role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">C</span><span
-                                                class="letter">O</span><span class="letter">N</span><span
-                                                class="letter">T</span><span class="letter">A</span><span
-                                                class="letter">C</span><span class="letter">T</span>
+                                        <div class="block"><span class="letter">C</span><span class="letter">O</span><span
+                                                class="letter">N</span><span class="letter">T</span><span
+                                                class="letter">A</span><span class="letter">C</span><span
+                                                class="letter">T</span>
                                         </div>
                                     </span></a>
                             </li>
@@ -128,7 +182,6 @@
                     </nav>
 
                     <div class="action-area">
-                        <!-- Mobile Menu Toggle -->
                         <div class="menu-btn">
 
                             <div class="rts-offcanvas-wrapper">
@@ -136,10 +189,6 @@
                                     <div class="action-menu">
                                         <div class="close-event" style="display: none;"></div>
                                         <div class="open-event">
-                                            <!-- <div class="text">
-                        <span>Menu</span>
-                        <span>Close</span>
-                    </div> -->
                                             <div class="burger">
                                                 <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
                                                     class="icon-close" data-v-649bbaab="">
@@ -180,22 +229,51 @@
                                                 <li id="menu-item-76" class="menu-item menu-item-has-children">
                                                     <a href="index.html"
                                                         onclick="window.location.href='index.html'">Home<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li id="menu-item-767" class="menu-item menu-item-has-children">
                                                     <a href="about-style.html"
                                                         onclick="window.location.href='about-style.html'">About<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
+                                                </li>
+                                                <li id="menu-item-768" class="menu-item menu-item-has-children">
+                                                    <a href="portfolio-filter.html"
+                                                        onclick="window.location.href='portfolio-filter.html'">Portfolio<span><svg
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-3.html">Services<span><svg height="24"
+                                                                viewBox="0 0 24 24" width="24"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path class="heroicon-ui"
                                                                     d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
@@ -207,20 +285,115 @@
                                                                 </path>
                                                             </svg></span></a>
                                                 </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="blog-detailsright-sidebar.html"
+                                    onclick="window.location.href='blog-detailsright-sidebar.html'">Blogs<span><svg
+                                                height="24" viewBox="0 0 24 24" width="24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="heroicon-ui"
+                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                </path>
+                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="heroicon-ui"
+                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                </path>
+                                            </svg></span></a>
+                            </li>
+                            <li class="menu-item"><a href="contact.html"
+                                    onclick="window.location.href='contact.html'">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="action-area">
+                        <div class="menu-btn">
+
+                            <div class="rts-offcanvas-wrapper">
+                                <div class="container-menu">
+                                    <div class="action-menu">
+                                        <div class="close-event" style="display: none;"></div>
+                                        <div class="open-event">
+                                            <div class="burger">
+                                                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon-close" data-v-649bbaab="">
+                                                    <line x1="13.788" y1="1.28816" x2="1.06011" y2="14.0161"
+                                                        stroke="currentColor" stroke-width="1.2"
+                                                        style="opacity: 0; stroke-dasharray: 0, 999px;"></line>
+                                                    <line x1="1.06049" y1="1.43963" x2="13.7884" y2="14.1675"
+                                                        stroke="currentColor" stroke-width="1.2"
+                                                        style="opacity: 0; stroke-dasharray: 0, 999px;"></line>
+                                                </svg>
+                                                <svg viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon-burger" data-v-649bbaab="">
+                                                    <line x1="18" y1="0.6" y2="0.6" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 0.6000000238418579"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                    <line x1="18" y1="5.7167" y2="5.7167" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 5.716700077056885"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                    <line x1="18" y1="10.8334" y2="10.8334" stroke="currentColor"
+                                                        stroke-width="1.2" data-v-649bbaab=""
+                                                        style="translate: none; rotate: none; scale: none;"
+                                                        data-svg-origin="0 10.833399772644043"
+                                                        transform="matrix(1,0,0,1,0,0)"></line>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rts-fs-menu">
+                                    <div class="rts-fs-container row">
+
+                                        <div class="rts-fs--nav col-12 col-md-6">
+                                            <ul id="primary-menu" class="navbar-nav-button active">
+                                                <li id="menu-item-76" class="menu-item menu-item-has-children">
+                                                    <a href="index.html"
+                                                        onclick="window.location.href='index.html'">Home<span><svg
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
+                                                </li>
+                                                <li id="menu-item-767" class="menu-item menu-item-has-children">
+                                                    <a href="about-style.html"
+                                                        onclick="window.location.href='about-style.html'">About<span><svg
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
+                                                </li>
                                                 <li id="menu-item-768" class="menu-item menu-item-has-children">
                                                     <a href="portfolio-filter.html"
                                                         onclick="window.location.href='portfolio-filter.html'">Portfolio<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="service-3.html">Services<span><svg height="24"
@@ -239,17 +412,17 @@
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="blog-detailsright-sidebar.html"
                                                         onclick="window.location.href='blog-detailsright-sidebar.html'">Blogs<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li class="menu-item"><a href="contact.html"
                                                         onclick="window.location.href='contact.html'">Contact</a></li>
@@ -328,18 +501,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- rts-fs-menu one end -->
-                    </div>
+                        </div>
                 </div>
     </header>
-    <!-- header area two end -->
-
-    <!-- Scripts style two End -->
-
-
     <div class="service-details-area rts-section-gapTop bg-dark-s">
         <div class="container-150">
-            <div class="row  pt--120 pb--80 pt_lg--50 pt_md--60 pt_sm--10">
+            <div class="row pt--120 pb--80 pt_lg--50 pt_md--60 pt_sm--10">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="main-page-title-service-left-area">
                         <div class="left">
@@ -440,24 +607,23 @@
             </div>
             <div class="row pt--80 pt_md--10 pt_sm--0">
                 <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 pr--60 pr_md--15 pr_sm--10 pb_sm--30">
-                    <!-- service details left area start -->
                     <div class="service-details-left">
                         <div class="thumbnaiul-large">
                             <img src="images/service/04.jpg" class="img-fluid" alt="service-details">
                         </div>
                     </div>
-                    <!-- service details left area end -->
                     <div class="single-para-title-service-details mt--40">
                         <h3 class="title">How We Do It</h3>
                         <p class="disc">
                             Our system is engineered for continuous improvement and scalable growth. We begin with a
-                            thorough Audit & Strategy phase, analyzing your current campaigns to develop a data-driven
-                            plan. From there, we move to Campaign Setup, building optimized campaigns on your chosen
-                            platforms with precise tracking implementation. We Launch & Monitor aggressively, using
-                            early data to make rapid iterations. From the second month onward, our focus shifts to
-                            Optimize & Scale, where we continuously refine campaigns based on performance and scale the
-                            winning strategies. This cycle is supported by monthly Reporting & Iteration, where we
-                            provide detailed analysis and actionable recommendations for sustained improvement.
+                            thorough **Audit & Strategy** phase, analyzing your current campaigns to develop a
+                            data-driven plan. From there, we move to **Campaign Setup**, building optimized campaigns on
+                            your chosen platforms with precise tracking implementation. We **Launch & Monitor**
+                            aggressively, using early data to make rapid iterations. From the second month onward, our
+                            focus shifts to **Optimize & Scale**, where we continuously refine campaigns based on
+                            performance and scale the winning strategies. This cycle is supported by monthly **Reporting
+                            & Iteration**, where we provide detailed analysis and actionable recommendations for
+                            sustained improvement.
                         </p>
                     </div>
 
@@ -516,8 +682,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
-                                <!-- accordion area start -->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">Market Strategy Growth FAQ</h3>
                                     <div class="accordion" id="accordionExample">
@@ -608,8 +773,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- accordion area end -->
-                            </div>
+                                </div>
                         </div>
                     </div>
                     <div class="faq-section-start-left-img mt--80">
@@ -640,23 +804,17 @@
         </div>
         <br><br>
     </div>
-    <!-- rts footer two area start -->
     <div id="contact" class="rts-footer-area-one footer-compact">
         <br><br>
         <div class="container">
             <div class="row footer-compact__row">
                 <div class="col-lg-12">
                     <div class="footer-main-wrapper-one">
-                        <!-- footer left area start -->
                         <div class="footer-left-two">
                             <a href="index.html" class="logo">
                                 <img src="/Krafthaus Logo white version.png" alt="logo" width="200px">
                             </a>
-                            <!-- <p class="disc">
-                                Ready to scale your story through content,<br> performance, and
-                                purpose-driven design?
-                            </p> -->
-                            <div class="rts-social-area-one" style="position: relative; top: 20px; left: 30px;">
+                            <div class="rts-social-area-one">
                                 <ul>
                                     <li><a href="https://www.facebook.com/profile.php?id=61580125714254"
                                             aria-label="Follow us on Facebook"><i
@@ -670,8 +828,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- footer left area end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Quick Links</h5>
                             <ul class="footer-nav">
@@ -682,8 +838,6 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Contact Info</h5>
                             <div class="mail-contact-area">
@@ -706,8 +860,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Subscribe Us</h5>
                             <div class="subscribtion-area">
@@ -722,8 +874,7 @@
                                 </form>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="row">
@@ -737,10 +888,6 @@
             </div>
         </div>
     </div>
-    <!-- rts footer two area end -->
-
-
-    <!-- Scripts style two -->
     <div class="loading-screen" id="loading-screen">
         <span class="bar top-bar"></span>
         <span class="bar down-bar"></span>
@@ -752,17 +899,11 @@
     <div class="bg-noise"></div>
 
 
-    <!-- back to top start -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
         </svg>
     </div>
-    <!-- back to top end -->
-
-
-
-    <!-- pre loader start -->
     <div class="rts-cursor cursor-outer" data-default="yes" data-link="yes" data-slider="no">
         <span class="fn-cursor"></span>
     </div>
@@ -772,13 +913,6 @@
             <span class="fn-right"></span>
         </span>
     </div>
-    <!-- pre loader end -->
-
-
-
-
-
-
     <script defer src="js/vendor/jquery.min.js"></script>
     <script defer src="js/plugins/bootstrap.min.js"></script>
     <script defer src="js/plugins/contact.form.js"></script>
@@ -786,11 +920,8 @@
     <script defer src="js/plugins/swiper.js"></script>
 
 
-    <!-- for side bar sticky -->
     <script defer src="js/plugins/resizer-sensor.js"></script>
     <script defer src="js/plugins/sticky-sidebar.js"></script>
-    <!-- for side bar sticky end-->
-
     <script defer src="js/plugins/isotop.js"></script>
     <script defer src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
@@ -801,20 +932,12 @@
     <script defer src="js/plugins/splittext.js"></script>
     <script defer src="js/plugins/smoothscroll.js"></script>
 
-    <!-- title opacity scroll magix -->
     <script defer src="js/plugins/scrollmagic.js"></script>
     <script defer src="js/plugins/animate-scrollmagic.js"></script>
-    <!-- title opacity scroll magic end -->
-
-
-
     <script defer src="js/plugins/tilt.js"></script>
     <script defer src="js/plugins/counterup.js"></script>
 
     <script defer src="js/vendor/waw.js"></script>
-    <!-- custom javascripts -->
-
-    <!-- Mobile Menu -->
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
         <div class="mobile-menu-header">
@@ -837,7 +960,6 @@
         </nav>
     </div>
     <script defer src="js/main.js"></script>
-    <!-- Scripts style two End -->
-</body>
+    </body>
 
 </html>

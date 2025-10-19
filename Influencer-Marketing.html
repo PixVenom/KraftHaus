@@ -27,15 +27,16 @@
         overflow-wrap: normal;
         hyphens: none;
     }
-    
+
     /* FIX: Slogan Spacing (Styles for the HTML structure provided below) */
     /* Target the strong slogan text to force it to be a block and add a bottom margin. */
     .service-details-area .bottom-content .slogan-strong {
-        display: block; 
-        margin-bottom: 15px; /* Adds space after the slogan */
-        font-size: 22px !important; 
+        display: block;
+        margin-bottom: 15px;
+        /* Adds space after the slogan */
+        font-size: 22px !important;
     }
-    
+
     /* Media query for tablets and smaller (max-width: 991px) */
     @media (max-width: 991px) {
         .main-page-title-service-left-area .title-page {
@@ -47,13 +48,66 @@
     @media (max-width: 576px) {
         /* FINAL FIX: Header Breaking - Further aggressive scaling to fit the long title */
         .main-page-title-service-left-area .title-page {
-            font-size: 7.2vw !important; /* Slightly increased from 6.5vw, as this might be the sweet spot for this screen size. */
+            font-size: 7.2vw !important;
+            /* Slightly increased from 6.5vw, as this might be the sweet spot for this screen size. */
             line-height: 1.1 !important;
         }
-        
+
         /* Pushes the content down to clear the header */
         .service-details-area .pt--120 {
-            padding-top: 100px !important; 
+            padding-top: 100px !important;
+        }
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* --- FOOTER CENTER ALIGNMENT FIX FOR MOBILE ONLY (MAX 767px) --- */
+    /* ---------------------------------------------------------------------- */
+    @media (max-width: 767px) {
+        /* Target the main wrapper inside the footer */
+        .rts-footer-area-one .footer-main-wrapper-one {
+            display: block;
+            /* Changes to block layout for better stacking on mobile */
+            text-align: center;
+            /* Centers inline content */
+        }
+
+        /* Target the main footer columns */
+        .rts-footer-area-one .footer-left-two,
+        .rts-footer-area-one .footer-single-wized-start {
+            text-align: center !important;
+            margin-bottom: 40px;
+            /* Add space between stacked sections */
+        }
+
+        /* Center the logo container/image */
+        .rts-footer-area-one .footer-left-two .logo {
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Center the social media links container */
+        .rts-footer-area-one .footer-left-two .rts-social-area-one {
+            display: flex;
+            /* Enables flex for the social icons */
+            justify-content: center;
+            /* Centers the social icons horizontally */
+            /* Overrides the original inline/theme styles for positioning */
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+        }
+
+        /* Center the list items in the Quick Links section */
+        .rts-footer-area-one .footer-single-wized-start .footer-nav {
+            padding-left: 0;
+            list-style: none;
+            /* To center the text of the <li> elements themselves */
+            display: inline-block;
+        }
+
+        /* Center the mail/phone info. It might contain <br>, so centering the text works. */
+        .rts-footer-area-one .mail-contact-area .single-con-info {
+            text-align: center !important;
         }
     }
 </style>
