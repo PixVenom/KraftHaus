@@ -14,120 +14,122 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-/* ---------------------------------------------------------------------- */
-/* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR BRANDING PAGE TITLE --- */
-/* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR BRANDING PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-/* Ensure words don't break at the character level across all screen sizes */
-.main-page-title-service-left-area .title-page {
-    /* Default style for large screens */
-    font-size: 80px;
-    line-height: 1.1;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-}
+        /* Ensure words don't break at the character level across all screen sizes */
+        .main-page-title-service-left-area .title-page {
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
+        }
 
-/* Custom styles for slogan (retained from your code) */
-.bottom-content .disc strong {
-    font-size: 22px;
-    display: block;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
+        /* Custom styles for slogan (retained from your code) */
+        .bottom-content .disc strong {
+            font-size: 22px;
+            display: block;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
 
-/* Fix: Ensure page content does NOT center on mobile/tablet */
-.bottom-content .disc {
-    text-align: left !important; /* Forces content text to remain left-aligned */
-}
+        /* Fix: Ensure page content does NOT center on mobile/tablet */
+        .bottom-content .disc {
+            text-align: left !important;
+            /* Forces content text to remain left-aligned */
+        }
 
-/* Media query for tablets and smaller (max-width: 991px) */
-@media (max-width: 991px) {
-    .main-page-title-service-left-area .title-page {
-        font-size: 8vw !important;
-    }
-}
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 8vw !important;
+            }
+        }
 
-/* Media query for typical mobile phones (max-width: 576px) */
-@media (max-width: 576px) {
-    /* Scaling to ensure even short titles fit well */
-    .main-page-title-service-left-area .title-page {
-        font-size: 10vw !important;
-        line-height: 1.1 !important;
-    }
-    
-    /* Pushes the content down to clear the header */
-    .service-details-area .pt--120 {
-        padding-top: 100px !important; 
-    }
-}
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            /* Scaling to ensure even short titles fit well */
+            .main-page-title-service-left-area .title-page {
+                font-size: 10vw !important;
+                line-height: 1.1 !important;
+            }
+
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
 
 
-/* ---------------------------------------------------------------------- */
-/* --- MOBILE/TABLET FOOTER CENTERING FIX (Separated from Slogan) --- */
-/* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- MOBILE/TABLET FOOTER CENTERING FIX (Separated from Slogan) --- */
+        /* ---------------------------------------------------------------------- */
 
-@media (min-width: 414px) and (max-width: 896px) {
+        @media (min-width: 414px) and (max-width: 896px) {
 
-    .footer-main-wrapper-one {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; 
-        gap: 30px !important;
-        text-align: center !important;
-    }
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
 
-    .footer-left-two {
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    
-    /* Override inline style and center social media section */
-    .footer-left-two .rts-social-area-one {
-        position: static !important;
-        left: auto !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin-top: 20px !important;
-    }
+            .footer-left-two {
+                text-align: center !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
 
-    .footer-nav {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
+            /* Override inline style and center social media section */
+            .footer-left-two .rts-social-area-one {
+                position: static !important;
+                left: auto !important;
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
 
-    .footer-single-wized-start {
-        text-align: center !important;
-    }
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
 
-    .mail-contact-area {
-        text-align: center !important;
-    }
-}
+            .footer-single-wized-start {
+                text-align: center !important;
+            }
 
-@media (max-width: 430px) {
+            .mail-contact-area {
+                text-align: center !important;
+            }
+        }
 
-    .footer-compact {
-        padding: 20px 0 !important;
-    }
+        @media (max-width: 430px) {
 
-    .footer-single-wized-start .title {
-        font-size: 16px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .footer-nav li a {
-        font-size: 14px !important;
-    }
-    
-    .copyright-area {
-        text-align: center !important;
-    }
-}
-</style>
+            .footer-compact {
+                padding: 20px 0 !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 16px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .footer-nav li a {
+                font-size: 14px !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -421,9 +423,7 @@
                                         sell.</strong>
                                     At KraftHaus, we believe great branding is the foundation of every successful
                                     business.<br> Your brand isn't just a logo or tagline — it's how people
-                                    feel when they experience your<br> product, your story, and your voice. We create
-                                    powerful, memorable brand identities that<br> build trust and stand
-                                    out in a crowded market.
+                                    feel when they experience your<br> product, your story, and your voice.
                                 </p>
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
@@ -452,21 +452,6 @@
                                         </p>
                                     </div>
                                     <br>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Brand Collateral</strong>
-                                            Business cards, packaging, social templates, and presentations —<br> we
-                                            ensure your brand looks consistent everywhere.
-                                        </p>
-                                    </div>
-                                    <br>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Brand Book & Launch</strong>
-                                            We deliver a complete Brand Guidelines Document that defines<br> how your
-                                            brand looks, speaks, and grows.
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -521,14 +506,7 @@
                         <p class="disc" style="color: white;">
                             Our branding process is a structured journey designed to build a powerful market position
                             from the ground up. We begin with a deep-dive discovery phase, using workshops and research
-                            to thoroughly understand your business, audience, and competitive landscape. From there, we
-                            conduct a rigorous market analysis to identify gaps and pinpoint your unique positioning
-                            opportunity. With this strategic foundation in place, our team develops your core messaging
-                            framework and communication strategy. This blueprint then guides the creative stage, where
-                            we design a complete visual identity system—including the logo, colors, and typography—that
-                            authentically communicates your brand's values. The process culminates in the delivery of a
-                            comprehensive brand guidelines document and an implementation roadmap, ensuring your new
-                            brand is launched consistently and effectively across all channels.
+                            to thoroughly understand your business, audience, and competitive landscape.
                         </p>
                     </div>
 
@@ -551,18 +529,6 @@
                                 <i class="fa-light fa-plus"></i>
                                 <p>Voice & Tone Development</p>
                             </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Brand Guidelines</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Rebranding Strategy</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Sports Brand Development</p>
-                            </div>
                         </div>
 
                         <div class="right-info-service-short-quote">
@@ -571,10 +537,7 @@
                                 Excellent branding is crucial because it's what separates market leaders from the crowd.
                                 Most businesses end up competing solely on price because they fail to define what makes
                                 them different. A strong brand strategy solves this by making you the obvious choice in
-                                your market. It clearly communicates why your company is unique and, more importantly,
-                                why that difference matters to your ideal customers. This isn't just about looking good;
-                                it's about driving real business results. In fact, companies with strong, well-defined
-                                brands achieve an average of 20% higher revenue growth than those with weak ones.
+                                your market.
                             </p>
                         </div>
                     </div>
@@ -606,12 +569,7 @@
                                                 <div class="accordion-body">
                                                     <p>A logo is just one piece of your brand's visual identity. Our
                                                         brand strategy service is much more comprehensive. We don't just
-                                                        create visuals; we build your entire market position. This
-                                                        involves deep analysis of your competition, defining your unique
-                                                        messaging, and developing a consistent voice and tone. The
-                                                        visual identity, including the logo, is then created based on
-                                                        this strategic foundation to ensure it communicates your unique
-                                                        value and resonates with your target audience.</p>
+                                                        create visuals; we build your entire market position.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -627,11 +585,7 @@
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <p>Our brand strategy process is a structured journey that typically
-                                                        takes between six to eight weeks from start to finish. This
-                                                        timeline includes our initial deep-dive discovery workshops,
-                                                        market analysis, strategy development, the creative phase for
-                                                        your visual identity, and the final delivery of your
-                                                        comprehensive brand guidelines and implementation roadmap.</p>
+                                                        takes between six to eight weeks from start to finish.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -648,12 +602,7 @@
                                                 <div class="accordion-body">
                                                     <p>We equip you with a complete toolkit to manage and grow your
                                                         brand effectively. The cornerstone of this is the comprehensive
-                                                        brand guidelines document we deliver. This guide defines all
-                                                        usage standards for your logo, color palette, and typography. It
-                                                        also includes voice and tone guidelines to ensure your messaging
-                                                        is consistent everywhere. We provide marketing asset templates
-                                                        and a clear implementation roadmap so your team can apply the
-                                                        new branding flawlessly across all channels.</p>
+                                                        brand guidelines document we deliver.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -670,13 +619,7 @@
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <p>Absolutely. Our process is designed to find what makes a brand
-                                                        unique, which is especially effective in niche markets. We have
-                                                        specialized expertise in several areas, including sports and
-                                                        athletic brands, challenger brands aiming to disrupt a market,
-                                                        B2B professional services, and purpose-driven businesses that
-                                                        need to align their mission with their messaging. We tailor our
-                                                        discovery and analysis phases to master the specifics of your
-                                                        industry.</p>
+                                                        unique, which is especially effective in niche markets.</p>
                                                 </div>
                                             </div>
                                         </div>
