@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-style-mode" content="1">
     <link rel="shortcut icon" type="image/x-icon" href="/Krafthaus Logo white version.png">
-    <title>Branding - KraftHaus</title>
+    <title>Search Engie Optimization - KraftHaus</title>
     <link rel="stylesheet" href="css/plugins/fontawesome-6.css">
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <link rel="stylesheet" href="css/vendor/metismenu.css">
@@ -76,6 +76,365 @@
         display: block;
         margin-bottom: 5px;
         font-size: 18px;
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* --- FOOTER CENTERING FOR MOBILE DEVICES (MAX-WIDTH: 768px) --- */
+    /* ------------------------------------------------------------------ */
+
+    /* Footer adjustments for mobile devices - Center aligned */
+    @media (max-width: 768px) {
+        .footer-compact {
+            padding: 40px 0 !important;
+            text-align: center !important;
+        }
+
+        .footer-compact__row {
+            padding-bottom: 30px !important;
+        }
+
+        .footer-main-wrapper-one {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 30px !important;
+            text-align: center !important;
+        }
+
+        .footer-left-two {
+            text-align: center !important;
+            order: 1 !important; /* Display logo/social first */
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .footer-left-two .logo img {
+            width: 180px !important; /* Adjust logo size */
+            height: auto !important;
+            margin-bottom: 20px !important;
+        }
+
+        .footer-left-two .rts-social-area-one {
+            display: flex !important;
+            justify-content: center !important;
+            margin-top: 20px !important;
+            position: relative !important; /* Reset potential desktop positioning */
+            left: 0 !important; /* Reset potential desktop positioning */
+        }
+
+        .footer-left-two .rts-social-area-one ul {
+            display: flex !important;
+            gap: 20px !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding-left: 0; /* Remove default list padding */
+        }
+
+        .footer-single-wized-start {
+            text-align: center !important;
+            margin-bottom: 0 !important; /* Remove bottom margin if stacking */
+            order: 2 !important; /* Ensure consistent order after logo */
+        }
+
+        .footer-single-wized-start .title {
+            font-size: 24px !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+            color: white !important;
+        }
+
+        .footer-nav {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 12px !important;
+            padding-left: 0; /* Remove default list padding */
+        }
+
+        .footer-nav li {
+            margin-bottom: 0 !important;
+        }
+
+        .footer-nav li a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .footer-nav li a:hover {
+            color: white !important;
+        }
+
+        .mail-contact-area {
+            text-align: center !important;
+        }
+
+        .mail-contact-area .single-con-info {
+            margin-bottom: 15px !important;
+        }
+
+        .mail-contact-area .single-con-info a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .mail-contact-area .single-con-info a:hover {
+            color: white !important;
+        }
+
+        .subscribtion-area {
+            text-align: center !important;
+        }
+
+        .subscribtion-area .disc {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 25px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .copyright-area {
+            text-align: center !important;
+            padding: 20px 0 !important;
+        }
+
+        .copyright-area p {
+            font-size: 16px !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin: 0 !important;
+        }
+
+        .copyright-area a {
+            color: white !important;
+            text-decoration: none !important;
+        }
+
+        /* Subscription form for mobile */
+        .subscribtion-input {
+            display: flex !important;
+            flex-direction: row !important; /* Keep side-by-side */
+            gap: 10px !important;
+            align-items: center !important;
+            justify-content: center !important; /* Center the form items */
+            width: 100% !important;
+            max-width: 350px !important; /* Limit width on small screens */
+            margin: 0 auto !important; /* Center the form itself */
+        }
+
+        /* This wrapper is needed in the HTML */
+        .subscribtion-input .email-input-wrapper {
+             position: relative; 
+             flex-grow: 1 !important;
+        }
+
+         .subscribtion-input .email-input-wrapper input[type="email"] {
+            flex: none !important; 
+            min-width: auto !important;
+            width: 100%; /* Fill the wrapper */
+            padding: 12px 14px 12px 40px !important; /* Keep icon padding */
+            font-size: 14px !important;
+            border-radius: 4px !important;
+            border: 1px solid #ccc !important;
+        }
+         .subscribtion-input .email-input-wrapper label {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333; /* Icon color on light input */
+            z-index: 10;
+         }
+
+
+        .subscribtion-input button {
+            flex-shrink: 0 !important; /* Prevent button shrinking */
+            padding: 12px 16px !important;
+            font-size: 12px !important;
+            white-space: nowrap !important;
+            border-radius: 4px !important;
+            min-width: fit-content !important;
+        }
+    }
+
+
+    /* ------------------------------------------------------------------ */
+    /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
+    /* ------------------------------------------------------------------ */
+    
+    /* Footer adjustments for tablet - Centered and larger fonts */
+    @media (min-width: 414px) and (max-width: 896px) {
+        .footer-compact {
+            padding: 40px 0 !important;
+            text-align: center !important;
+        }
+
+        .footer-compact__row {
+            padding-bottom: 30px !important;
+        }
+
+        .footer-main-wrapper-one {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 30px !important;
+            text-align: center !important;
+        }
+
+        .footer-left-two {
+            text-align: center !important;
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .footer-left-two .logo img {
+            width: 180px !important;
+            height: auto !important;
+            margin-bottom: 20px !important;
+        }
+
+        .footer-left-two .rts-social-area-one {
+            display: flex !important;
+            justify-content: center !important;
+            margin-top: 20px !important;
+            position: relative !important; /* Reset position */
+            left: 0 !important; /* Reset position */
+        }
+
+        .footer-left-two .rts-social-area-one ul {
+            display: flex !important;
+            gap: 20px !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding-left: 0; /* Add this */
+        }
+
+        .footer-single-wized-start {
+            text-align: center !important;
+            margin-bottom: 0 !important;
+            order: 2 !important;
+        }
+
+        .footer-single-wized-start .title {
+            font-size: 24px !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+            color: white !important;
+        }
+
+        .footer-nav {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 12px !important;
+            padding-left: 0; /* Add this */
+        }
+
+        .footer-nav li {
+            margin-bottom: 0 !important;
+        }
+
+        .footer-nav li a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .footer-nav li a:hover {
+            color: white !important;
+        }
+
+        .mail-contact-area {
+            text-align: center !important;
+        }
+
+        .mail-contact-area .single-con-info {
+            margin-bottom: 15px !important;
+        }
+
+        .mail-contact-area .single-con-info a {
+            font-size: 18px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .mail-contact-area .single-con-info a:hover {
+            color: white !important;
+        }
+
+        .subscribtion-area {
+            text-align: center !important;
+        }
+
+        .subscribtion-area .disc {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 25px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .copyright-area {
+            text-align: center !important;
+            padding: 20px 0 !important;
+        }
+
+        .copyright-area p {
+            font-size: 16px !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin: 0 !important;
+        }
+
+        .copyright-area a {
+            color: white !important;
+            text-decoration: none !important;
+        }
+
+        /* Subscription form for tablet */
+        .subscribtion-input {
+            flex-direction: row !important;
+            gap: 15px !important;
+            max-width: 450px !important; /* Allow slightly wider form */
+            margin: 0 auto !important; /* Add this to center */
+        }
+        
+        /* Add this wrapper style */
+        .subscribtion-input .email-input-wrapper {
+             position: relative;
+             flex-grow: 1 !important;
+        }
+        
+        .subscribtion-input .email-input-wrapper input[type="email"] {
+            flex: 1 !important;
+            width: 100%; /* Add this */
+            padding: 12px 14px 12px 40px !important; /* Update padding */
+            font-size: 14px !important;
+        }
+
+        /* Add this for the icon */
+         .subscribtion-input .email-input-wrapper label {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
+            z-index: 10;
+         }
+
+        .subscribtion-input button {
+            padding: 12px 20px !important;
+            font-size: 14px !important;
+            white-space: nowrap !important;
+            margin-top: -4px !important;
+        }
     }
 </style>
 </head>
@@ -708,8 +1067,10 @@
                                     <br> don’t worry we don’t spam your email address
                                 </p>
                                 <form action="#" class="subscribtion-input">
-                                    <input id="email" type="email" placeholder="Enter your email..." required="">
-                                    <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    <div class="email-input-wrapper">
+                                        <input id="email" type="email" placeholder="Enter your email..." required="">
+                                        <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    </div>
                                     <button type="submit" class="rts-btn btn-dark">subscribe</button>
                                 </form>
                             </div>
