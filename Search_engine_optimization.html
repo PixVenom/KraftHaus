@@ -14,70 +14,170 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SEO PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SEO PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
-    .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        /* Core word-break prevention */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* Custom styles for slogan (retained from your code) */
-    .bottom-content .disc strong {
-        font-size: 24px;
-        display: block;
-        margin-bottom: 15px;
-        line-height: 1.4;
-    }
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
+        /* Ensure words don't break at the character level across all screen sizes */
         .main-page-title-service-left-area .title-page {
-            font-size: 7vw !important; /* Starting to scale down */
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            /* Core word-break prevention */
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
-    }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FINAL FIX: Header Breaking - Aggressive scaling to fit the extremely long title without breaking words. */
-        .main-page-title-service-left-area .title-page {
-            font-size: 5.5vw !important; /* Very aggressive scaling to ensure fit */
-            line-height: 1.1 !important;
+        /* Custom styles for slogan (retained from your code) */
+        .bottom-content .disc strong {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
+
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 7vw !important;
+                /* Starting to scale down */
+            }
         }
-    }
-    
-    /* Checklist styles (retained from your code) */
-    .single-check {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 25px;
-    }
-    .single-check i {
-        margin-right: 15px;
-        margin-top: 5px;
-        font-size: 18px;
-    }
-    .single-check p {
-        line-height: 1.6;
-    }
-    .single-check p strong {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 18px;
-    }
-</style>
+
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            /* FINAL FIX: Header Breaking - Aggressive scaling to fit the extremely long title without breaking words. */
+            .main-page-title-service-left-area .title-page {
+                font-size: 5.5vw !important;
+                /* Very aggressive scaling to ensure fit */
+                line-height: 1.1 !important;
+            }
+
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
+
+        /* Checklist styles (retained from your code) */
+        .single-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .single-check i {
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .single-check p {
+            line-height: 1.6;
+        }
+
+        .single-check p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        /* Footer centering for mobile viewport (430x932) */
+        @media (max-width: 430px) {
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-left-two .logo {
+                display: block !important;
+                margin: 0 auto 20px auto !important;
+            }
+
+            .rts-social-area-one {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-single-wized-start .title {
+                text-align: center !important;
+            }
+
+            .footer-nav {
+                text-align: center !important;
+                list-style: none !important;
+                padding: 0 !important;
+            }
+
+            .footer-nav li {
+                text-align: center !important;
+                margin-bottom: 10px !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-input {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0 !important;
+                width: 100% !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+
+            .subscribtion-input input {
+                flex: 1 !important;
+                width: auto !important;
+                max-width: none !important;
+                text-align: left !important;
+                border-radius: 5px 0 0 5px !important;
+                border-right: none !important;
+            }
+
+            .subscribtion-input button {
+                border-radius: 0 5px 5px 0 !important;
+                white-space: nowrap !important;
+                flex-shrink: 0 !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+            }
+
+            .copyright-area .left {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -365,11 +465,7 @@
                                     <strong style="font-size: 24px;">Get Found by Customers Who Are Ready to
                                         Buy</strong>
                                     At KraftHaus, we believe your business should be found by customers who are ready to
-                                    buy,<br> not lost to competitors simply because they rank higher. We build powerful
-                                    SEO strategies that<br> deliver what truly matters: qualified traffic, tangible
-                                    leads, and measurable revenue. Our focus<br> isn't just on rankings; it's on
-                                    connecting you with high-intent customers to drive real growth for<br> your
-                                    business.
+                                    buy,<br> not lost to competitors simply because they rank higher.
                                 </p>
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
@@ -398,33 +494,6 @@
                                             foundation necessary for achieving higher<br> rankings.
                                         </p>
                                         <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Content Optimization (Week 4-8)</strong>
-                                            We optimize your existing pages and create new, authoritative content
-                                            designed to rank for <br>priority keywords. This strategy establishes your
-                                            site as a go-to resource while capturing<br> qualified traffic.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Link Building & Authority Development (Month 2+)</strong>
-                                            We earn high-quality backlinks from authoritative websites through strategic
-                                            outreach and<br> content marketing. This builds your domain's trust and
-                                            authority, leading to higher and more<br> sustainable search rankings.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Monitoring & Optimization (Ongoing)</strong>
-                                            We continuously track your rankings, traffic, and conversions to measure
-                                            what truly matters<br> to your business. This data allows us to refine our
-                                            strategy in real-time and ensure your<br> growth is not just achieved, but
-                                            sustained.
-                                        </p>
                                     </div>
                                 </div>
 
@@ -479,7 +548,9 @@
                     <div class="single-para-title-service-details mt--40">
                         <h3 class="title">How We Do It</h3>
                         <p class="disc" style="color: white;">
-                            Our SEO process is a methodical campaign for sustainable growth. It begins with a Comprehensive Audit & Keyword Strategy to identify high-value opportunities. We follow this with Technical & Content Optimization to fix site issues and prime pages to rank. The strategy is amplified through ongoing Link Building for authority, and we maintain continuous Monitoring & Optimization to adapt and maximize long-term impact.
+                            Our SEO process is a methodical campaign for sustainable growth. It begins with a
+                            Comprehensive Audit & Keyword Strategy to identify high-value opportunities. We follow this
+                            with Technical & Content Optimization to fix site issues and prime pages to rank.
                         </p>
                     </div>
 
@@ -502,24 +573,13 @@
                                 <i class="fa-light fa-plus"></i>
                                 <p>Content Strategy</p>
                             </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Link Building</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Local SEO</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>SEO Audits</p>
-                            </div>
                         </div>
 
                         <div class="right-info-service-short-quote">
                             <h6 class="title">Why It Matters</h6>
                             <p class="disc">
-                                The reality is simple: if you're not on Google's first page, you're invisible to 75% of customers. We focus on keywords that signal a user is ready to buy. This transforms your site into a powerful, long-term growth engine that reduces dependence on paid advertising and consistently outranks the competition.
+                                The reality is simple: if you're not on Google's first page, you're invisible to 75% of
+                                customers. We focus on keywords that signal a user is ready to buy.
                             </p>
                         </div>
                     </div>
@@ -532,7 +592,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <!-- accordion area start -->
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">Branding FAQ</h3>
@@ -548,7 +608,8 @@
                                             <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>SEO earns organic (unpaid) traffic through long-term ranking improvements that build trust and compound over time. Paid Search involves paying for ads at the top of results for immediate traffic that stops when your budget does. A smart strategy uses both.</p>
+                                                    <p>SEO earns organic (unpaid) traffic through long-term ranking
+                                                        improvements that build trust and compound over time.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -563,7 +624,9 @@
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>SEO is a long-term investment, not an overnight fix. Initial technical improvements may be seen quickly, but significant gains in rankings and traffic for competitive keywords typically take 3–6 months. Results are sustainable and compound over time.</p>
+                                                    <p>SEO is a long-term investment, not an overnight fix. Initial
+                                                        technical improvements may be seen quickly.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +642,8 @@
                                             <div id="collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Technical SEO is the foundation of your website. It ensures your site is fast, mobile-friendly, and properly structured so search engines can easily crawl and understand it. This critical first step unlocks your site's full ranking potential.
+                                                    <p>Technical SEO is the foundation of your website. It ensures your
+                                                        site is fast, mobile-friendly.
                                                     </p>
                                                 </div>
                                             </div>
@@ -595,7 +659,8 @@
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>No, SEO is an ongoing process. Algorithms constantly change, and competitors always work to outrank you. Continuous monitoring, content creation, and link building are necessary to achieve, defend, and maintain top rankings for the long term.</p>
+                                                    <p>No, SEO is an ongoing process. Algorithms constantly change, and
+                                                        competitors always work to outrank you.</p>
                                                 </div>
                                             </div>
                                         </div>

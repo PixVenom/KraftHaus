@@ -14,72 +14,173 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">\
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR UI/UX PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR UI/UX PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
-    .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        /* Core word-break prevention */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
-    /* Targets the strong slogan text to isolate it as a block and add margin. */
-    .service-details-area .bottom-content .slogan-strong {
-        display: block; 
-        margin-bottom: 15px !important; /* Adds space after the slogan/before the next text */
-        font-size: 24px !important; /* Locks the font size */
-        line-height: 1.4; 
-    }
-
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
+        /* Ensure words don't break at the character level across all screen sizes */
         .main-page-title-service-left-area .title-page {
-            font-size: 8vw !important;
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            /* Core word-break prevention */
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
-    }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FINAL FIX: Header Breaking - Aggressive scaling to ensure the full title fits on one line or wraps cleanly. */
-        .main-page-title-service-left-area .title-page {
-            font-size: 8vw !important; /* Aggressive scaling to fit "UI/UX Design" */
-            line-height: 1.1 !important;
+        /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+        /* Targets the strong slogan text to isolate it as a block and add margin. */
+        .service-details-area .bottom-content .slogan-strong {
+            display: block;
+            margin-bottom: 15px !important;
+            /* Adds space after the slogan/before the next text */
+            font-size: 24px !important;
+            /* Locks the font size */
+            line-height: 1.4;
         }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
+
+
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 8vw !important;
+            }
         }
-    }
-    
-    /* Checklist styles from your original code */
-    .single-check {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 25px;
-    }
-    .single-check i {
-        margin-right: 15px;
-        margin-top: 5px;
-        font-size: 18px;
-    }
-    .single-check p {
-        line-height: 1.6;
-    }
-    .single-check p strong {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 18px;
-    }
-</style>
+
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            /* FINAL FIX: Header Breaking - Aggressive scaling to ensure the full title fits on one line or wraps cleanly. */
+            .main-page-title-service-left-area .title-page {
+                font-size: 8vw !important;
+                /* Aggressive scaling to fit "UI/UX Design" */
+                line-height: 1.1 !important;
+            }
+
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
+
+        /* Checklist styles from your original code */
+        .single-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .single-check i {
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .single-check p {
+            line-height: 1.6;
+        }
+
+        .single-check p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        /* Footer centering for mobile viewport (430x932) */
+        @media (max-width: 430px) {
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-left-two .logo {
+                display: block !important;
+                margin: 0 auto 20px auto !important;
+            }
+
+            .rts-social-area-one {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-single-wized-start .title {
+                text-align: center !important;
+            }
+
+            .footer-nav {
+                text-align: center !important;
+                list-style: none !important;
+                padding: 0 !important;
+            }
+
+            .footer-nav li {
+                text-align: center !important;
+                margin-bottom: 10px !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-input {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0 !important;
+                width: 100% !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+
+            .subscribtion-input input {
+                flex: 1 !important;
+                width: auto !important;
+                max-width: none !important;
+                text-align: left !important;
+                border-radius: 5px 0 0 5px !important;
+                border-right: none !important;
+            }
+
+            .subscribtion-input button {
+                border-radius: 0 5px 5px 0 !important;
+                white-space: nowrap !important;
+                flex-shrink: 0 !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+            }
+
+            .copyright-area .left {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -369,7 +470,8 @@
                             </h1>
                             <div class="bottom-content">
                                 <p class="disc slogan-title">
-                                    <strong class="slogan-strong">Designing experiences that people love to use.</strong>
+                                    <strong class="slogan-strong">Designing experiences that people love to
+                                        use.</strong>
                                 </p>
 
                                 <p class="disc slogan-body" style="margin-top: 15px;">
@@ -377,7 +479,7 @@
                                     impression. <br>At KraftHaus, our UI/UX design process ensures your digital presence
                                     is beautiful,<br> intuitive, and built to convert.
                                 </p>
-                                
+
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
@@ -398,25 +500,11 @@
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
                                         <p><strong>UI Design</strong><br>
-                                            Our designers craft visually engaging, brand-aligned interfaces<br> that combine
+                                            Our designers craft visually engaging, brand-aligned interfaces<br> that
+                                            combine
                                             functionality with aesthetic balance.
                                         </p>
                                         <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Prototyping & Testing</strong><br>
-                                            We create clickable prototypes and gather user feedback to<br> ensure the
-                                            experience is seamless and effective.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Front-End Development Support</strong><br>
-                                            We collaborate with developers to ensure that every design is <br>implemented
-                                            exactly as envisioned — pixel-perfect and <br>performance-optimized.
-                                        </p>
                                     </div>
                                 </div>
 
@@ -471,7 +559,8 @@
                     <div class="single-para-title-service-details mt--40">
                         <h3 class="title">How We Do It</h3>
                         <p class="disc">
-                            Our design process is a user-centric journey built for results. We start with User Research (interviews, analysis) to inform the Information Architecture (user journeys). We build interactive Wireframes & Prototypes for testing before crafting the visual Design (UI/branding) focused on conversion. The process culminates in rigorous Testing & Iteration with real users, followed by a seamless Design Handoff for developers.
+                            Our design process is a user-centric journey built for results. We start with User Research
+                            (interviews, analysis) to inform the Information Architecture (user journeys).
                         </p>
                     </div>
                     <div class="service-short-quote mt--50">
@@ -493,24 +582,13 @@
                                 <i class="fa-light fa-plus"></i>
                                 <p>Web Application Design</p>
                             </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Design System Creation</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Usability Testing</p>
-                            </div>
-                            <div class="single-check">
-                                <i class="fa-light fa-plus"></i>
-                                <p>Conversion Optimization</p>
-                            </div>
                         </div>
 
                         <div class="right-info-service-short-quote">
                             <h6 class="title">Why It Matters</h6>
                             <p class="disc">
-                                Usability determines success: 88% of consumers won't return after one bad experience. A beautiful design that doesn't convert is just expensive art. Our philosophy is design must solve business problems. We strategically guide users to action, leading to higher conversion rates, reduced support costs, and a strong competitive advantage.
+                                Usability determines success: 88% of consumers won't return after one bad experience. A
+                                beautiful design that doesn't convert is just expensive art.
                             </p>
                         </div>
                     </div>
@@ -521,7 +599,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <!-- accordion area start -->
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">UI/UX Development FAQ</h3>
@@ -537,7 +615,8 @@
                                             <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>UX (User Experience) is the strategy and feel: making the product intuitive, logical, and easy to use through research. UI (User Interface) is the visual execution: the look of screens, buttons, and all visual elements users interact with. We master both.</p>
+                                                    <p>UX (User Experience) is the strategy and feel: making the product
+                                                        intuitive, logical, and easy to use through research..</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -552,7 +631,8 @@
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Absolutely. We use usability testing with real users to validate our assumptions. This step is crucial for identifying confusion and refining the experience, ensuring the final product is genuinely effective before expensive development begins.</p>
+                                                    <p>Absolutely. We use usability testing with real users to validate
+                                                        our assumptions.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -568,7 +648,9 @@
                                             <div id="collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>You receive a complete, developer-ready package. Our handoff includes organized Figma source files, a full component library, and a comprehensive design system with documentation for pixel-perfect, seamless implementation by your engineers.</p>
+                                                    <p>You receive a complete, developer-ready package. Our handoff
+                                                        includes organized Figma source files, a full component library.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -584,7 +666,8 @@
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Superior UX drives key business results: higher conversion rates (easier actions), improved user satisfaction and loyalty (repeat business), and reduced confusion, significantly lowering your support costs.</p>
+                                                    <p>Superior UX drives key business results: higher conversion rates
+                                                        (easier actions), improved user satisfaction.</p>
                                                 </div>
                                             </div>
                                         </div>

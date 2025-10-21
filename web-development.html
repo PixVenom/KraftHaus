@@ -14,72 +14,173 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ---------------------------------------------------------------------- */
-    /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR WEB DEV PAGE TITLE --- */
-    /* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR WEB DEV PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-    /* Ensure words don't break at the character level across all screen sizes */
-    .main-page-title-service-left-area .title-page {
-        /* Default style for large screens */
-        font-size: 80px;
-        line-height: 1.1;
-        /* Core word-break prevention (using aggressive scaling as the fix) */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-    
-    /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
-    /* Targets the strong slogan text to isolate it as a block and add margin. */
-    .service-details-area .bottom-content .slogan-strong {
-        display: block; 
-        margin-bottom: 15px !important; /* Adds space after the slogan/before the next text */
-        font-size: 24px !important; /* Locks the font size */
-        line-height: 1.4; 
-    }
-
-
-    /* Media query for tablets and smaller (max-width: 991px) */
-    @media (max-width: 991px) {
+        /* Ensure words don't break at the character level across all screen sizes */
         .main-page-title-service-left-area .title-page {
-            font-size: 7.5vw !important;
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            /* Core word-break prevention (using aggressive scaling as the fix) */
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
-    }
 
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        /* FINAL FIX: Header Breaking - Highly aggressive scaling to fit the entire title cleanly. */
-        .main-page-title-service-left-area .title-page {
-            font-size: 6vw !important; /* Most aggressive scaling for this very long title */
-            line-height: 1.1 !important;
+        /* FIX: Slogan Spacing (Guarantees separation for the new HTML structure) */
+        /* Targets the strong slogan text to isolate it as a block and add margin. */
+        .service-details-area .bottom-content .slogan-strong {
+            display: block;
+            margin-bottom: 15px !important;
+            /* Adds space after the slogan/before the next text */
+            font-size: 24px !important;
+            /* Locks the font size */
+            line-height: 1.4;
         }
-        
-        /* Pushes the content down to clear the header */
-        .service-details-area .pt--120 {
-            padding-top: 100px !important; 
+
+
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 7.5vw !important;
+            }
         }
-    }
-    
-    /* Checklist styles from your original code (retained) */
-    .single-check {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 25px;
-    }
-    .single-check i {
-        margin-right: 15px;
-        margin-top: 5px;
-        font-size: 18px;
-    }
-    .single-check p {
-        line-height: 1.6;
-    }
-    .single-check p strong {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 18px;
-    }
-</style>
+
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            /* FINAL FIX: Header Breaking - Highly aggressive scaling to fit the entire title cleanly. */
+            .main-page-title-service-left-area .title-page {
+                font-size: 6vw !important;
+                /* Most aggressive scaling for this very long title */
+                line-height: 1.1 !important;
+            }
+
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
+
+        /* Checklist styles from your original code (retained) */
+        .single-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .single-check i {
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .single-check p {
+            line-height: 1.6;
+        }
+
+        .single-check p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        /* Footer centering for mobile viewport (430x932) */
+        @media (max-width: 430px) {
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-left-two .logo {
+                display: block !important;
+                margin: 0 auto 20px auto !important;
+            }
+
+            .rts-social-area-one {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 30px !important;
+                width: 100% !important;
+            }
+
+            .footer-single-wized-start .title {
+                text-align: center !important;
+            }
+
+            .footer-nav {
+                text-align: center !important;
+                list-style: none !important;
+                padding: 0 !important;
+            }
+
+            .footer-nav li {
+                text-align: center !important;
+                margin-bottom: 10px !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-input {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0 !important;
+                width: 100% !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+
+            .subscribtion-input input {
+                flex: 1 !important;
+                width: auto !important;
+                max-width: none !important;
+                text-align: left !important;
+                border-radius: 5px 0 0 5px !important;
+                border-right: none !important;
+            }
+
+            .subscribtion-input button {
+                border-radius: 0 5px 5px 0 !important;
+                white-space: nowrap !important;
+                flex-shrink: 0 !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+            }
+
+            .copyright-area .left {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -369,19 +470,22 @@
                             </h1>
                             <div class="bottom-content">
                                 <p class="disc slogan-title">
-                                    <strong class="slogan-strong">Beautiful, functional websites built to perform.</strong>
+                                    <strong class="slogan-strong">Beautiful, functional websites built to
+                                        perform.</strong>
                                 </p>
 
                                 <p class="disc slogan-body" style="margin-top: 15px;">
                                     Your website is your digital home. At KraftHaus, we create websites that are not
-                                    just<br> visually stunning but strategically designed to convert visitors into clients.
+                                    just<br> visually stunning but strategically designed to convert visitors into
+                                    clients.
                                 </p>
 
                                 <div class="check-area-main-sd">
                                     <div class="single-check">
                                         <i class="fa-light fa-check"></i>
                                         <p><strong>Discovery & Wireframing</strong><br>
-                                            We understand your business goals and map the user journey for an<br> intuitive
+                                            We understand your business goals and map the user journey for an<br>
+                                            intuitive
                                             experience.
                                         </p>
                                         <br>
@@ -401,20 +505,6 @@
                                             from portfolio sites to e-commerce stores.
                                         </p>
                                         <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Content Integration & Testing</strong><br>
-                                            We ensure every page loads fast, looks perfect on all devices, and<br> performs
-                                            flawlessly.
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="single-check">
-                                        <i class="fa-light fa-check"></i>
-                                        <p><strong>Launch & Maintenance</strong><br>
-                                            Once live, we handle analytics setup, basic SEO, and maintenance<br> support.
-                                        </p>
                                     </div>
                                 </div>
 
@@ -471,12 +561,7 @@
                         <p class="disc">
                             Our development process is a structured, end-to-end journey that guarantees a
                             high-performance final product. We begin with a comprehensive discovery and strategy phase,
-                            auditing your current site and mapping out conversion-focused user journeys. This blueprint
-                            guides the design and wireframing stage, where we create prototypes that prioritize user
-                            experience. Our team then builds your site using modern technologies, ensuring it's
-                            rigorously tested across all devices. The process culminates in a strategic launch and
-                            optimization phase, but our partnership doesn’t end there; we provide ongoing support to
-                            ensure your website continues to perform at its peak long after it goes live.
+                            auditing your current site and mapping out conversion-focused user journeys.
                         </p>
                     </div>
 
@@ -503,7 +588,8 @@
                         <div class="right-info-service-short-quote">
                             <h6 class="title">Why It Matters</h6>
                             <p class="disc">
-                                You have 3 seconds to capture attention; slow sites lose ~60% of users forever. Our approach prevents this. Every design is conversion-focused, every line of code optimized for speed. We engineer digital sales machines that improve rankings, convert more visitors, and work as hard as you do.
+                                You have 3 seconds to capture attention; slow sites lose ~60% of users forever. Our
+                                approach prevents this.
                             </p>
                         </div>
                     </div>
@@ -516,7 +602,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <!-- accordion area start -->
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">Web Design And Development FAQ</h3>
@@ -532,7 +618,9 @@
                                             <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>A conversion-focused website strategically crafts every element (design, speed, content) to guide visitors toward specific actions (leads/sales). It's engineered to function as a digital sales machine for your business.</p>
+                                                    <p>A conversion-focused website strategically crafts every element
+                                                        (design, speed, content) to guide visitors toward specific
+                                                        actions (leads/sales).</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,7 +635,9 @@
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Our standard web development process takes 6–8 weeks. This covers discovery, strategy, design, wireframing, full development, testing, launch, and initial optimization, ensuring a high-quality final product.
+                                                    <p>Our standard web development process takes 6–8 weeks. This covers
+                                                        discovery, strategy, design, wireframing, full development,
+                                                        testing, launch.
                                                     </p>
                                                 </div>
                                             </div>
@@ -563,7 +653,8 @@
                                             <div id="collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>YYes. We build on easy Content Management Systems (CMS) like WordPress, Shopify, or Webflow. You can manage content (update text, add blogs, change images) without any technical skills or needing a developer for minor changes.</p>
+                                                    <p>YYes. We build on easy Content Management Systems (CMS) like
+                                                        WordPress, Shopify, or Webflow.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +670,9 @@
                                             <div id="collapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Speed is critical: you have 3 seconds before over half your visitors leave forever. We prioritize speed using modern tech (React/Vue) and optimized code. This results in a lightning-fast site that boosts UX, rankings, and conversions.</p>
+                                                    <p>Speed is critical: you have 3 seconds before over half your
+                                                        visitors leave forever. We prioritize speed using modern tech
+                                                        (React/Vue) and optimized code.</p>
                                                 </div>
                                             </div>
                                         </div>

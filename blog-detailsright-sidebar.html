@@ -13,202 +13,203 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    /* ----------------------------------------------------------- */
-    /* --- MOBILE RESPONSIVENESS FIX FOR "Our Blogs" TITLE --- */
-    /* ----------------------------------------------------------- */
+        /* ----------------------------------------------------------- */
+        /* --- MOBILE RESPONSIVENESS FIX FOR "Our Blogs" TITLE --- */
+        /* ----------------------------------------------------------- */
 
-    .theiaStickySidebar:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+        .theiaStickySidebar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-    /* Default size (large screen) */
-    .rts-breadcrumb-area .rts_hero__title {
-        /* You didn't specify the default size here, so setting a large base size. */
-        font-size: 160px; 
-        line-height: 1.1;
-        /* Core fix: Prevents words from breaking mid-word */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-
-    /* Media query for tablets and larger phones (max-width: 991px) */
-    @media (max-width: 991px) {
+        /* Default size (large screen) */
         .rts-breadcrumb-area .rts_hero__title {
-            font-size: 12vw !important; /* Scale title based on viewport width */
-        }
-    }
-
-    /* Media query for typical mobile phones (max-width: 576px) */
-    @media (max-width: 576px) {
-        .rts-breadcrumb-area .rts_hero__title {
-            /* Reduce font size to ensure "Blogs" doesn't break, e.g., on two lines: Our/Blogs */
-            font-size: 11vw !important;
-            line-height: 1.1 !important;
-        }
-    }
-
-    /* Dedicated query for extra small devices (max-width: 400px) */
-    @media (max-width: 400px) {
-        .rts-breadcrumb-area .rts_hero__title {
-            /* Aggressively reduce font size for the smallest screens */
-            font-size: 10vw !important; 
-        }
-    }
-
-    /* ------------------------------------------------------------------ */
-    /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
-    /* ------------------------------------------------------------------ */
-    
-    /* Footer adjustments for tablet - Centered and larger fonts */
-    @media (min-width: 414px) and (max-width: 896px) {
-        .footer-compact {
-            padding: 40px 0 !important;
-            text-align: center !important;
+            /* You didn't specify the default size here, so setting a large base size. */
+            font-size: 160px;
+            line-height: 1.1;
+            /* Core fix: Prevents words from breaking mid-word */
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
         }
 
-        .footer-compact__row {
-            padding-bottom: 30px !important;
+        /* Media query for tablets and larger phones (max-width: 991px) */
+        @media (max-width: 991px) {
+            .rts-breadcrumb-area .rts_hero__title {
+                font-size: 12vw !important;
+                /* Scale title based on viewport width */
+            }
         }
 
-        .footer-main-wrapper-one {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 30px !important;
-            text-align: center !important;
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+            .rts-breadcrumb-area .rts_hero__title {
+                /* Reduce font size to ensure "Blogs" doesn't break, e.g., on two lines: Our/Blogs */
+                font-size: 11vw !important;
+                line-height: 1.1 !important;
+            }
         }
 
-        .footer-left-two {
-            text-align: center !important;
-            order: 1 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
+        /* Dedicated query for extra small devices (max-width: 400px) */
+        @media (max-width: 400px) {
+            .rts-breadcrumb-area .rts_hero__title {
+                /* Aggressively reduce font size for the smallest screens */
+                font-size: 10vw !important;
+            }
         }
 
-        .footer-left-two .logo img {
-            width: 180px !important;
-            height: auto !important;
-            margin-bottom: 20px !important;
-        }
+        /* ------------------------------------------------------------------ */
+        /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
+        /* ------------------------------------------------------------------ */
 
-        .footer-left-two .rts-social-area-one {
-            display: flex !important;
-            justify-content: center !important;
-            margin-top: 20px !important;
-        }
+        /* Footer adjustments for tablet - Centered and larger fonts */
+        @media (min-width: 414px) and (max-width: 896px) {
+            .footer-compact {
+                padding: 40px 0 !important;
+                text-align: center !important;
+            }
 
-        .footer-left-two .rts-social-area-one ul {
-            display: flex !important;
-            gap: 20px !important;
-            justify-content: center !important;
-            align-items: center !important;
-        }
+            .footer-compact__row {
+                padding-bottom: 30px !important;
+            }
 
-        .footer-single-wized-start {
-            text-align: center !important;
-            margin-bottom: 0 !important;
-            order: 2 !important;
-        }
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
 
-        .footer-single-wized-start .title {
-            font-size: 24px !important;
-            margin-bottom: 20px !important;
-            font-weight: 700 !important;
-            color: white !important;
-        }
+            .footer-left-two {
+                text-align: center !important;
+                order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
 
-        .footer-nav {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 12px !important;
-        }
+            .footer-left-two .logo img {
+                width: 180px !important;
+                height: auto !important;
+                margin-bottom: 20px !important;
+            }
 
-        .footer-nav li {
-            margin-bottom: 0 !important;
-        }
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
 
-        .footer-nav li a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
 
-        .footer-nav li a:hover {
-            color: white !important;
-        }
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                order: 2 !important;
+            }
 
-        .mail-contact-area {
-            text-align: center !important;
-        }
+            .footer-single-wized-start .title {
+                font-size: 24px !important;
+                margin-bottom: 20px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
 
-        .mail-contact-area .single-con-info {
-            margin-bottom: 15px !important;
-        }
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+            }
 
-        .mail-contact-area .single-con-info a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
+            .footer-nav li {
+                margin-bottom: 0 !important;
+            }
 
-        .mail-contact-area .single-con-info a:hover {
-            color: white !important;
-        }
+            .footer-nav li a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
 
-        .subscribtion-area {
-            text-align: center !important;
-        }
+            .footer-nav li a:hover {
+                color: white !important;
+            }
 
-        .subscribtion-area .disc {
-            font-size: 16px !important;
-            line-height: 1.4 !important;
-            margin-bottom: 25px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
+            .mail-contact-area {
+                text-align: center !important;
+            }
 
-        .copyright-area {
-            text-align: center !important;
-            padding: 20px 0 !important;
-        }
+            .mail-contact-area .single-con-info {
+                margin-bottom: 15px !important;
+            }
 
-        .copyright-area p {
-            font-size: 16px !important;
-            color: rgba(255, 255, 255, 0.8) !important;
-            margin: 0 !important;
-        }
+            .mail-contact-area .single-con-info a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
 
-        .copyright-area a {
-            color: white !important;
-            text-decoration: none !important;
-        }
+            .mail-contact-area .single-con-info a:hover {
+                color: white !important;
+            }
 
-        /* Subscription form for tablet */
-        .subscribtion-input {
-            flex-direction: row !important;
-            gap: 15px !important;
-        }
+            .subscribtion-area {
+                text-align: center !important;
+            }
 
-        .subscribtion-input input[type="email"] {
-            flex: 1 !important;
-            padding: 12px 14px !important;
-            font-size: 14px !important;
-        }
+            .subscribtion-area .disc {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 25px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
 
-        .subscribtion-input button {
-            padding: 12px 20px !important;
-            font-size: 14px !important;
-            white-space: nowrap !important;
-            margin-top: -4px !important;
+            .copyright-area {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .copyright-area p {
+                font-size: 16px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin: 0 !important;
+            }
+
+            .copyright-area a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            /* Subscription form for tablet */
+            .subscribtion-input {
+                flex-direction: row !important;
+                gap: 15px !important;
+            }
+
+            .subscribtion-input input[type="email"] {
+                flex: 1 !important;
+                padding: 12px 14px !important;
+                font-size: 14px !important;
+            }
+
+            .subscribtion-input button {
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+                white-space: nowrap !important;
+                margin-top: -4px !important;
+            }
         }
-    }
-</style>
+    </style>
 </head>
 
 <body class="inner-page" style="" data-new-gr-c-s-check-loaded="14.1256.0" data-gr-ext-installed="">
@@ -577,7 +578,6 @@
                             <img src="images/blog/11.jpg" alt="blog_images">
                         </a>
                         <div class="blog-content-area">
-                            <span>Photography / Module Design</span>
                             <a href="blog-detailsright-sidebar.html">
                                 <h3 class="title quote animated fadeIn" style="">
                                     <div class="split-parent">
