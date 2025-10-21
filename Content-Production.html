@@ -14,124 +14,127 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-/* ---------------------------------------------------------------------- */
-/* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
-/* ---------------------------------------------------------------------- */
+        /* ---------------------------------------------------------------------- */
+        /* --- ENHANCED MOBILE RESPONSIVENESS FIX FOR SERVICE PAGE TITLE --- */
+        /* ---------------------------------------------------------------------- */
 
-/* Ensure words don't break at the character level across all screen sizes */
-.main-page-title-service-left-area .title-page {
-    /* Default style for large screens */
-    font-size: 80px;
-    line-height: 1.1;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-}
+        /* Ensure words don't break at the character level across all screen sizes */
+        .main-page-title-service-left-area .title-page {
+            /* Default style for large screens */
+            font-size: 80px;
+            line-height: 1.1;
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: none;
+        }
 
-/* FIX: Slogan Spacing (Guarantees separation) */
-/* Add a large bottom margin to the slogan block */
-.service-details-area .bottom-content .slogan-title {
-    margin-bottom: 30px !important; /* Force a large gap after the slogan block */
-}
+        /* FIX: Slogan Spacing (Guarantees separation) */
+        /* Add a large bottom margin to the slogan block */
+        .service-details-area .bottom-content .slogan-title {
+            margin-bottom: 30px !important;
+            /* Force a large gap after the slogan block */
+        }
 
-/* FIX: Slogan Font Size (Ensures it is separate from HTML style attribute) */
-.slogan-strong {
-    display: block; 
-    font-size: 22px !important; /* Lock the font size */
-}
+        /* FIX: Slogan Font Size (Ensures it is separate from HTML style attribute) */
+        .slogan-strong {
+            display: block;
+            font-size: 22px !important;
+            /* Lock the font size */
+        }
 
 
-/* Media query for tablets and smaller (max-width: 991px) */
-@media (max-width: 991px) {
-    .main-page-title-service-left-area .title-page {
-        font-size: 8vw !important;
-    }
-}
+        /* Media query for tablets and smaller (max-width: 991px) */
+        @media (max-width: 991px) {
+            .main-page-title-service-left-area .title-page {
+                font-size: 8vw !important;
+            }
+        }
 
-/* Media query for typical mobile phones (max-width: 576px) */
-@media (max-width: 576px) {
-    /* FIX: Header Breaking - Further aggressive scaling to fit the long title */
-    .main-page-title-service-left-area .title-page {
-        font-size: 6.5vw !important; 
-        line-height: 1.1 !important;
-    }
-    
-    /* Pushes the content down to clear the header */
-    .service-details-area .pt--120 {
-        padding-top: 100px !important; 
-    }
-}
+        /* Media query for typical mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
 
-/* ---------------------------------------------------------------------- */
-/* --- MOBILE/TABLET FOOTER CENTERING FIX (Consistent across pages) --- */
-/* ---------------------------------------------------------------------- */
+            /* FIX: Header Breaking - Further aggressive scaling to fit the long title */
+            .main-page-title-service-left-area .title-page {
+                font-size: 6.5vw !important;
+                line-height: 1.1 !important;
+            }
 
-/* Ensure main content elements remain left-aligned on smaller screens (overrides accidental inheritance) */
-.service-details-area .disc {
-    text-align: left !important;
-}
+            /* Pushes the content down to clear the header */
+            .service-details-area .pt--120 {
+                padding-top: 100px !important;
+            }
+        }
 
-@media (min-width: 414px) and (max-width: 896px) {
+        /* ---------------------------------------------------------------------- */
+        /* --- MOBILE/TABLET FOOTER CENTERING FIX (Consistent across pages) --- */
+        /* ---------------------------------------------------------------------- */
 
-    .footer-main-wrapper-one {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; 
-        gap: 30px !important;
-        text-align: center !important;
-    }
+        /* Ensure main content elements remain left-aligned on smaller screens (overrides accidental inheritance) */
+        .service-details-area .disc {
+            text-align: left !important;
+        }
 
-    .footer-left-two {
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    
-    /* Override inline style of social media section and ensure centering */
-    .footer-left-two .rts-social-area-one {
-        position: static !important;
-        left: auto !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin-top: 20px !important;
-    }
+        @media (min-width: 414px) and (max-width: 896px) {
 
-    .footer-nav {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
 
-    .footer-single-wized-start {
-        text-align: center !important;
-    }
+            .footer-left-two {
+                text-align: center !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
 
-    .mail-contact-area {
-        text-align: center !important;
-    }
-}
+            /* Override inline style of social media section and ensure centering */
+            .footer-left-two .rts-social-area-one {
+                position: static !important;
+                left: auto !important;
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
 
-@media (max-width: 430px) {
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
 
-    .footer-compact {
-        padding: 20px 0 !important;
-    }
+            .footer-single-wized-start {
+                text-align: center !important;
+            }
 
-    .footer-single-wized-start .title {
-        font-size: 16px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .footer-nav li a {
-        font-size: 14px !important;
-    }
-    
-    .copyright-area {
-        text-align: center !important;
-    }
-}
-</style>
+            .mail-contact-area {
+                text-align: center !important;
+            }
+        }
+
+        @media (max-width: 430px) {
+
+            .footer-compact {
+                padding: 20px 0 !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 16px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .footer-nav li a {
+                font-size: 14px !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -420,7 +423,8 @@
                                 <p class="disc">
                                     <strong class="slogan-strong">Creating visuals that make people stop, feel, and
                                         remember.</strong>
-                                    <span class="slogan-content">We help brands tell their story through powerful content — whether it’s lifestyle
+                                    <span class="slogan-content">We help brands tell their story through powerful
+                                        content — whether it’s lifestyle
                                         shoots, product<br> photography, or social reels.</span>
                                 </p>
                                 <div class="check-area-main-sd">
@@ -499,14 +503,11 @@
                     <div class="single-para-title-service-details mt--40">
                         <h3 class="title">How We Do It</h3>
                         <p class="disc">
-                            Our content creation process is a seamless, strategic workflow designed for impact. We begin
-                            with a Creative Strategy session to deeply understand your brand and goals, which informs
-                            the content themes and messaging. Next, we move into Content Planning, where we develop
-                            detailed calendars and production schedules. The core of our work happens during the
-                            Production phase, where our team executes high-quality video shoots, photography, and
-                            design. We then collaborate with you in a Review & Refinement stage to ensure the final
-                            assets perfectly align with your vision before the final Delivery & Distribution, providing
-                            organized, ready-to-launch content for all your marketing channels.
+                            Our process is a seamless, strategic workflow designed for impact. We start with Creative
+                            Strategy to align content themes with your goals. This moves into Content Planning, where we
+                            develop detailed calendars. The core Production phase executes high-quality video,
+                            photography, and design work. After your Review & Refinement, we provide final Delivery &
+                            Distribution of organized, ready-to-launch content for all your marketing channels.
                         </p>
                     </div>
 
@@ -546,14 +547,12 @@
                         <div class="right-info-service-short-quote">
                             <h6 class="title">Why It Matters</h6>
                             <p class="disc">
-                                In a world saturated with content, simply posting is not enough. The reality is that
-                                while businesses with strategic content generate significantly more leads, most of
-                                what's produced is forgettable. Our approach is different because we believe every piece
-                                of content must serve a purpose. By blending creativity with conversion psychology, we
-                                create visuals, videos, and copy that not only cut through the noise but also drive
-                                meaningful action. We don't just make content that gets attention; we produce
-                                high-performing assets that build your brand, engage your ideal customers, and deliver a
-                                measurable return.
+                                In a world saturated with content, simply posting is not enough. Most content is
+                                forgettable, even though strategic content generates significantly more leads. Our
+                                approach is different: we believe every piece must serve a purpose. We blend creativity
+                                with conversion psychology to produce visuals, videos, and copy that not only cut
+                                through the noise but also drive measurable action, engage your ideal customers, and
+                                deliver a return.
                             </p>
                         </div>
                     </div>
@@ -566,7 +565,7 @@
                                     <img src="images/service/05.jpg" class="img-fluid" alt="service">
                                 </div>
                             </div>
-                                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pl--50 pl_lg--0">
                                 <!-- accordion area start -->
                                 <div class="service-details-accordion-area">
                                     <h3 class="title">Market Strategy Growth FAQ</h3>
@@ -582,13 +581,11 @@
                                             <div id="collapseOne" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>We are a full-service production agency. Our capabilities include
-                                                        high-energy video production (from social reels to ad films),
-                                                        professional photography (brand and product), eye-catching
-                                                        graphic design for social media, and persuasive copywriting for
-                                                        websites and campaigns. We specialize in creating content for
-                                                        sports brands, B2B thought leadership, and e-commerce product
-                                                        marketing.</p>
+                                                    <p>We are a full-service production agency. Our core capabilities
+                                                        include Video Production (reels to ad films), Professional
+                                                        Photography (brand and product), Graphic Design, and Persuasive
+                                                        Copywriting. We specialize in content for sports brands, B2B
+                                                        thought leadership, and e-commerce product marketing.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -604,12 +601,11 @@
                                             <div id="collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <p>Our process is strategy-first. We begin with a "Creative
-                                                        Strategy" phase where we dive deep into your brand, audience,
-                                                        and business objectives. This ensures that every piece of
-                                                        content—from a single graphic to a full video—is planned with a
-                                                        specific purpose in mind, whether that's increasing engagement,
-                                                        generating leads, or building brand identity.</p>
+                                                    <p>Our process is strategy-first. We begin with a Creative Strategy
+                                                        phase to dive deep into your brand and objectives. This ensures
+                                                        every piece of content, from a graphic to a full video, has a
+                                                        specific purpose (e.g., increasing engagement, generating leads,
+                                                        or building brand identity) and drives measurable results.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -625,12 +621,10 @@
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <p>Our process is structured for efficiency and typically spans
-                                                        about four weeks. We start with strategy and planning in the
-                                                        first two weeks. The core production (filming, shooting,
-                                                        designing) happens from weeks two to four. This is followed by a
-                                                        collaborative review and refinement phase, with final assets
-                                                        delivered and ready for distribution shortly after the four-week
-                                                        mark.</p>
+                                                        about four weeks. We dedicate the first two weeks to strategy
+                                                        and planning. The core production and creative phase happens
+                                                        between weeks two and four, followed immediately by a
+                                                        collaborative review/refinement and final asset delivery.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -650,8 +644,7 @@
                                                         comprehensive Content Strategy phase. We help you develop
                                                         content themes, create detailed content calendars, and build
                                                         production schedules that align directly with your broader
-                                                        marketing goals, ensuring you have a steady stream of effective
-                                                        content.</p>
+                                                        marketing goals for a steady stream of effective content.</p>
                                                 </div>
                                             </div>
                                         </div>
