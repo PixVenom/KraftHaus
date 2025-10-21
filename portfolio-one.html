@@ -13,12 +13,24 @@
     <link rel="stylesheet" href="css/plugins/animate.min.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Keep original image/video fit */
+        .pli-image img,
+        .pli-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Or contain, if you preferred that */
+            display: block; /* Ensure elements don't have extra space */
+        }
+        /* Ensure video stays hidden initially */
+        .preview-video {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="inner-page">
 
-    <!-- Scripts style two -->
-    <!-- header area two start -->
     <header class="header-area header-one header--sticky">
         <div class="header-container-one">
             <div class="header-wrapper">
@@ -89,7 +101,6 @@
                     </nav>
 
                     <div class="action-area">
-                        <!-- Mobile Menu Toggle -->
                         <div class="menu-btn">
 
                             <div class="rts-offcanvas-wrapper">
@@ -97,10 +108,6 @@
                                     <div class="action-menu">
                                         <div class="close-event" style="display: none;"></div>
                                         <div class="open-event">
-                                            <!-- <div class="text">
-                        <span>Menu</span>
-                        <span>Close</span>
-                    </div> -->
                                             <div class="burger">
                                                 <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
                                                     class="icon-close" data-v-649bbaab="">
@@ -290,17 +297,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- rts-fs-menu one end -->
-                    </div>
+                        </div>
                 </div>
     </header>
-    <!-- header area two end -->
-
-    <!-- Scripts style two End -->
-
-
-    <!-- Scripts style two -->
-    <!-- rts bread crumba rea start -->
     <div class="rts-breadcrumb-area bg_image">
         <div class="container">
             <div class="row">
@@ -316,136 +315,122 @@
         </div>
     </div>
 
-    <!-- rts case studyes area start -->
     <div class="rts-case-studys-area rts-section-gap parallax-case">
         <br><br>
         <div class="container-140">
             <div class="row g-80">
                 <div class="col-lg-6">
-                    <!-- single product -->
-                    <div class="single-product-case-4 mb--80">
+                    <div class="single-product-case-4 mb--80 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/11.jpg"
-                                        data-src="images/product/11.jpg" alt="image">
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                    <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/pixelscientist.png"
+                                        data-src="images/landingpagescreenshot/pixelscientist.png"
+                                        alt="Pixel Scientist Website Screenshot">
+                                    <video src="videos/01.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>Creative</span>
                             <a href="https://pixelscientist.netlify.app/">
                                 <h5 class="name">Modern Collective Flowers</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="single-product-case-4  mb--80">
+                    <div class="single-product-case-4 mb--80 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/53.jpg"
-                                        data-src="images/product/53.jpg" alt="image">
-
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                    <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/milkmantra.png"
+                                        data-src="images/landingpagescreenshot/milkmantra.png"
+                                        alt="Milk Mantra Website Screenshot">
+                                    <video src="videos/02.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>Product</span>
                             <a href="https://milkmantra.com/">
                                 <h5 class="name">Unleashed Artistry Showcase</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="single-product-case-4">
+                    <div class="single-product-case-4 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/17.jpg"
-                                        data-src="images/product/17.jpg" alt="image">
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                    <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/pi42.png"
+                                        data-src="images/landingpagescreenshot/pi42.png"
+                                        alt="Pi42 Website Screenshot">
+                                    <video src="videos/03.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>Modifying</span>
                             <a href="https://pi42.com/">
                                 <h5 class="name">Boundless Creative Vault</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                </div>
+                    </div>
                 <div class="col-lg-6">
-                    <!-- single product -->
-                    <div class="single-product-case-4 mb--80 mt--100">
+                    <div class="single-product-case-4 mb--80 mt--100 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/13.jpg"
-                                        data-src="images/product/13.jpg" alt="image">
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                     <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/aarna.png"
+                                        data-src="images/landingpagescreenshot/aarna.png"
+                                        alt="Aarna AI Website Screenshot">
+                                    <video src="videos/04.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>Development</span>
                             <a href="https://www.aarna.ai/">
                                 <h5 class="name">Innovative Vision Gallery</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="single-product-case-4  mb--80">
+                    <div class="single-product-case-4 mb--80 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/14.jpg"
-                                        data-src="images/product/14.jpg" alt="image">
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                     <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/intelity.png"
+                                        data-src="images/landingpagescreenshot/intelity.png"
+                                        alt="Intelity Website Screenshot">
+                                    <video src="videos/05.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>App Development</span>
                             <a href="https://intelity.com/">
                                 <h5 class="name">InspireX Design Exhibition</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="single-product-case-4">
+                    <div class="single-product-case-4 portfolio-item">
                         <div class="pli-image-link">
                             <div class="pli-image-holder">
-                                <!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
                                 <figure class="pli-image">
-                                    <img class="anim-image-parallax tt-lazy" src="images/product/12.jpg"
-                                        data-src="images/product/12.jpg" alt="image">
-                                </figure> <!-- /.pli-image -->
-                            </div> <!-- /.pli-image-holder -->
-
-                        </div> <!-- /.pli-image-link -->
-                        <div class="inner-content">
+                                     <img class="anim-image-parallax tt-lazy preview-image"
+                                        src="images/landingpagescreenshot/byramudiplantation.png"
+                                        data-src="images/landingpagescreenshot/byramudiplantation.png"
+                                        alt="Byramudi Coffee Website Screenshot">
+                                    <video src="videos/06.mp4" class="preview-video" loop muted playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </figure> </div> </div> <div class="inner-content">
                             <span>Ui/ Ux</span>
                             <a href="https://byramudicoffee.com/">
                                 <h5 class="name">Creative Chronicles Expo</h5>
                             </a>
                         </div>
                     </div>
-                    <!-- single product end -->
-                </div>
+                    </div>
             </div>
         </div>
         <br><br><br>
@@ -457,7 +442,6 @@
             <div class="row footer-compact__row">
                 <div class="col-lg-12">
                     <div class="footer-main-wrapper-one">
-                        <!-- footer left area start -->
                         <div class="footer-left-two">
                             <a href="index.html" class="logo">
                                 <img src="/Krafthaus Logo white version.png" alt="logo" width="200px">
@@ -476,8 +460,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- footer left area end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Quick Links</h5>
                             <ul class="footer-nav">
@@ -488,8 +470,6 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Contact Info</h5>
                             <div class="mail-contact-area">
@@ -512,8 +492,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Subscribe Us</h5>
                             <div class="subscribtion-area">
@@ -528,8 +506,7 @@
                                 </form>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="row">
@@ -544,7 +521,6 @@
         </div>
     </div>
 
-    <!-- Scripts style two -->
     <div class="loading-screen" id="loading-screen">
         <span class="bar top-bar"></span>
         <span class="bar down-bar"></span>
@@ -556,17 +532,11 @@
     <div class="bg-noise"></div>
 
 
-    <!-- back to top start -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
         </svg>
     </div>
-    <!-- back to top end -->
-
-
-
-    <!-- pre loader start -->
     <div class="rts-cursor cursor-outer" data-default="yes" data-link="yes" data-slider="no">
         <span class="fn-cursor"></span>
     </div>
@@ -576,21 +546,12 @@
             <span class="fn-right"></span>
         </span>
     </div>
-    <!-- pre loader end -->
-
-
-
-    <!-- dark light switcher start-->
     <div class="modal-sidebar-scroll rts-dark-light">
         <ul>
             <li class="go-dark-w"><span>Dark</span><i class="rts-go-dark fal fa-moon"></i></li>
             <li class="go-light-w"><span>Light</span><i class="rts-go-light fa-light fa-brightness"></i></li>
         </ul>
     </div>
-    <!-- dark light switcher end -->
-
-
-
     <script defer src="js/vendor/jquery.min.js"></script>
     <script defer src="js/plugins/bootstrap.min.js"></script>
     <script defer src="js/plugins/contact.form.js"></script>
@@ -598,11 +559,8 @@
     <script defer src="js/plugins/swiper.js"></script>
 
 
-    <!-- for side bar sticky -->
     <script defer src="js/plugins/resizer-sensor.js"></script>
     <script defer src="js/plugins/sticky-sidebar.js"></script>
-    <!-- for side bar sticky end-->
-
     <script defer src="js/plugins/isotop.js"></script>
     <script defer src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
@@ -613,20 +571,58 @@
     <script defer src="js/plugins/splittext.js"></script>
     <script defer src="js/plugins/smoothscroll.js"></script>
 
-    <!-- title opacity scroll magix -->
     <script defer src="js/plugins/scrollmagic.js"></script>
     <script defer src="js/plugins/animate-scrollmagic.js"></script>
-    <!-- title opacity scroll magic end -->
-
-
-
     <script defer src="js/plugins/tilt.js"></script>
     <script defer src="js/plugins/counterup.js"></script>
 
     <script defer src="js/vendor/waw.js"></script>
-    <!-- custom javascripts -->
     <script defer src="js/main.js"></script>
-    <!-- Scripts style two End -->
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        portfolioItems.forEach(item => {
+            const img = item.querySelector('.preview-image');
+            const video = item.querySelector('.preview-video');
+
+            if (img && video) {
+            // --- Explicitly Set Initial State ---
+            // Make sure the image is visible first
+            img.style.display = 'block';
+            // Make sure the video is hidden first (redundant with CSS but safe)
+            video.style.display = 'none';
+            // --- End Initial State ---
+
+            // Event when mouse enters the item's area
+            item.addEventListener('mouseenter', () => {
+                img.style.display = 'none';   // Hide image
+                video.style.display = 'block'; // Show video
+                // Use a promise to ensure video can play, handle potential errors
+                video.play().catch(error => {
+                // Ignore errors if video is already playing or can't play yet
+                // console.error('Error attempting to play video:', error);
+                });
+            });
+
+            // Event when mouse leaves the item's area
+            item.addEventListener('mouseleave', () => {
+                // Check if video is potentially playing before trying to pause
+                if (!video.paused) {
+                    video.pause();
+                }
+                video.currentTime = 0;        // Reset video to start
+                video.style.display = 'none';  // Hide video
+                img.style.display = 'block';  // Show image again
+            });
+
+            } else {
+                // Optional: Log if an item is missing an image or video
+                // console.warn('Portfolio item is missing preview image or video:', item);
+            }
+        });
+        });
+    </script>
+    </body>
 
 </html>
