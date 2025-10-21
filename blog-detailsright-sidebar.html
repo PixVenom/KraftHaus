@@ -13,26 +13,26 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* ----------------------------------------------------------- */
-        /* --- MOBILE RESPONSIVENESS FIX FOR "Our Blogs" TITLE --- */
-        /* ----------------------------------------------------------- */
+    /* ----------------------------------------------------------- */
+    /* --- MOBILE RESPONSIVENESS FIX FOR "Our Blogs" TITLE --- */
+    /* ----------------------------------------------------------- */
 
-        .theiaStickySidebar:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+    .theiaStickySidebar:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-        /* Default size (large screen) */
-        .rts-breadcrumb-area .rts_hero__title {
-            /* You didn't specify the default size here, so setting a large base size. */
-            font-size: 160px;
-            line-height: 1.1;
-            /* Core fix: Prevents words from breaking mid-word */
-            word-break: normal;
-            overflow-wrap: normal;
-            hyphens: none;
-        }
+    /* Default size (large screen) */
+    .rts-breadcrumb-area .rts_hero__title {
+        /* You didn't specify the default size here, so setting a large base size. */
+        font-size: 160px; 
+        line-height: 1.1;
+        /* Core fix: Prevents words from breaking mid-word */
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
 
         /* Media query for tablets and larger phones (max-width: 991px) */
         @media (max-width: 991px) {
@@ -51,24 +51,24 @@
             }
         }
 
-        /* Dedicated query for extra small devices (max-width: 400px) */
-        @media (max-width: 400px) {
-            .rts-breadcrumb-area .rts_hero__title {
-                /* Aggressively reduce font size for the smallest screens */
-                font-size: 10vw !important;
-            }
+    /* Dedicated query for extra small devices (max-width: 400px) */
+    @media (max-width: 400px) {
+        .rts-breadcrumb-area .rts_hero__title {
+            /* Aggressively reduce font size for the smallest screens */
+            font-size: 10vw !important; 
         }
+    }
 
-        /* ------------------------------------------------------------------ */
-        /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
-        /* ------------------------------------------------------------------ */
-
-        /* Footer adjustments for tablet - Centered and larger fonts */
-        @media (min-width: 414px) and (max-width: 896px) {
-            .footer-compact {
-                padding: 40px 0 !important;
-                text-align: center !important;
-            }
+    /* ------------------------------------------------------------------ */
+    /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
+    /* ------------------------------------------------------------------ */
+    
+    /* Footer adjustments for tablet - Centered and larger fonts */
+    @media (min-width: 414px) and (max-width: 896px) {
+        .footer-compact {
+            padding: 40px 0 !important;
+            text-align: center !important;
+        }
 
             .footer-compact__row {
                 padding-bottom: 30px !important;
@@ -190,17 +190,17 @@
                 text-decoration: none !important;
             }
 
-            /* Subscription form for tablet */
-            .subscribtion-input {
-                flex-direction: row !important;
-                gap: 15px !important;
-            }
+        /* Subscription form for tablet */
+        .subscribtion-input {
+            flex-direction: row !important;
+            gap: 15px !important;
+        }
 
-            .subscribtion-input input[type="email"] {
-                flex: 1 !important;
-                padding: 12px 14px !important;
-                font-size: 14px !important;
-            }
+        .subscribtion-input input[type="email"] {
+            flex: 1 !important;
+            padding: 12px 14px !important;
+            font-size: 14px !important;
+        }
 
             .subscribtion-input button {
                 padding: 12px 20px !important;
@@ -945,8 +945,10 @@
                                     <br> Don’t worry we don’t spam your email address
                                 </p>
                                 <form action="#" class="subscribtion-input">
-                                    <input id="email" type="email" placeholder="Enter your email..." required="">
-                                    <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    <div class="email-input-wrapper">
+                                        <input id="email" type="email" placeholder="Enter your email..." required="">
+                                        <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    </div>
                                     <button type="submit" class="rts-btn btn-dark">subscribe</button>
                                 </form>
                             </div>

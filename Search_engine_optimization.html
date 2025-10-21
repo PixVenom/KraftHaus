@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-style-mode" content="1">
     <link rel="shortcut icon" type="image/x-icon" href="/Krafthaus Logo white version.png">
-    <title>Branding - KraftHaus</title>
+    <title>Search Engie Optimization - KraftHaus</title>
     <link rel="stylesheet" href="css/plugins/fontawesome-6.css">
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <link rel="stylesheet" href="css/vendor/metismenu.css">
@@ -45,139 +45,40 @@
             }
         }
 
-        /* Media query for typical mobile phones (max-width: 576px) */
-        @media (max-width: 576px) {
-
-            /* FINAL FIX: Header Breaking - Aggressive scaling to fit the extremely long title without breaking words. */
-            .main-page-title-service-left-area .title-page {
-                font-size: 5.5vw !important;
-                /* Very aggressive scaling to ensure fit */
-                line-height: 1.1 !important;
-            }
-
-            /* Pushes the content down to clear the header */
-            .service-details-area .pt--120 {
-                padding-top: 100px !important;
-            }
+    /* Media query for typical mobile phones (max-width: 576px) */
+    @media (max-width: 576px) {
+        /* FINAL FIX: Header Breaking - Aggressive scaling to fit the extremely long title without breaking words. */
+        .main-page-title-service-left-area .title-page {
+            font-size: 5.5vw !important; /* Very aggressive scaling to ensure fit */
+            line-height: 1.1 !important;
         }
-
-        /* Checklist styles (retained from your code) */
-        .single-check {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
+        
+        /* Pushes the content down to clear the header */
+        .service-details-area .pt--120 {
+            padding-top: 100px !important; 
         }
-
-        .single-check i {
-            margin-right: 15px;
-            margin-top: 5px;
-            font-size: 18px;
-        }
-
-        .single-check p {
-            line-height: 1.6;
-        }
-
-        .single-check p strong {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
-
-        /* Footer centering for mobile viewport (430x932) */
-        @media (max-width: 430px) {
-            .footer-main-wrapper-one {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center !important;
-            }
-
-            .footer-left-two {
-                text-align: center !important;
-                margin-bottom: 30px !important;
-                width: 100% !important;
-            }
-
-            .footer-left-two .logo {
-                display: block !important;
-                margin: 0 auto 20px auto !important;
-            }
-
-            .rts-social-area-one {
-                position: static !important;
-                left: auto !important;
-                top: auto !important;
-                text-align: center !important;
-                margin-top: 20px !important;
-                display: flex !important;
-                justify-content: center !important;
-            }
-
-            .footer-single-wized-start {
-                text-align: center !important;
-                margin-bottom: 30px !important;
-                width: 100% !important;
-            }
-
-            .footer-single-wized-start .title {
-                text-align: center !important;
-            }
-
-            .footer-nav {
-                text-align: center !important;
-                list-style: none !important;
-                padding: 0 !important;
-            }
-
-            .footer-nav li {
-                text-align: center !important;
-                margin-bottom: 10px !important;
-            }
-
-            .mail-contact-area {
-                text-align: center !important;
-            }
-
-            .subscribtion-area {
-                text-align: center !important;
-            }
-
-            .subscribtion-input {
-                display: flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
-                justify-content: center !important;
-                gap: 0 !important;
-                width: 100% !important;
-                max-width: 400px !important;
-                margin: 0 auto !important;
-            }
-
-            .subscribtion-input input {
-                flex: 1 !important;
-                width: auto !important;
-                max-width: none !important;
-                text-align: left !important;
-                border-radius: 5px 0 0 5px !important;
-                border-right: none !important;
-            }
-
-            .subscribtion-input button {
-                border-radius: 0 5px 5px 0 !important;
-                white-space: nowrap !important;
-                flex-shrink: 0 !important;
-            }
-
-            .copyright-area {
-                text-align: center !important;
-            }
-
-            .copyright-area .left {
-                text-align: center !important;
-            }
-        }
-    </style>
+    }
+    
+    /* Checklist styles (retained from your code) */
+    .single-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    .single-check i {
+        margin-right: 15px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .single-check p {
+        line-height: 1.6;
+    }
+    .single-check p strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+</style>
 </head>
 
 <body class="inner-page about contact-page servi-ce-details">
@@ -773,8 +674,10 @@
                                     <br> don’t worry we don’t spam your email address
                                 </p>
                                 <form action="#" class="subscribtion-input">
-                                    <input id="email" type="email" placeholder="Enter your email..." required="">
-                                    <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    <div class="email-input-wrapper">
+                                        <input id="email" type="email" placeholder="Enter your email..." required="">
+                                        <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                                    </div>
                                     <button type="submit" class="rts-btn btn-dark">subscribe</button>
                                 </form>
                             </div>
