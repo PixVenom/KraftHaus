@@ -18,13 +18,83 @@
             display: table;
             clear: both;
         }
+
+        /* ---------------------------------------------------------------------- */
+        /* --- MOBILE RESPONSIVENESS FIXES (BLOGS PAGE) --- */
+        /* ---------------------------------------------------------------------- */
+
+        /* 1. Header Title Breaking Fix (Our Blogs) */
+        /* Target the title specifically for mobile breakpoints */
+        @media (max-width: 991px) {
+            .rts-breadcrumb-area .baread-crumb-main-wrapper .inner .title {
+                font-size: 8vw !important;
+                /* Scale down for tablets/small screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .rts-breadcrumb-area .baread-crumb-main-wrapper .inner .title {
+                font-size: 9vw !important;
+                /* Aggressively scale down for mobile phones */
+                line-height: 1.1 !important;
+            }
+        }
+
+        /* ---------------------------------------------------------------------- */
+        /* 2. FOOTER CENTER ALIGNMENT FIX FOR MOBILE ONLY (MAX 767px) */
+        /* ---------------------------------------------------------------------- */
+        @media (max-width: 767px) {
+            /* Target the main wrapper inside the footer */
+            .rts-footer-area-one .footer-main-wrapper-one {
+                display: block;
+                /* Changes to block layout for better stacking on mobile */
+                text-align: center;
+                /* Centers inline content */
+            }
+
+            /* Target the main footer columns */
+            .rts-footer-area-one .footer-left-two,
+            .rts-footer-area-one .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 40px;
+                /* Add space between stacked sections */
+            }
+
+            /* Center the logo container/image */
+            .rts-footer-area-one .footer-left-two .logo {
+                display: block;
+                margin: 0 auto 15px auto;
+            }
+
+            /* Center the social media links container */
+            .rts-footer-area-one .footer-left-two .rts-social-area-one {
+                display: flex;
+                /* Enables flex for the social icons */
+                justify-content: center;
+                /* Centers the social icons horizontally */
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+            }
+
+            /* Center the list items in the Quick Links section */
+            .rts-footer-area-one .footer-single-wized-start .footer-nav {
+                padding-left: 0;
+                list-style: none;
+                /* To center the text of the <li> elements themselves */
+                display: inline-block;
+            }
+
+            /* Center the mail/phone info. */
+            .rts-footer-area-one .mail-contact-area .single-con-info {
+                text-align: center !important;
+            }
+        }
     </style>
 </head>
 
 <body class="inner-page" style="" data-new-gr-c-s-check-loaded="14.1258.0" data-gr-ext-installed="">
 
-    <!-- Scripts style two -->
-    <!-- header area two start -->
     <div class="gsap-marker-end"
         style="border-color: red; font-size: 16px; color: red; font-weight: normal; pointer-events: none; white-space: nowrap; font-family: sans-serif, Arial; z-index: 1000; padding: 4px 8px; border-width: 1px 0px 0px; border-style: solid; position: absolute; translate: none; rotate: none; scale: none; top: 2193px; transform: translate(0px, 0px); display: block; left: 0px;">
         end</div>
@@ -86,56 +156,55 @@
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="index.html" onclick="window.location.href='index.html'" role="menuitem"
                                     aria-current="page"><span class="rolling-text">
-                                        <div class="block"><span class="letter">H</span><span
-                                                class="letter">O</span><span class="letter">M</span><span
-                                                class="letter">E</span></div>
+                                        <div class="block"><span class="letter">H</span><span class="letter">O</span><span
+                                                class="letter">M</span><span class="letter">E</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on" role="none">
                                 <a class="menu-link" href="about.html" onclick="window.location.href='about.html'"
                                     role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">A</span><span
-                                                class="letter">B</span><span class="letter">O</span><span
-                                                class="letter">U</span><span class="letter">T</span></div>
+                                        <div class="block"><span class="letter">A</span><span class="letter">B</span><span
+                                                class="letter">O</span><span class="letter">U</span><span
+                                                class="letter">T</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="portfolio-one.html" onclick="window.location.href='portfolio-one.html'"
                                     role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">P</span><span
-                                                class="letter">O</span><span class="letter">R</span><span
-                                                class="letter">T</span><span class="letter">F</span><span
-                                                class="letter">O</span><span class="letter">L</span><span
-                                                class="letter">I</span><span class="letter">O</span></div>
+                                        <div class="block"><span class="letter">P</span><span class="letter">O</span><span
+                                                class="letter">R</span><span class="letter">T</span><span
+                                                class="letter">F</span><span class="letter">O</span><span
+                                                class="letter">L</span><span class="letter">I</span><span
+                                                class="letter">O</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="service-3.html" onclick="window.location.href='service-3.html'"
                                     role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">S</span><span
-                                                class="letter">E</span><span class="letter">R</span><span
-                                                class="letter">V</span><span class="letter">I</span><span
-                                                class="letter">C</span><span class="letter">E<span class="letter">S
+                                        <div class="block"><span class="letter">S</span><span class="letter">E</span><span
+                                                class="letter">R</span><span class="letter">V</span><span
+                                                class="letter">I</span><span class="letter">C</span><span
+                                                class="letter">E<span class="letter">S
                                                 </span>
                                         </div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="blog-detailsright-sidebar.html"
-                                    onclick="window.location.href='blog-detailsright-sidebar.html'"
-                                    role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">B</span><span
-                                                class="letter">L</span><span class="letter">O</span><span
-                                                class="letter">G</span><span class="letter">S</span></div>
+                                    onclick="window.location.href='blog-detailsright-sidebar.html'" role="menuitem"><span
+                                        class="rolling-text">
+                                        <div class="block"><span class="letter">B</span><span class="letter">L</span><span
+                                                class="letter">O</span><span class="letter">G</span><span
+                                                class="letter">S</span></div>
                                     </span></a>
                             </li>
                             <li class="menu-item main-nav-on menu-item-has-children" role="none">
                                 <a href="contact.html" onclick="window.location.href='contact.html'"
                                     role="menuitem"><span class="rolling-text">
-                                        <div class="block"><span class="letter">C</span><span
-                                                class="letter">O</span><span class="letter">N</span><span
-                                                class="letter">T</span><span class="letter">A</span><span
-                                                class="letter">C</span><span class="letter">T</span>
+                                        <div class="block"><span class="letter">C</span><span class="letter">O</span><span
+                                                class="letter">N</span><span class="letter">T</span><span
+                                                class="letter">A</span><span class="letter">C</span><span
+                                                class="letter">T</span>
                                         </div>
                                     </span></a>
                             </li>
@@ -143,7 +212,6 @@
                     </nav>
 
                     <div class="action-area">
-                        <!-- Mobile Menu Toggle -->
                         <div class="menu-btn">
 
                             <div class="rts-offcanvas-wrapper">
@@ -151,10 +219,6 @@
                                     <div class="action-menu">
                                         <div class="close-event" style="display: none;"></div>
                                         <div class="open-event">
-                                            <!-- <div class="text">
-                                                    <span>Menu</span>
-                                                    <span>Close</span>
-                                                </div> -->
                                             <div class="burger">
                                                 <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
                                                     class="icon-close" data-v-649bbaab="">
@@ -195,77 +259,77 @@
                                                 <li id="menu-item-76" class="menu-item menu-item-has-children">
                                                     <a href="index.html"
                                                         onclick="window.location.href='index.html'">Home<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li id="menu-item-767" class="menu-item menu-item-has-children">
                                                     <a href="about.html"
                                                         onclick="window.location.href='about.html'">About<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li id="menu-item-768" class="menu-item menu-item-has-children">
                                                     <a href="portfolio-one.html"
                                                         onclick="window.location.href='portfolio-one.html'">Portfolio<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="service-3.html"
                                                         onclick="window.location.href='service-3.html'">Services<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="blog-detailsright-sidebar.html"
                                                         onclick="window.location.href='blog-detailsright-sidebar.html'">Blogs<span><svg
-                                                                height="24" viewBox="0 0 24 24" width="24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span><span><svg height="24" viewBox="0 0 24 24"
-                                                                width="24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heroicon-ui"
-                                                                    d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
-                                                                </path>
-                                                            </svg></span></a>
+                                                                    height="24" viewBox="0 0 24 24" width="24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span><span><svg height="24" viewBox="0 0 24 24"
+                                                                    width="24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path class="heroicon-ui"
+                                                                        d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z">
+                                                                    </path>
+                                                                </svg></span></a>
                                                 </li>
                                                 <li class="menu-item"><a href="contact.html"
                                                         onclick="window.location.href='contact.html'">Contact</a></li>
@@ -344,17 +408,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- rts-fs-menu one end -->
-                    </div>
+                        </div>
                 </div>
     </header>
-    <!-- header area two end -->
-
-    <!-- Scripts style two End -->
-
-
-    <!-- Scripts style two -->
-    <!-- rts bread crumba rea start -->
     <div class="rts-breadcrumb-area bg_image">
         <div class="container">
             <div class="row">
@@ -371,13 +427,8 @@
             </div>
         </div>
     </div>
-    <!-- rts bread crumba rea end -->
-    <!-- Scripts style two End -->
-
-
-    <!-- blog post area inner  start-->
     <div class="blog-list-area pb--120 pt--80">
-        <div class="container-150  rts-section-gap">
+        <div class="container-150 rts-section-gap">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-blog-list-one rts-skew-up-gsap" style="">
@@ -453,16 +504,11 @@
             </div>
         </div>
     </div>
-    <!-- blog post area inner end -->
-
-
-
     <div id="contact" class="rts-footer-area-one footer-compact">
         <div class="container">
             <div class="row footer-compact__row">
                 <div class="col-lg-12">
                     <div class="footer-main-wrapper-one">
-                        <!-- footer left area start -->
                         <div class="footer-left-two">
                             <a href="index.html" class="logo">
                                 <img src="/Krafthaus Logo white version.png" alt="logo" width="200px">
@@ -481,8 +527,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- footer left area end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Quick Links</h5>
                             <ul class="footer-nav">
@@ -493,8 +537,6 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Contact Info</h5>
                             <div class="mail-contact-area">
@@ -517,8 +559,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                        <!-- footer single wized start -->
                         <div class="footer-single-wized-start">
                             <h5 class="title">Subscribe Us</h5>
                             <div class="subscribtion-area">
@@ -535,8 +575,7 @@
                                 </form>
                             </div>
                         </div>
-                        <!-- footer single wized end -->
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="row">
@@ -550,19 +589,9 @@
             </div>
         </div>
     </div>
-    <!-- rts footer two area end -->
-
-    <!-- Footer style two End -->
-
-
-    <!-- Scripts style two -->
-
-
-
     <div class="bg-noise"></div>
 
 
-    <!-- back to top start -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
@@ -570,11 +599,6 @@
             </path>
         </svg>
     </div>
-    <!-- back to top end -->
-
-
-
-    <!-- pre loader start -->
     <div class="rts-cursor cursor-outer" data-default="yes" data-link="yes" data-slider="no"
         style="visibility: visible; transform: translate(1362px, 180px);">
         <span class="fn-cursor"></span>
@@ -586,21 +610,12 @@
             <span class="fn-right"></span>
         </span>
     </div>
-    <!-- pre loader end -->
-
-
-
-    <!-- dark light switcher start-->
     <div class="modal-sidebar-scroll rts-dark-light">
         <ul>
             <li class="go-dark-w"><span>Dark</span><i class="rts-go-dark fal fa-moon"></i></li>
             <li class="go-light-w"><span>Light</span><i class="rts-go-light fa-light fa-brightness"></i></li>
         </ul>
     </div>
-    <!-- dark light switcher end -->
-
-
-
     <script defer="" src="js/vendor/jquery.min.js"></script>
     <script defer="" src="js/plugins/bootstrap.min.js"></script>
     <script defer="" src="js/plugins/contact.form.js"></script>
@@ -608,11 +623,8 @@
     <script defer="" src="js/plugins/swiper.js"></script>
 
 
-    <!-- for side bar sticky -->
     <script defer="" src="js/plugins/resizer-sensor.js"></script>
     <script defer="" src="js/plugins/sticky-sidebar.js"></script>
-    <!-- for side bar sticky end-->
-
     <script defer="" src="js/plugins/isotop.js"></script>
     <script defer="" src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
@@ -623,47 +635,13 @@
     <script defer="" src="js/plugins/splittext.js"></script>
     <script defer="" src="js/plugins/smoothscroll.js"></script>
 
-    <!-- title opacity scroll magix -->
     <script defer="" src="js/plugins/scrollmagic.js"></script>
     <script defer="" src="js/plugins/animate-scrollmagic.js"></script>
-    <!-- title opacity scroll magic end -->
-
-
-
     <script defer="" src="js/plugins/tilt.js"></script>
     <script defer="" src="js/plugins/counterup.js"></script>
 
     <script defer="" src="js/vendor/waw.js"></script>
-    <!-- custom javascripts -->
     <script defer="" src="js/main.js"></script>
-    <!-- Scripts style two End -->
-
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
-        <style>
-            div.grammarly-desktop-integration {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            div.grammarly-desktop-integration:before {
-                content: attr(data-content);
-            }
-        </style>
-        <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
-            data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
-        </div>
-    </template></grammarly-desktop-integration>
+    </body>
 
 </html>
