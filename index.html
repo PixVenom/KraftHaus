@@ -54,21 +54,29 @@
                 padding: 15px 20px !important;
             }
 
+            /* --- FIX START --- */
+            /* 1. Make the header a horizontal row and space out items */
             .header-wrapper {
-                flex-direction: column !important;
-                align-items: flex-start !important;
+                flex-direction: row !important;           /* CHANGED from column */
+                align-items: center !important;          /* CHANGED from flex-start */
+                justify-content: space-between !important; /* ADDED */
             }
 
+            /* 2. Make the right-side (with the button) fit its content */
             .header-right {
-                width: 100% !important;
-                margin-top: 15px !important;
+                width: auto !important;     /* CHANGED from 100% */
+                margin-top: 0 !important; /* CHANGED from 15px */
             }
 
+            /* 3. Hide the desktop navigation links */
             .nav-area {
-                width: 100% !important;
-                margin-bottom: 15px !important;
+                display: none !important; /* CHANGED from width: 100% etc. */
             }
+            /* --- FIX END --- */
 
+
+            /* These rules below are for the slide-out menu, not the header bar */
+            /* They can stay if they are used by your mobile menu panel */
             .navbar-nav-1 {
                 display: flex !important;
                 flex-direction: column !important;
@@ -103,19 +111,22 @@
                 animation: none !important;
             }
 
+            /* This rule is correct for the menu/search icon container */
             .action-area {
-                width: 100% !important;
+                width: auto !important; /* CHANGED from 100% */
                 display: flex !important;
                 justify-content: space-between !important;
                 align-items: center !important;
             }
 
+            /* These ordering rules are correct */
             .menu-btn {
                 order: 2 !important;
             }
 
             .search-icon-header {
                 order: 1 !important;
+                margin-right: 15px; /* ADDED to create space */
             }
         }
 
