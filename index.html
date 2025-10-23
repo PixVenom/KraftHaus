@@ -15,116 +15,105 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Typing animation styles and script for .border-bottom-1 -->
     <style id="typing-anim-styles">
-    /* --- Base Typing Animation Styles --- */
-    .typing-wrapper {
-        display: inline-block;
-        position: relative;
-    }
-
-    .typing-caret {
-        display: inline-block;
-        width: 2px;
-        background: currentColor;
-        margin-left: 6px;
-        animation: blink 1s steps(2, end) infinite;
-        vertical-align: bottom;
-        height: 1.2em;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0
+        /* --- Base Typing Animation Styles --- */
+        .typing-wrapper {
+            display: inline-block;
+            position: relative;
         }
-    }
 
-    /* --- GLOBAL FIXES (All Screen Sizes) --- */
+        .typing-caret {
+            display: inline-block;
+            width: 2px;
+            background: currentColor;
+            margin-left: 6px;
+            animation: blink 1s steps(2, end) infinite;
+            vertical-align: bottom;
+            height: 1.2em;
+        }
 
-    .single-item-service-one {
-        margin-bottom: 0px !important;
-        /* Resetting external space */
-    }
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
 
-    /* Desktop Service Card Styles */
-    .service-area-one-main-wrapper .single-item-service-one {
-        margin-bottom: 0px;
-        padding: 20px 20px 20px 0px;
-    }
+        /* --- GLOBAL FIXES (All Screen Sizes) --- */
 
-    .service-area-one-main-wrapper .single-item-service-one a {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+        .single-item-service-one {
+            margin-bottom: 0px !important;
+            /* Resetting external space */
+        }
 
-    /* Mobile Styles (767px) */
-    @media only screen and (max-width: 767px) {
+        /* Desktop Service Card Styles */
         .service-area-one-main-wrapper .single-item-service-one {
-            margin-bottom: 5px !important;
-            padding: 15px 20px !important;
+            margin-bottom: 0px;
+            padding: 20px 20px 20px 0px;
         }
 
         .service-area-one-main-wrapper .single-item-service-one a {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            width: 100% !important;
-            padding-top: 15px !important;
-            padding-bottom: 15px !important;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
-        .service-area-one-main-wrapper .single-item-service-one .list-title h3,
-        .service-area-one-main-wrapper .single-item-service-one .list-info p,
-        .service-area-one-main-wrapper .single-item-service-one .list-info p.dsic,
-        .service-area-one-main-wrapper .single-item-service-one .list-info p.disc {
-            text-align: center !important;
-            word-wrap: break-word !important;
+        /* Mobile Styles (767px) */
+        @media only screen and (max-width: 767px) {
+            .service-area-one-main-wrapper .single-item-service-one {
+                margin-bottom: 5px !important;
+                padding: 15px 20px !important;
+            }
+
+            .service-area-one-main-wrapper .single-item-service-one a {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                width: 100% !important;
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+
+            .service-area-one-main-wrapper .single-item-service-one .list-title h3,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p.dsic,
+            .service-area-one-main-wrapper .single-item-service-one .list-info p.disc {
+                text-align: center !important;
+                word-wrap: break-word !important;
+            }
+
+            .service-area-one-main-wrapper .single-item-service-one .list-title,
+            .service-area-one-main-wrapper .single-item-service-one .list-info,
+            .service-area-one-main-wrapper .single-item-service-one .rts-img-contaciner {
+                margin-right: 0px !important;
+                margin-bottom: 5px !important;
+                flex: unset !important;
+            }
+
+            .service-area-one-main-wrapper .single-item-service-one .button-area {
+                align-self: center !important;
+            }
         }
 
-        .service-area-one-main-wrapper .single-item-service-one .list-title,
-        .service-area-one-main-wrapper .single-item-service-one .list-info,
-        .service-area-one-main-wrapper .single-item-service-one .rts-img-contaciner {
-            margin-right: 0px !important;
-            margin-bottom: 5px !important;
-            flex: unset !important;
+        /* Small Phones (430px) */
+        @media only screen and (max-width: 430px) {
+            .service-area-one-main-wrapper .single-item-service-one {
+                margin-bottom: 5px !important;
+                padding: 10px 15px !important;
+            }
         }
 
-        .service-area-one-main-wrapper .single-item-service-one .button-area {
-            align-self: center !important;
+        /* FIX 3: Reduces the overall vertical padding around the entire service section (for desktop views) */
+        .rts-service-area {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
-    }
 
-    /* Small Phones (430px) */
-    @media only screen and (max-width: 430px) {
-        .service-area-one-main-wrapper .single-item-service-one {
-            margin-bottom: 5px !important;
-            padding: 10px 15px !important;
+        /* NEW: Remove underline from "Solutions" text */
+        .solutions-text {
+            text-decoration: none !important;
+            border-bottom: none !important;
         }
-    }
 
-    /* FIX 3: Reduces the overall vertical padding around the entire service section (for desktop views) */
-    .rts-service-area {
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-    }
-
-    /* NEW: Remove underline from "Solutions" text */
-    .solutions-text {
-        text-decoration: none !important;
-        border-bottom: none !important;
-    }
-
-    /* Hero title font size control - Desktop default */
-    .rts_hero__title {
-        font-size: 100px !important;
-        line-height: 1.1 !important;
-        /* --- ADDED WORD BREAK FIX --- */
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-    }
-
-    /* Force override for all screen sizes except mobile */
-    @media (min-width: 431px) {
+        /* Hero title font size control - Desktop default */
         .rts_hero__title {
             font-size: 100px !important;
             line-height: 1.1 !important;
@@ -133,498 +122,510 @@
             overflow-wrap: normal;
             hyphens: none;
         }
-    }
 
-    /* Hero title font size for 430x932 dimensions only */
-    @media (max-width: 430px) {
-        .rts_hero__title {
-            font-size: 50px !important;
-            line-height: 1.1 !important;
-            /* --- ADDED WORD BREAK FIX --- */
-            word-break: normal !important;
-            overflow-wrap: normal !important;
-            hyphens: none !important;
-        }
-    }
-
-    /* Footer: Center the logo and social icons by default (Desktop) */
-    .footer-left-two {
-        text-align: center;
-    }
-
-    .footer-left-two .rts-social-area-one {
-        margin-top: 25px;
-    }
-
-    .footer-left-two .rts-social-area-one ul {
-        padding: 0;
-        list-style: none;
-        display: inline-flex;
-        /* Allows the list to be centered */
-    }
-
-
-    /* --- MOBILE RESPONSIVENESS FIXES --- */
-    @media (max-width: 767px) {
-
-        /* 1. Hero Title Fix */
-        .rts_hero__title {
-            font-size: clamp(38px, 12vw, 55px) !important;
-            line-height: 1.2;
-            text-wrap: balance;
-            /* --- ADDED WORD BREAK FIX --- */
-            word-break: normal;
-            overflow-wrap: normal;
-            hyphens: none;
+        /* Force override for all screen sizes except mobile */
+        @media (min-width: 431px) {
+            .rts_hero__title {
+                font-size: 100px !important;
+                line-height: 1.1 !important;
+                /* --- ADDED WORD BREAK FIX --- */
+                word-break: normal;
+                overflow-wrap: normal;
+                hyphens: none;
+            }
         }
 
-        .solutions-text {
-            font-size: clamp(30px, 9vw, 45px) !important;
-            text-wrap: balance;
+        /* Hero title font size for 430x932 dimensions only */
+        @media (max-width: 430px) {
+            .rts_hero__title {
+                font-size: 50px !important;
+                line-height: 1.1 !important;
+                /* --- ADDED WORD BREAK FIX --- */
+                word-break: normal !important;
+                overflow-wrap: normal !important;
+                hyphens: none !important;
+            }
         }
 
-        /* 2. "Our Core Services" Title Fix */
-        .rts-service-area .title-area .sub-title {
-            font-size: clamp(42px, 13vw, 65px) !important;
-            line-height: 1.2 !important;
-            text-wrap: balance;
-        }
-
-        /* 3. "Our Expertise" Title Fix */
-        .large-image-option-start .title.quote {
-            font-size: clamp(45px, 14vw, 70px) !important;
-            line-height: 1.1 !important;
-            text-wrap: balance;
-        }
-
-        /* 4. Button Arrow Color Fix */
-        .rts-btn-mouse-move i {
-            color: white !important;
-        }
-
-        /* Hiding/Adjusting desktop-only elements */
-        .top-center-image {
-            display: none !important;
-        }
-
-        .banner-jump-button {
-            position: relative;
-            display: block;
+        /* Footer: Center the logo and social icons by default (Desktop) */
+        .footer-left-two {
             text-align: center;
-            margin-top: 40px;
-        }
-    }
-
-    /* --- DESKTOP FONT SIZE FOR CORE SERVICES --- */
-    @media (min-width: 768px) {
-        .rts-service-area .title-area .sub-title {
-            font-size: 60px !important;
-            line-height: 1.2 !important;
-            justify-self: center;
-        }
-    }
-
-    /* --- RESPONSIVE STYLES FOR 768x1024 (TABLET PORTRAIT) --- */
-    @media (min-width: 414px) and (max-width: 896px) {
-        
-        /* ... (all your existing tablet styles for containers, header, etc. are here) ... */
-
-        .rts_hero__title {
-            font-size: clamp(100px, 18vw, 140px) !important;
-            line-height: 0.9 !important;
-            margin-bottom: 50px !important;
-            /* --- ADDED WORD BREAK FIX --- */
-            word-break: normal;
-            overflow-wrap: normal;
-            hyphens: none;
-        }
-        
-        /* ... (all your other tablet styles are here) ... */
-    }
-
-
-    /* --- SPECIFIC RESPONSIVE STYLES FOR 430x932 DIMENSIONS --- */
-    @media (max-width: 430px) {
-
-        /* ... (all your existing 430px styles for containers, header, etc. are here) ... */
-
-        .rts_hero__title {
-            font-size: clamp(28px, 8vw, 35px) !important;
-            line-height: 1.1 !important;
-            margin-bottom: 20px !important;
-            width: auto !important;
-            max-width: 100% !important;
-            
-            /* --- THIS IS THE MAIN FIX --- */
-            /* Changed from break-word to normal */
-            word-wrap: normal !important;
-            overflow-wrap: normal !important;
-            hyphens: none !important;
-            /* --- END OF FIX --- */
-        }
-
-        /* ... (all your other 430px styles are here) ... */
-    }
-
-    /* ------------------------------------------------------------------ */
-    /* --- FOOTER CENTERING FOR MOBILE DEVICES --- */
-    /* ------------------------------------------------------------------ */
-
-    /* Footer adjustments for mobile devices - Center aligned */
-    @media (max-width: 768px) {
-        .footer-compact {
-            padding: 40px 0 !important;
-            text-align: center !important;
-        }
-
-        .footer-compact__row {
-            padding-bottom: 30px !important;
-        }
-
-        .footer-main-wrapper-one {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 30px !important;
-            text-align: center !important;
-        }
-
-        .footer-left-two {
-            text-align: center !important;
-            order: 1 !important;
-            /* Display logo/social first */
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-        }
-
-        .footer-left-two .logo img {
-            width: 180px !important;
-            /* Adjust logo size */
-            height: auto !important;
-            margin-bottom: 20px !important;
         }
 
         .footer-left-two .rts-social-area-one {
-            display: flex !important;
-            justify-content: center !important;
-            margin-top: 20px !important;
-            position: relative !important;
-            /* Reset potential desktop positioning */
-            left: 0 !important;
-            /* Reset potential desktop positioning */
+            margin-top: 25px;
         }
 
         .footer-left-two .rts-social-area-one ul {
-            display: flex !important;
-            gap: 20px !important;
-            justify-content: center !important;
-            align-items: center !important;
-            padding-left: 0;
-            /* Remove default list padding */
-        }
-
-        .footer-single-wized-start {
-            text-align: center !important;
-            margin-bottom: 0 !important;
-            /* Remove bottom margin if stacking */
-            order: 2 !important;
-            /* Ensure consistent order after logo */
-        }
-
-        .footer-single-wized-start .title {
-            font-size: 24px !important;
-            margin-bottom: 20px !important;
-            font-weight: 700 !important;
-            color: white !important;
-        }
-
-        .footer-nav {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 12px !important;
-            padding-left: 0;
-            /* Remove default list padding */
-        }
-
-        .footer-nav li {
-            margin-bottom: 0 !important;
-        }
-
-        .footer-nav li a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
-
-        .footer-nav li a:hover {
-            color: white !important;
-        }
-
-        .mail-contact-area {
-            text-align: center !important;
-        }
-
-        .mail-contact-area .single-con-info {
-            margin-bottom: 15px !important;
-        }
-
-        .mail-contact-area .single-con-info a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
-
-        .mail-contact-area .single-con-info a:hover {
-            color: white !important;
-        }
-
-        .subscribtion-area {
-            text-align: center !important;
-        }
-
-        .subscribtion-area .disc {
-            font-size: 16px !important;
-            line-height: 1.4 !important;
-            margin-bottom: 25px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-
-        .copyright-area {
-            text-align: center !important;
-            padding: 20px 0 !important;
-        }
-
-        .copyright-area p {
-            font-size: 16px !important;
-            color: rgba(255, 255, 255, 0.8) !important;
-            margin: 0 !important;
-        }
-
-        .copyright-area a {
-            color: white !important;
-            text-decoration: none !important;
-        }
-
-        /* Subscription form for mobile */
-        .subscribtion-input {
-            display: flex !important;
-            flex-direction: row !important;
-            /* Keep side-by-side */
-            gap: 10px !important;
-            align-items: center !important;
-            justify-content: center !important;
-            /* Center the form items */
-            width: 100% !important;
-            max-width: 350px !important;
-            /* Limit width on small screens */
-            margin: 0 auto !important;
-            /* Center the form itself */
-        }
-
-        /* This wrapper is needed in the HTML */
-        .subscribtion-input .email-input-wrapper {
-            position: relative;
-            flex-grow: 1 !important;
-        }
-
-        .subscribtion-input .email-input-wrapper input[type="email"] {
-            flex: none !important;
-            min-width: auto !important;
-            width: 100%;
-            /* Fill the wrapper */
-            padding: 12px 14px 12px 40px !important;
-            /* Keep icon padding */
-            font-size: 14px !important;
-            border-radius: 4px !important;
-            border: 1px solid #ccc !important;
-        }
-
-        .subscribtion-input .email-input-wrapper label {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #333;
-            /* Icon color on light input */
-            z-index: 10;
+            padding: 0;
+            list-style: none;
+            display: inline-flex;
+            /* Allows the list to be centered */
         }
 
 
-        .subscribtion-input button {
-            flex-shrink: 0 !important;
-            /* Prevent button shrinking */
-            padding: 12px 16px !important;
-            font-size: 12px !important;
-            white-space: nowrap !important;
-            border-radius: 4px !important;
-            min-width: fit-content !important;
-        }
-    }
+        /* --- MOBILE RESPONSIVENESS FIXES --- */
+        @media (max-width: 767px) {
 
-    /* ------------------------------------------------------------------ */
-    /* --- FOOTER CENTERING FOR TABLET DIMENSIONS --- */
-    /* ------------------------------------------------------------------ */
+            /* 1. Hero Title Fix */
+            .rts_hero__title {
+                font-size: clamp(38px, 12vw, 55px) !important;
+                line-height: 1.2;
+                text-wrap: balance;
+                /* --- ADDED WORD BREAK FIX --- */
+                word-break: normal;
+                overflow-wrap: normal;
+                hyphens: none;
+            }
 
-    @media (min-width: 414px) and (max-width: 896px) {
-        .footer-compact {
-            padding: 40px 0 !important;
-            text-align: center !important;
-        }
+            .solutions-text {
+                font-size: clamp(30px, 9vw, 45px) !important;
+                text-wrap: balance;
+            }
 
-        .footer-compact__row {
-            padding-bottom: 30px !important;
-        }
+            /* 2. "Our Core Services" Title Fix */
+            .rts-service-area .title-area .sub-title {
+                font-size: clamp(42px, 13vw, 65px) !important;
+                line-height: 1.2 !important;
+                text-wrap: balance;
+            }
 
-        .footer-main-wrapper-one {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 30px !important;
-            text-align: center !important;
-        }
+            /* 3. "Our Expertise" Title Fix */
+            .large-image-option-start .title.quote {
+                font-size: clamp(45px, 14vw, 70px) !important;
+                line-height: 1.1 !important;
+                text-wrap: balance;
+            }
 
-        .footer-left-two {
-            text-align: center !important;
-            order: 1 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-        }
+            /* 4. Button Arrow Color Fix */
+            .rts-btn-mouse-move i {
+                color: white !important;
+            }
 
-        .footer-left-two .logo img {
-            width: 180px !important;
-            height: auto !important;
-            margin-bottom: 20px !important;
-        }
+            /* Hiding/Adjusting desktop-only elements */
+            .top-center-image {
+                display: none !important;
+            }
 
-        .footer-left-two .rts-social-area-one {
-            display: flex !important;
-            justify-content: center !important;
-            margin-top: 20px !important;
+            .banner-jump-button {
+                position: relative;
+                display: block;
+                text-align: center;
+                margin-top: 40px;
+            }
         }
 
-        .footer-left-two .rts-social-area-one ul {
-            display: flex !important;
-            gap: 20px !important;
-            justify-content: center !important;
-            align-items: center !important;
-            padding-left: 0;
+        /* --- DESKTOP FONT SIZE FOR CORE SERVICES --- */
+        @media (min-width: 768px) {
+            .rts-service-area .title-area .sub-title {
+                font-size: 60px !important;
+                line-height: 1.2 !important;
+                justify-self: center;
+            }
         }
 
-        .footer-single-wized-start {
-            text-align: center !important;
-            margin-bottom: 0 !important;
-            order: 2 !important;
+        /* --- RESPONSIVE STYLES FOR 768x1024 (TABLET PORTRAIT) --- */
+        @media (min-width: 414px) and (max-width: 896px) {
+
+            /* ... (all your existing tablet styles for containers, header, etc. are here) ... */
+
+            .rts_hero__title {
+                font-size: clamp(100px, 18vw, 140px) !important;
+                line-height: 0.9 !important;
+                margin-bottom: 50px !important;
+                /* --- ADDED WORD BREAK FIX --- */
+                word-break: normal;
+                overflow-wrap: normal;
+                hyphens: none;
+            }
+
+            /* ... (all your other tablet styles are here) ... */
         }
 
-        .footer-single-wized-start .title {
-            font-size: 24px !important;
-            margin-bottom: 20px !important;
-            font-weight: 700 !important;
-            color: white !important;
+
+        /* --- SPECIFIC RESPONSIVE STYLES FOR 430x932 DIMENSIONS --- */
+        @media (max-width: 430px) {
+
+            /* ... (all your existing 430px styles for containers, header, etc. are here) ... */
+
+            .rts_hero__title {
+                font-size: clamp(28px, 8vw, 35px) !important;
+                line-height: 1.1 !important;
+                margin-bottom: 20px !important;
+                width: auto !important;
+                max-width: 100% !important;
+
+                /* --- THIS IS THE MAIN FIX --- */
+                /* Changed from break-word to normal */
+                word-wrap: normal !important;
+                overflow-wrap: normal !important;
+                hyphens: none !important;
+                /* --- END OF FIX --- */
+            }
+
+            /* ... (all your other 430px styles are here) ... */
         }
 
-        .footer-nav {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 12px !important;
-            padding-left: 0;
+        /* ------------------------------------------------------------------ */
+        /* --- FOOTER CENTERING FOR MOBILE DEVICES --- */
+        /* ------------------------------------------------------------------ */
+
+        /* Footer adjustments for mobile devices - Center aligned */
+        @media (max-width: 768px) {
+            .footer-compact {
+                padding: 40px 0 !important;
+                text-align: center !important;
+            }
+
+            .footer-compact__row {
+                padding-bottom: 30px !important;
+            }
+
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                order: 1 !important;
+                /* Display logo/social first */
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .footer-left-two .logo img {
+                width: 180px !important;
+                /* Adjust logo size */
+                height: auto !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+                position: relative !important;
+                /* Reset potential desktop positioning */
+                left: 0 !important;
+                /* Reset potential desktop positioning */
+            }
+
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding-left: 0;
+                /* Remove default list padding */
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                /* Remove bottom margin if stacking */
+                order: 2 !important;
+                /* Ensure consistent order after logo */
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 24px !important;
+                margin-bottom: 20px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+                padding-left: 0;
+                /* Remove default list padding */
+            }
+
+            .footer-nav li {
+                margin-bottom: 0 !important;
+            }
+
+            .footer-nav li a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .footer-nav li a:hover {
+                color: white !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .mail-contact-area .single-con-info {
+                margin-bottom: 15px !important;
+            }
+
+            .mail-contact-area .single-con-info a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .mail-contact-area .single-con-info a:hover {
+                color: white !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area .disc {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 25px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .copyright-area p {
+                font-size: 16px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin: 0 !important;
+            }
+
+            .copyright-area a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            /* Subscription form for mobile */
+            .subscribtion-input {
+                display: flex !important;
+                flex-direction: row !important;
+                /* Keep side-by-side */
+                gap: 10px !important;
+                align-items: center !important;
+                justify-content: center !important;
+                /* Center the form items */
+                width: 100% !important;
+                max-width: 350px !important;
+                /* Limit width on small screens */
+                margin: 0 auto !important;
+                /* Center the form itself */
+            }
+
+            /* This wrapper is needed in the HTML */
+            .subscribtion-input .email-input-wrapper {
+                position: relative;
+                flex-grow: 1 !important;
+            }
+
+            .subscribtion-input .email-input-wrapper input[type="email"] {
+                flex: none !important;
+                min-width: auto !important;
+                width: 100%;
+                /* Fill the wrapper */
+                padding: 12px 14px 12px 40px !important;
+                /* Keep icon padding */
+                font-size: 14px !important;
+                border-radius: 4px !important;
+                border: 1px solid #ccc !important;
+            }
+
+            .subscribtion-input .email-input-wrapper label {
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #333;
+                /* Icon color on light input */
+                z-index: 10;
+            }
+
+
+            .subscribtion-input button {
+                flex-shrink: 0 !important;
+                /* Prevent button shrinking */
+                padding: 12px 16px !important;
+                font-size: 12px !important;
+                white-space: nowrap !important;
+                border-radius: 4px !important;
+                min-width: fit-content !important;
+            }
         }
 
-        .footer-nav li {
-            margin-bottom: 0 !important;
+        /* ------------------------------------------------------------------ */
+        /* --- FOOTER CENTERING FOR TABLET DIMENSIONS --- */
+        /* ------------------------------------------------------------------ */
+
+        @media (min-width: 414px) and (max-width: 896px) {
+            .footer-compact {
+                padding: 40px 0 !important;
+                text-align: center !important;
+            }
+
+            .footer-compact__row {
+                padding-bottom: 30px !important;
+            }
+
+            .footer-main-wrapper-one {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                text-align: center !important;
+            }
+
+            .footer-left-two {
+                text-align: center !important;
+                order: 1 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .footer-left-two .logo img {
+                width: 180px !important;
+                height: auto !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one {
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 20px !important;
+            }
+
+            .footer-left-two .rts-social-area-one ul {
+                display: flex !important;
+                gap: 20px !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding-left: 0;
+            }
+
+            .footer-single-wized-start {
+                text-align: center !important;
+                margin-bottom: 0 !important;
+                order: 2 !important;
+            }
+
+            .footer-single-wized-start .title {
+                font-size: 24px !important;
+                margin-bottom: 20px !important;
+                font-weight: 700 !important;
+                color: white !important;
+            }
+
+            .footer-nav {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+                padding-left: 0;
+            }
+
+            .footer-nav li {
+                margin-bottom: 0 !important;
+            }
+
+            .footer-nav li a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .footer-nav li a:hover {
+                color: white !important;
+            }
+
+            .mail-contact-area {
+                text-align: center !important;
+            }
+
+            .mail-contact-area .single-con-info {
+                margin-bottom: 15px !important;
+            }
+
+            .mail-contact-area .single-con-info a {
+                font-size: 18px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                text-decoration: none !important;
+                transition: color 0.3s ease !important;
+            }
+
+            .mail-contact-area .single-con-info a:hover {
+                color: white !important;
+            }
+
+            .subscribtion-area {
+                text-align: center !important;
+            }
+
+            .subscribtion-area .disc {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 25px !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .copyright-area {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .copyright-area p {
+                font-size: 16px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                margin: 0 !important;
+            }
+
+            .copyright-area a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            /* Subscription form for tablet */
+            .subscribtion-input {
+                flex-direction: row !important;
+                gap: 15px !important;
+                max-width: 450px !important;
+            }
+
+            .subscribtion-input .email-input-wrapper {
+                flex-grow: 1 !important;
+            }
+
+            .subscribtion-input .email-input-wrapper input[type="email"] {
+                flex: 1 !important;
+                width: 100%;
+                padding: 12px 14px 12px 40px !important;
+                font-size: 14px !important;
+            }
+
+            .subscribtion-input button {
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+                white-space: nowrap !important;
+                margin-top: 0 !important;
+            }
         }
 
-        .footer-nav li a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
-
-        .footer-nav li a:hover {
-            color: white !important;
-        }
-
-        .mail-contact-area {
-            text-align: center !important;
-        }
-
-        .mail-contact-area .single-con-info {
-            margin-bottom: 15px !important;
-        }
-
-        .mail-contact-area .single-con-info a {
-            font-size: 18px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-decoration: none !important;
-            transition: color 0.3s ease !important;
-        }
-
-        .mail-contact-area .single-con-info a:hover {
-            color: white !important;
-        }
-
-        .subscribtion-area {
-            text-align: center !important;
-        }
-
-        .subscribtion-area .disc {
-            font-size: 16px !important;
-            line-height: 1.4 !important;
-            margin-bottom: 25px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-
-        .copyright-area {
-            text-align: center !important;
-            padding: 20px 0 !important;
-        }
-
-        .copyright-area p {
-            font-size: 16px !important;
-            color: rgba(255, 255, 255, 0.8) !important;
-            margin: 0 !important;
-        }
-
-        .copyright-area a {
-            color: white !important;
-            text-decoration: none !important;
-        }
-
-        /* Subscription form for tablet */
-        .subscribtion-input {
-            flex-direction: row !important;
-            gap: 15px !important;
-            max-width: 450px !important;
-        }
-
-        .subscribtion-input .email-input-wrapper {
-            flex-grow: 1 !important;
-        }
-
-        .subscribtion-input .email-input-wrapper input[type="email"] {
-            flex: 1 !important;
-            width: 100%;
-            padding: 12px 14px 12px 40px !important;
-            font-size: 14px !important;
-        }
-
-        .subscribtion-input button {
-            padding: 12px 20px !important;
-            font-size: 14px !important;
-            white-space: nowrap !important;
-            margin-top: 0 !important;
-        }
-    }
-    /* --- END OF FOOTER CENTERING --- */
-</style>
+        /* --- END OF FOOTER CENTERING --- */
+    </style>
     <script>
         (function () {
             // prevent double-initialization
@@ -1811,10 +1812,11 @@
                                                 <br> Don’t worry we don’t spam your email address
                                             </p>
                                             <form action="#" class="subscribtion-input">
-                                                <div class="email-input-wrapper"> 
-                                                    <input id="email" type="email" placeholder="Enter your email..." required="">
+                                                <div class="email-input-wrapper">
+                                                    <input id="email" type="email" placeholder="Enter your email..."
+                                                        required="">
                                                     <label for="email"><i class="fa-regular fa-envelope"></i></label>
-                                                </div> 
+                                                </div>
                                                 <button type="submit" class="rts-btn btn-dark">subscribe</button>
                                             </form>
                                         </div>
