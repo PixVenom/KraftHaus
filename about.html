@@ -23,6 +23,81 @@
         /* --- ENHANCED MOBILE RESPONSIVENESS FOR ABOUT.HTML HEADINGS --- */
         /* ------------------------------------------------------------------ */
 
+        /* Navigation Menu Styles */
+        .rts-fs-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            z-index: 99999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .rts-fs-menu.menu-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Close button styling */
+        .menu-close-btn {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            z-index: 100000;
+            cursor: pointer;
+            color: white;
+        }
+
+        .menu-close-btn svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+        }
+
+        /* Navigation menu items styling */
+        .rts-fs-container {
+            padding: 0 !important;
+            margin-top: 80px !important; /* Push content down */
+        }
+
+        .rts-fs--nav {
+            padding: 0 !important;
+        }
+
+        #primary-menu.navbar-nav-button {
+            list-style: none;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: center;
+        }
+
+        #primary-menu.navbar-nav-button li {
+            margin: 0 !important; /* No margin */
+            padding: 2px 0 !important; /* Minimal padding instead */
+        }
+
+        #primary-menu.navbar-nav-button li a {
+            color: #ffffff;
+            font-size: 20px !important;
+            line-height: 1 !important;
+            padding: 0 !important;
+            text-transform: uppercase;
+            text-decoration: none !important; /* Remove underlines */
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            display: inline-block;
+            border-bottom: none !important; /* Remove bottom border */
+        }
+
+        #primary-menu.navbar-nav-button li a:hover {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
         /* Default large size for the main title (Who Are We?) */
         .rts-breadcrumb-area .rts_hero__title {
             /* Prevents character-level breaks (e.g., Wo-rk, A-re) */
@@ -675,8 +750,14 @@
                                     </div>
                                 </div>
                                 <div class="rts-fs-menu">
+                                    <!-- Close button -->
+                                    <div class="menu-close-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
                                     <div class="rts-fs-container row">
-
                                         <div class="rts-fs--nav col-12 col-md-6">
                                             <ul id="primary-menu" class="navbar-nav-button active">
                                                 <li id="menu-item-76" class="menu-item menu-item-has-children">
@@ -1382,6 +1463,23 @@
         <!-- custom javascripts -->
         <script defer="" src="js/main.js"></script>
 
+        <!-- Menu Toggle Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuBtn = document.querySelector('.menu-btn');
+                const fsMenu = document.querySelector('.rts-fs-menu');
+                const burgerIcon = document.querySelector('.burger');
+                const closeBtn = document.querySelector('.menu-close-btn');
+
+                menuBtn.addEventListener('click', function() {
+                    fsMenu.classList.add('menu-open');
+                });
+
+                closeBtn.addEventListener('click', function() {
+                    fsMenu.classList.remove('menu-open');
+                });
+            });
+        </script>
 
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
         <style>
