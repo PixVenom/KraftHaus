@@ -279,9 +279,133 @@
             }
         }
 
-        /* ------------------------------------------------------------------ */
-        /* --- FOOTER CENTERING FOR 768x1024 DIMENSIONS --- */
-        /* ------------------------------------------------------------------ */
+        /* Mobile Menu Z-Index Fix - Keep Same Layout */
+        @media (max-width: 768px) {
+
+            /* Ensure mobile menu appears above all content */
+            .rts-fs-menu {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                background: rgba(0, 0, 0, 0.95) !important;
+                z-index: 99999 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                backdrop-filter: blur(10px) !important;
+            }
+
+            .rts-fs-container {
+                width: 100% !important;
+                max-width: 90% !important;
+                margin: 0 auto !important;
+                padding: 20px !important;
+            }
+
+            .rts-fs--nav {
+                width: 100% !important;
+                margin-bottom: 40px !important;
+            }
+
+            .rts-fs--nav ul {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 30px !important;
+                align-items: center !important;
+            }
+
+            .rts-fs--nav li {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .rts-fs--nav li a {
+                display: block !important;
+                width: 100% !important;
+                padding: 25px 0 !important;
+                font-size: 28px !important;
+                font-weight: 600 !important;
+                color: white !important;
+                text-decoration: none !important;
+                text-transform: uppercase !important;
+                letter-spacing: 2px !important;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+                transition: all 0.3s ease !important;
+            }
+
+            .rts-fs--nav li a:hover {
+                color: #ff6b35 !important;
+                border-bottom-color: #ff6b35 !important;
+                transform: scale(1.05) !important;
+            }
+
+            .rts-fs--contacts {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .contact-inner {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 40px !important;
+            }
+
+            .contact-information h2 {
+                font-size: 24px !important;
+                color: white !important;
+                margin-bottom: 20px !important;
+            }
+
+            .contact-information ul li {
+                margin-bottom: 15px !important;
+            }
+
+            .contact-information ul li a,
+            .contact-information ul li p {
+                color: rgba(255, 255, 255, 0.8) !important;
+                font-size: 18px !important;
+                text-decoration: none !important;
+            }
+
+            .contact-information ul li a:hover {
+                color: #ff6b35 !important;
+            }
+
+            .rts-social-area-one ul {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 20px !important;
+                margin-top: 20px !important;
+            }
+
+            .rts-social-area-one ul li a {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 50px !important;
+                height: 50px !important;
+                background: rgba(255, 255, 255, 0.1) !important;
+                border-radius: 50% !important;
+                color: white !important;
+                font-size: 20px !important;
+                transition: all 0.3s ease !important;
+            }
+
+            .rts-social-area-one ul li a:hover {
+                background: #ff6b35 !important;
+                transform: translateY(-3px) !important;
+            }
+
+            /* Ensure content sections don't interfere */
+            .our-approch-area-style-one,
+            .rts-section-gap,
+            .bg-dark-1 {
+                z-index: 1 !important;
+                position: relative !important;
+            }
+        }
 
         /* Footer adjustments for tablet - Centered and larger fonts */
         @media (min-width: 414px) and (max-width: 896px) {
