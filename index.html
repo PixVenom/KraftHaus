@@ -15,6 +15,56 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Typing animation styles and script for .border-bottom-1 -->
     <style id="typing-anim-styles">
+        /* Fix for Mobile Scrolling Issues */
+        @media (max-width: 768px) {
+            /* Enable scrolling on main containers */
+            html, body {
+                overflow-x: hidden !important;
+                overflow-y: auto !important;
+                height: auto !important;
+                position: relative !important;
+            }
+
+            #smooth-wrapper,
+            #smooth-content {
+                overflow: visible !important;
+                height: auto !important;
+                position: relative !important;
+                transform: none !important;
+            }
+
+            /* Fix any fixed position elements that might block scrolling */
+            .header-area.header--sticky {
+                position: fixed !important;
+                width: 100% !important;
+                z-index: 1000 !important;
+            }
+
+            /* Ensure main content areas are scrollable */
+            .banner-area,
+            .rts-about-area-1,
+            .rts-service-area,
+            .rts-use-case-area-one,
+            .large-image-option-start,
+            .rts-footer-area-one {
+                position: relative !important;
+                overflow: visible !important;
+            }
+
+            /* Remove any transform properties that might interfere with scrolling */
+            .banner-one-wrapper,
+            .about-area-right-start,
+            .service-area-one-main-wrapper {
+                transform: none !important;
+            }
+
+            /* Fix for GSAP animations that might lock scrolling */
+            .gsap-inner {
+                position: relative !important;
+                transform: none !important;
+            }
+        }
+
         /* --- Base Typing Animation Styles --- */
         .typing-wrapper {
             display: inline-block;
