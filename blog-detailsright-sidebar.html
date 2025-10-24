@@ -19,6 +19,30 @@
             clear: both;
         }
 
+        /* ---------------------------------------------------------------------- */
+        /* --- BLOG LIST IMAGE SIZE ADJUSTMENT (FORCED OVERRIDE) --- */
+        /* ---------------------------------------------------------------------- */
+        .single-blog-list-one .thumbnail {
+            /* --- This controls the WIDTH --- */
+            /* Adjust this value to make the image container smaller or larger */
+            max-width: 600px !important;  
+            
+            flex-shrink: 0; 
+            width: 100%;
+        }
+
+        .single-blog-list-one .thumbnail img {
+            /* This makes the image fill its container */
+            width: 100%; 
+
+            /* --- This controls the HEIGHT --- */
+            /* Set a specific height for the image */
+            height: 300px !important; /* <--- YOU CAN CHANGE THIS HEIGHT VALUE */
+            
+            /* This prevents the image from stretching or distorting */
+            object-fit: cover; 
+        }
+
         .rts-breadcrumb-area .rts_hero__title{
             font-size: 70px !important;
         }
@@ -438,7 +462,7 @@
                     <div class="single-blog-list-one rts-skew-up-gsap" style="">
                         <a href="athelete_marketing_blog.html" class="thumbnail">
                             <img src="https://projectnile.in/wp-content/uploads/2021/05/s3-news-tmp-304828-sports_creative-default-1280.jpg"
-                                alt="blog_images" width="700px">
+                                alt="blog_images">
                         </a>
                         <div class="blog-content-area">
                             <a href="athelete_marketing_blog.html">
@@ -452,10 +476,10 @@
                             <a href="athelete_marketing_blog.html" class="read-more-bb">Read More</a>
                         </div>
                     </div>
-                    <div class="single-blog-list-one rts-skew-up-gsap" style="">
+                    <div class="single-blog-list-one rts-skew-up-gsap">
                         <a href="athelete_influencers.html" class="thumbnail">
                             <img src="https://famesters.com/wp-content/uploads/2024/03/Athlete-influencer-marketing.png"
-                                alt="blog_images" width="750px">
+                                alt="blog_images">
                         </a>
                         <div class="blog-content-area">
                             <a href="athelete_influencers.html">
@@ -473,7 +497,7 @@
                     <div class="single-blog-list-one rts-skew-up-gsap" style="">
                         <a href="authentic_partnerships.html" class="thumbnail">
                             <img src="https://img1.wsimg.com/isteam/ip/59e5a86c-4e4f-417f-82ef-67d244583bc9/together-we-conquer-teamwork-is-key-photo_9603.jpg/:/cr=t:24.94%25,l:0%25,w:100%25,h:75.06%25/rs=w:1240,h:620,cg:true"
-                                alt="blog_images" width="750px">
+                                alt="blog_images">
                         </a>
                         <div class="blog-content-area">
                             <a href="authentic_partnerships.html">
@@ -490,7 +514,7 @@
                     <div class="single-blog-list-one rts-skew-up-gsap" style="">
                         <a href="influencer_reimagined.html" class="thumbnail">
                             <img src="https://www.rollingstone.com/wp-content/uploads/2022/06/Influencer-Marketing-Is-Dead-Long-Live-the-Commune-Economy.jpg?w=1581&h=1054&crop=1"
-                                alt="blog_images" width="750px">
+                                alt="blog_images">
                         </a>
                         <div class="blog-content-area">
                             <a href="influencer_reimagined.html">
